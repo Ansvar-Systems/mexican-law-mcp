@@ -1,0 +1,92 @@
+{
+  "id": "lfea",
+  "type": "statute",
+  "title": "Ley de Firma Electrónica Avanzada",
+  "title_en": "Advanced Electronic Signature Law",
+  "short_name": "Ley de Firma Electrónica",
+  "status": "in_force",
+  "issued_date": "2012-01-11",
+  "in_force_date": "2012-01-12",
+  "url": "https://www.diputados.gob.mx/LeyesBiblio/ref/lfea.htm",
+  "description": "Advanced Electronic Signature Law (2012). Governs the use of advanced electronic signatures (FIEL/e.firma) in government procedures, legal validity of electronic documents, certification service providers, and digital identity verification.",
+  "provisions": [
+    {
+      "provision_ref": "art1",
+      "chapter": "CAPÍTULO I - Disposiciones Generales",
+      "section": "1",
+      "title": "Objeto de la Ley",
+      "content": "Artículo 1.- La presente Ley es de orden e interés público y tiene por objeto regular: I. El uso de la firma electrónica avanzada en los actos previstos en esta Ley y la expedición de certificados digitales a personas físicas; II. Los servicios relacionados con la firma electrónica avanzada, y III. La homologación de la firma electrónica avanzada con las firmas electrónicas avanzadas reguladas por otros ordenamientos legales, en los términos establecidos en esta Ley."
+    },
+    {
+      "provision_ref": "art2",
+      "chapter": "CAPÍTULO I - Disposiciones Generales",
+      "section": "2",
+      "title": "Definiciones",
+      "content": "Artículo 2.- Para los efectos de la presente Ley, se entenderá por: I. Actos: las comunicaciones, trámites, servicios, actos jurídicos y administrativos, así como procedimientos administrativos en los cuales los particulares y los servidores públicos de las dependencias y entidades de la Administración Pública Federal, de la Procuraduría General de la República y de las unidades administrativas de la Presidencia de la República, utilicen la firma electrónica avanzada; II. Actuaciones electrónicas: las notificaciones, citatorios, emplazamientos, requerimientos, solicitud de informes o documentos y, en su caso, las resoluciones o sentencias definitivas que se emitan en los actos a que se refiere esta Ley, que sean comunicados por medios electrónicos; III. Autoridad certificadora: las dependencias y entidades de la Administración Pública Federal y los prestadores de servicios de certificación que conforme a las disposiciones jurídicas aplicables tengan reconocida esta calidad y cuenten con la infraestructura tecnológica para la emisión, administración y registro de certificados digitales; IV. Certificado digital: el mensaje de datos o registro que confirme el vínculo entre un firmante y la clave privada; V. Datos de creación de firma electrónica avanzada: los datos únicos que el firmante utiliza para crear la firma electrónica avanzada; VI. Datos de verificación de firma electrónica avanzada: los datos que se utilizan para verificar la firma electrónica avanzada; VII. Documento electrónico: aquel que es generado, consultado, modificado o procesado por medios electrónicos; VIII. Firma electrónica avanzada: el conjunto de datos y caracteres que permite la identificación del firmante, que ha sido creada por medios electrónicos bajo su exclusivo control, de manera que está vinculada únicamente al mismo y a los datos a los que se refiere, lo que permite que sea detectable cualquier modificación ulterior de éstos."
+    },
+    {
+      "provision_ref": "art3",
+      "chapter": "CAPÍTULO I - Disposiciones Generales",
+      "section": "3",
+      "title": "Ámbito de aplicación",
+      "content": "Artículo 3.- Están sujetos a las disposiciones de la presente Ley: I. Las dependencias y entidades de la Administración Pública Federal, la Procuraduría General de la República y las unidades administrativas de la Presidencia de la República; II. Los servidores públicos de las dependencias y entidades referidas en la fracción anterior, que en la realización de los actos a que se refiere esta Ley utilicen la firma electrónica avanzada, y III. Los particulares, en los casos en que utilicen la firma electrónica avanzada en los términos de esta Ley."
+    },
+    {
+      "provision_ref": "art7",
+      "chapter": "CAPÍTULO II - De la Firma Electrónica Avanzada",
+      "section": "7",
+      "title": "Validez jurídica de la firma electrónica avanzada",
+      "content": "Artículo 7.- La firma electrónica avanzada podrá ser utilizada en documentos electrónicos y, en su caso, en mensajes de datos. Los documentos electrónicos y los mensajes de datos que cuenten con firma electrónica avanzada producirán los mismos efectos que los presentados con firma autógrafa y, en consecuencia, tendrán el mismo valor probatorio que las disposiciones aplicables les otorgan a éstos."
+    },
+    {
+      "provision_ref": "art8",
+      "chapter": "CAPÍTULO II - De la Firma Electrónica Avanzada",
+      "section": "8",
+      "title": "Presunción de autoría",
+      "content": "Artículo 8.- Cuando se requiera que un documento sea firmado, se presumirá que el documento electrónico firmado con firma electrónica avanzada satisface el requisito de firma autógrafa."
+    },
+    {
+      "provision_ref": "art16",
+      "chapter": "CAPÍTULO III - Del Certificado Digital",
+      "section": "16",
+      "title": "Contenido del certificado digital",
+      "content": "Artículo 16.- El certificado digital deberá contener los siguientes datos: I. Nombre del titular del certificado digital; II. Clave Única de Registro de Población (CURP) del titular del certificado digital; III. Clave privada asociada al certificado digital; IV. Período de vigencia del certificado digital; V. El número de serie del certificado digital; VI. Nombre de la autoridad certificadora que lo emite; VII. La mención de que fue emitido como un certificado digital de firma electrónica avanzada, y VIII. Los demás requisitos que, en su caso, establezca la Secretaría mediante las disposiciones generales que expida para tal efecto."
+    },
+    {
+      "provision_ref": "art18",
+      "chapter": "CAPÍTULO III - Del Certificado Digital",
+      "section": "18",
+      "title": "Revocación de certificados",
+      "content": "Artículo 18.- El certificado digital quedará sin efectos o será revocado por la autoridad certificadora que lo emitió, cuando: I. El titular del certificado digital lo solicite; II. Fallezca la persona física titular del certificado digital; III. Se disuelva o liquide o sea declarada en quiebra la persona moral titular del certificado digital; IV. Se compruebe que al momento de la expedición del certificado digital no cumplió con los requisitos legales; V. Se pierda o inutilice por daños la clave privada asociada al certificado digital; VI. Cuando derive de información falsa proporcionada por el titular; VII. Por resolución de la autoridad competente."
+    },
+    {
+      "provision_ref": "art28",
+      "chapter": "CAPÍTULO V - De los Derechos y Obligaciones de los Titulares de Certificados Digitales",
+      "section": "28",
+      "title": "Obligaciones del titular",
+      "content": "Artículo 28.- El titular de un certificado digital tendrá las siguientes obligaciones: I. Hacer declaraciones veraces y completas en relación con los datos y documentos requeridos para la obtención y uso del certificado digital; II. Custodiar adecuadamente sus datos de creación de firma electrónica avanzada y mantenerlos en reserva; III. Comunicar a la autoridad certificadora cualquier compromiso de su clave privada y solicitar la revocación correspondiente; IV. Actualizar sus datos de identificación ante la autoridad certificadora."
+    }
+  ],
+  "definitions": [
+    {
+      "term": "Firma electrónica avanzada",
+      "definition": "El conjunto de datos y caracteres que permite la identificación del firmante, que ha sido creada por medios electrónicos bajo su exclusivo control, de manera que está vinculada únicamente al mismo y a los datos a los que se refiere, lo que permite que sea detectable cualquier modificación ulterior de éstos.",
+      "source_provision": "art2"
+    },
+    {
+      "term": "Certificado digital",
+      "definition": "El mensaje de datos o registro que confirme el vínculo entre un firmante y la clave privada.",
+      "source_provision": "art2"
+    },
+    {
+      "term": "Documento electrónico",
+      "definition": "Aquel que es generado, consultado, modificado o procesado por medios electrónicos.",
+      "source_provision": "art2"
+    },
+    {
+      "term": "Autoridad certificadora",
+      "definition": "Las dependencias y entidades de la Administración Pública Federal y los prestadores de servicios de certificación que conforme a las disposiciones jurídicas aplicables tengan reconocida esta calidad y cuenten con la infraestructura tecnológica para la emisión, administración y registro de certificados digitales.",
+      "source_provision": "art2"
+    }
+  ]
+}

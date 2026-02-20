@@ -1,0 +1,85 @@
+{
+  "id": "cpf",
+  "type": "statute",
+  "title": "Código Penal Federal",
+  "title_en": "Federal Criminal Code",
+  "short_name": "Código Penal Federal",
+  "status": "in_force",
+  "issued_date": "1931-08-14",
+  "in_force_date": "1931-09-17",
+  "url": "https://www.diputados.gob.mx/LeyesBiblio/ref/cpf.htm",
+  "description": "Federal Criminal Code. Contains cybercrime provisions in Articles 211 bis 1-7 covering unauthorized access to computer systems, data interception, and information system sabotage. Also covers identity theft, fraud, and intellectual property crimes.",
+  "provisions": [
+    {
+      "provision_ref": "art211bis1",
+      "chapter": "TÍTULO NOVENO - Revelación de secretos y acceso ilícito a sistemas y equipos de informática",
+      "section": "211 Bis 1",
+      "title": "Acceso ilícito a sistemas de informática",
+      "content": "Artículo 211 bis 1.- Al que sin autorización modifique, destruya o provoque pérdida de información contenida en sistemas o equipos de informática protegidos por algún mecanismo de seguridad, se le impondrán de seis meses a dos años de prisión y de cien a trescientos días multa. Al que sin autorización conozca o copie información contenida en sistemas o equipos de informática protegidos por algún mecanismo de seguridad, se le impondrán de tres meses a un año de prisión y de cincuenta a ciento cincuenta días multa."
+    },
+    {
+      "provision_ref": "art211bis2",
+      "chapter": "TÍTULO NOVENO - Revelación de secretos y acceso ilícito a sistemas y equipos de informática",
+      "section": "211 Bis 2",
+      "title": "Acceso ilícito a sistemas del Estado",
+      "content": "Artículo 211 bis 2.- Al que sin autorización modifique, destruya o provoque pérdida de información contenida en sistemas o equipos de informática del Estado, protegidos por algún mecanismo de seguridad, se le impondrán de uno a cuatro años de prisión y de doscientos a seiscientos días multa. Al que sin autorización conozca o copie información contenida en sistemas o equipos de informática del Estado, protegidos por algún mecanismo de seguridad, se le impondrán de seis meses a dos años de prisión y de cien a trescientos días multa."
+    },
+    {
+      "provision_ref": "art211bis3",
+      "chapter": "TÍTULO NOVENO - Revelación de secretos y acceso ilícito a sistemas y equipos de informática",
+      "section": "211 Bis 3",
+      "title": "Acceso ilícito a sistemas de seguridad pública",
+      "content": "Artículo 211 bis 3.- Al que estando autorizado para acceder a sistemas y equipos de informática del Estado, indebidamente modifique, destruya o provoque pérdida de información que contengan, se le impondrán de dos a ocho años de prisión y de trescientos a novecientos días multa. Al que estando autorizado para acceder a sistemas y equipos de informática del Estado, indebidamente copie información que contengan, se le impondrán de uno a cuatro años de prisión y de ciento cincuenta a cuatrocientos cincuenta días multa."
+    },
+    {
+      "provision_ref": "art211bis4",
+      "chapter": "TÍTULO NOVENO - Revelación de secretos y acceso ilícito a sistemas y equipos de informática",
+      "section": "211 Bis 4",
+      "title": "Acceso ilícito a sistemas de instituciones financieras",
+      "content": "Artículo 211 bis 4.- Al que sin autorización modifique, destruya o provoque pérdida de información contenida en sistemas o equipos de informática de las instituciones que integran el sistema financiero, protegidos por algún mecanismo de seguridad, se le impondrán de seis meses a cuatro años de prisión y de cien a seiscientos días multa. Al que sin autorización conozca o copie información contenida en sistemas o equipos de informática de las instituciones que integran el sistema financiero, protegidos por algún mecanismo de seguridad, se le impondrán de tres meses a dos años de prisión y de cincuenta a trescientos días multa."
+    },
+    {
+      "provision_ref": "art211bis5",
+      "chapter": "TÍTULO NOVENO - Revelación de secretos y acceso ilícito a sistemas y equipos de informática",
+      "section": "211 Bis 5",
+      "title": "Acceso ilícito autorizado a sistemas financieros",
+      "content": "Artículo 211 bis 5.- Al que estando autorizado para acceder a sistemas y equipos de informática de las instituciones que integran el sistema financiero, indebidamente modifique, destruya o provoque pérdida de información que contengan, se le impondrán de seis meses a cuatro años de prisión y de cien a seiscientos días multa. Al que estando autorizado para acceder a sistemas y equipos de informática de las instituciones que integran el sistema financiero, indebidamente copie información que contengan, se le impondrán de tres meses a dos años de prisión y de cincuenta a trescientos días multa. Las penas previstas en este artículo se incrementarán en una mitad cuando las conductas sean cometidas por funcionarios o empleados de las instituciones que integran el sistema financiero."
+    },
+    {
+      "provision_ref": "art211bis6",
+      "chapter": "TÍTULO NOVENO - Revelación de secretos y acceso ilícito a sistemas y equipos de informática",
+      "section": "211 Bis 6",
+      "title": "Acceso ilícito a sistemas de seguridad pública - agravado",
+      "content": "Artículo 211 bis 6.- Para los efectos de los artículos 211 Bis 4 y 211 Bis 5 anteriores, se entiende por instituciones que integran el sistema financiero, las señaladas en el artículo 400 Bis de este Código."
+    },
+    {
+      "provision_ref": "art211bis7",
+      "chapter": "TÍTULO NOVENO - Revelación de secretos y acceso ilícito a sistemas y equipos de informática",
+      "section": "211 Bis 7",
+      "title": "Agravantes",
+      "content": "Artículo 211 bis 7.- Las penas previstas en este capítulo se aumentarán hasta en una mitad cuando la información obtenida se utilice en provecho propio o ajeno."
+    },
+    {
+      "provision_ref": "art210",
+      "chapter": "TÍTULO NOVENO - Revelación de secretos y acceso ilícito a sistemas y equipos de informática",
+      "section": "210",
+      "title": "Revelación de secretos",
+      "content": "Artículo 210.- Se impondrán de treinta a doscientas jornadas de trabajo en favor de la comunidad, al que sin justa causa, con perjuicio de alguien y sin consentimiento del que pueda resultar perjudicado, revele algún secreto o comunicación reservada que conoce o ha recibido con motivo de su empleo, cargo o puesto."
+    },
+    {
+      "provision_ref": "art386",
+      "chapter": "TÍTULO VIGÉSIMO SEGUNDO - Delitos en contra de las personas en su patrimonio",
+      "section": "386",
+      "title": "Fraude",
+      "content": "Artículo 386.- Comete el delito de fraude el que engañando a uno o aprovechándose del error en que éste se halla se hace ilícitamente de alguna cosa o alcanza un lucro indebido. El delito de fraude se castigará con las penas siguientes: I. Con prisión de 3 días a 6 meses o de 30 a 180 días multa, cuando el valor de lo defraudado no exceda de diez veces el salario; II. Con prisión de 6 meses a 3 años y multa de 10 a 100 veces el salario, cuando el valor de lo defraudado excediera de 10 pero no de 500 veces el salario; III. Con prisión de tres a doce años y multa hasta de ciento veinte veces el salario, si el valor de lo defraudado fuere mayor de quinientas veces el salario."
+    },
+    {
+      "provision_ref": "art400bis",
+      "chapter": "TÍTULO VIGÉSIMO TERCERO - Encubrimiento y Operaciones con Recursos de Procedencia Ilícita",
+      "section": "400 Bis",
+      "title": "Operaciones con recursos de procedencia ilícita (lavado de dinero)",
+      "content": "Artículo 400 Bis.- Se impondrá de cinco a quince años de prisión y de mil a cinco mil días multa al que por sí o por interpósita persona realice cualquiera de las siguientes conductas: adquiera, enajene, administre, custodie, posea, cambie, convierta, deposite, retire, dé o reciba por cualquier motivo, invierta, traspase, transporte o transfiera, dentro del territorio nacional, de éste hacia el extranjero o a la inversa, recursos, derechos o bienes de cualquier naturaleza, cuando tenga conocimiento de que proceden o representan el producto de una actividad ilícita."
+    }
+  ],
+  "definitions": []
+}

@@ -1,0 +1,120 @@
+{
+  "id": "lritf",
+  "type": "statute",
+  "title": "Ley para Regular las Instituciones de Tecnología Financiera",
+  "title_en": "Law to Regulate Financial Technology Institutions (Fintech Law)",
+  "short_name": "Ley Fintech",
+  "status": "in_force",
+  "issued_date": "2018-03-09",
+  "in_force_date": "2018-03-10",
+  "url": "https://www.diputados.gob.mx/LeyesBiblio/ref/lritf.htm",
+  "description": "Fintech regulatory framework (2018). One of the most comprehensive in Latin America. Covers crowdfunding (ITF), e-money institutions (IFPE), virtual assets (crypto), open banking, regulatory sandboxes, and AML/CFT requirements for fintech operators.",
+  "provisions": [
+    {
+      "provision_ref": "art1",
+      "chapter": "TÍTULO I - Disposiciones Preliminares",
+      "section": "1",
+      "title": "Objeto de la Ley",
+      "content": "Artículo 1.- La presente Ley es de orden público y observancia general en los Estados Unidos Mexicanos y tiene por objeto regular los servicios financieros que prestan las instituciones de tecnología financiera, así como su organización, operación y funcionamiento, y los servicios financieros sujetos a alguna normatividad especial que sean ofrecidos o realizados por medios innovadores. En lo no previsto por la presente Ley, se aplicará supletoriamente la legislación mercantil, la Ley de la Comisión Nacional Bancaria y de Valores, y el Código Civil Federal."
+    },
+    {
+      "provision_ref": "art2",
+      "chapter": "TÍTULO I - Disposiciones Preliminares",
+      "section": "2",
+      "title": "Principios y finalidades",
+      "content": "Artículo 2.- Las actividades reguladas en la presente Ley se organizarán con apego a los siguientes principios: I. Inclusión e innovación financiera; II. Promoción de la competencia; III. Protección al consumidor; IV. Preservación de la estabilidad financiera; V. Prevención de operaciones con recursos de procedencia ilícita y financiamiento al terrorismo, y VI. Neutralidad tecnológica."
+    },
+    {
+      "provision_ref": "art4",
+      "chapter": "TÍTULO I - Disposiciones Preliminares",
+      "section": "4",
+      "title": "Definiciones",
+      "content": "Artículo 4.- Para los efectos de la presente Ley, se entenderá por: I. Activos virtuales: la representación de valor registrada electrónicamente y utilizada entre el público como medio de pago para todo tipo de actos jurídicos y cuya transferencia únicamente puede llevarse a cabo a través de medios electrónicos; II. CNBV: la Comisión Nacional Bancaria y de Valores; III. CONDUSEF: la Comisión Nacional para la Protección y Defensa de los Usuarios de Servicios Financieros; IV. ITF: institución de tecnología financiera; V. IFPE: institución de fondos de pago electrónico; VI. Operaciones con activos virtuales: las operaciones de compra, venta, almacenamiento, transferencia y custodia de activos virtuales que realicen las ITF."
+    },
+    {
+      "provision_ref": "art11",
+      "chapter": "TÍTULO II - De las Instituciones de Tecnología Financiera",
+      "section": "11",
+      "title": "Tipos de ITF",
+      "content": "Artículo 11.- Para organizarse y operar como institución de tecnología financiera se requiere autorización de la CNBV, previo acuerdo del Comité Interinstitucional. Las instituciones de tecnología financiera se clasifican en: I. Instituciones de financiamiento colectivo, e II. Instituciones de fondos de pago electrónico."
+    },
+    {
+      "provision_ref": "art15",
+      "chapter": "TÍTULO II - De las Instituciones de Tecnología Financiera",
+      "section": "15",
+      "title": "Financiamiento colectivo (crowdfunding)",
+      "content": "Artículo 15.- Las instituciones de financiamiento colectivo tendrán por objeto poner en contacto a personas del público en general, con el fin de que entre ellas se otorguen financiamientos. Las actividades que realicen las instituciones de financiamiento colectivo podrán ser: I. Financiamiento colectivo de deuda, con el cual los inversionistas otorgan préstamos; II. Financiamiento colectivo de capital, con el cual los inversionistas adquieren títulos representativos de capital de personas morales; III. Financiamiento colectivo de copropiedad o regalías, con el cual los inversionistas adquieren una participación en un bien presente o futuro o en los ingresos que éste genere."
+    },
+    {
+      "provision_ref": "art22",
+      "chapter": "TÍTULO II - De las Instituciones de Tecnología Financiera",
+      "section": "22",
+      "title": "Fondos de pago electrónico",
+      "content": "Artículo 22.- Las instituciones de fondos de pago electrónico tendrán por objeto prestar de manera habitual y profesional servicios consistentes en la emisión, administración y redención de fondos de pago electrónico, a través de aplicaciones informáticas, interfaces, páginas de internet o cualquier otro medio de comunicación electrónica o digital."
+    },
+    {
+      "provision_ref": "art30",
+      "chapter": "TÍTULO III - De los Activos Virtuales",
+      "section": "30",
+      "title": "Operaciones con activos virtuales",
+      "content": "Artículo 30.- Las instituciones de tecnología financiera y las instituciones de crédito que pretendan realizar operaciones con activos virtuales deberán contar con la autorización del Banco de México. El Banco de México determinará los activos virtuales con los que podrán operar las instituciones de crédito y las instituciones de tecnología financiera."
+    },
+    {
+      "provision_ref": "art56",
+      "chapter": "TÍTULO IV - De las Interfaces de Programación de Aplicaciones Informáticas Estandarizadas (Open Banking)",
+      "section": "56",
+      "title": "Open Banking - APIs estandarizadas",
+      "content": "Artículo 56.- Las entidades financieras, así como aquellas personas que operen con algún tipo de novedoso modelo que ofrezca servicios financieros al público, por determinación de las autoridades financieras deberán establecer interfaces de programación de aplicaciones informáticas estandarizadas que posibiliten la conectividad y acceso a otros participantes e infraestructuras del sistema financiero, de acuerdo con las disposiciones de carácter general que emitan las autoridades financieras."
+    },
+    {
+      "provision_ref": "art76",
+      "chapter": "TÍTULO V - De las Autorizaciones Temporales (Sandbox Regulatorio)",
+      "section": "76",
+      "title": "Sandbox regulatorio",
+      "content": "Artículo 76.- Las autoridades financieras otorgarán autorizaciones temporales a las sociedades que pretendan ofrecer al público servicios financieros con modelos novedosos que, por su naturaleza, no se encuentren contemplados en la legislación financiera vigente. Las autorizaciones temporales tendrán como objeto crear un espacio controlado, acotado y temporal, donde las sociedades autorizadas puedan probar modelos novedosos sin estar sujetas a la totalidad de los requisitos regulatorios aplicables."
+    },
+    {
+      "provision_ref": "art58",
+      "chapter": "TÍTULO IV - De las Interfaces de Programación de Aplicaciones Informáticas Estandarizadas (Open Banking)",
+      "section": "58",
+      "title": "Tipos de datos en Open Banking",
+      "content": "Artículo 58.- Los datos que se intercambien a través de las interfaces de programación de aplicaciones informáticas estandarizadas serán de los siguientes tipos: I. Datos abiertos financieros: aquellos referentes a los productos y servicios que ofrecen las entidades financieras; II. Datos agregados: aquellos obtenidos a partir de la información financiera o transaccional de sus clientes, de manera que no permita su identificación individual, y III. Datos transaccionales: aquellos referentes a la información financiera o transaccional de un cliente, que permita conocer su comportamiento de gasto, consumo, ahorro e inversión."
+    },
+    {
+      "provision_ref": "art92",
+      "chapter": "TÍTULO VI - De la Prevención de Operaciones con Recursos de Procedencia Ilícita",
+      "section": "92",
+      "title": "Prevención de lavado de dinero",
+      "content": "Artículo 92.- Las instituciones de tecnología financiera deberán establecer medidas y procedimientos para prevenir y detectar actos, omisiones u operaciones que pudieran favorecer, prestar ayuda, auxilio o cooperación de cualquier especie para la comisión de los delitos previstos en los artículos 139, 148 Bis o 400 Bis del Código Penal Federal."
+    },
+    {
+      "provision_ref": "art95",
+      "chapter": "TÍTULO VI - De la Prevención de Operaciones con Recursos de Procedencia Ilícita",
+      "section": "95",
+      "title": "Identificación del cliente (KYC)",
+      "content": "Artículo 95.- Las instituciones de tecnología financiera deberán identificar y conocer a sus clientes, para lo cual estarán obligadas a solicitar la información y documentación necesaria para su identificación."
+    }
+  ],
+  "definitions": [
+    {
+      "term": "Activos virtuales",
+      "definition": "La representación de valor registrada electrónicamente y utilizada entre el público como medio de pago para todo tipo de actos jurídicos y cuya transferencia únicamente puede llevarse a cabo a través de medios electrónicos.",
+      "source_provision": "art4"
+    },
+    {
+      "term": "ITF",
+      "definition": "Institución de tecnología financiera, autorizada por la CNBV para operar como institución de financiamiento colectivo o institución de fondos de pago electrónico.",
+      "source_provision": "art4"
+    },
+    {
+      "term": "IFPE",
+      "definition": "Institución de fondos de pago electrónico, que presta servicios de emisión, administración y redención de fondos de pago electrónico.",
+      "source_provision": "art4"
+    },
+    {
+      "term": "Sandbox regulatorio",
+      "definition": "Espacio controlado, acotado y temporal donde las sociedades autorizadas pueden probar modelos novedosos de servicios financieros sin estar sujetas a la totalidad de los requisitos regulatorios.",
+      "source_provision": "art76"
+    }
+  ]
+}

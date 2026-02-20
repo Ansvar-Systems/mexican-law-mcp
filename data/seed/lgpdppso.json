@@ -1,0 +1,94 @@
+{
+  "id": "lgpdppso",
+  "type": "statute",
+  "title": "Ley General de Protección de Datos Personales en Posesión de Sujetos Obligados",
+  "title_en": "General Law on Protection of Personal Data Held by Public Bodies",
+  "short_name": "LGPDPPSO",
+  "status": "in_force",
+  "issued_date": "2017-01-26",
+  "in_force_date": "2017-01-27",
+  "url": "https://www.diputados.gob.mx/LeyesBiblio/ref/lgpdppso.htm",
+  "description": "Public-sector data protection law (2017). Applies to all levels of government and autonomous bodies. Establishes data protection principles, ARCO rights for data held by public authorities, and requirements for data protection impact assessments.",
+  "provisions": [
+    {
+      "provision_ref": "art1",
+      "chapter": "TÍTULO PRIMERO - Disposiciones Generales",
+      "section": "1",
+      "title": "Objeto de la Ley",
+      "content": "Artículo 1.- La presente Ley es de orden público y de observancia general en toda la República, reglamentaria de los artículos 6o., Base A y 16, segundo párrafo, de la Constitución Política de los Estados Unidos Mexicanos, en materia de protección de datos personales en posesión de sujetos obligados. Tiene por objeto establecer las bases, principios y procedimientos para garantizar el derecho que tiene toda persona a la protección de sus datos personales, en posesión de sujetos obligados."
+    },
+    {
+      "provision_ref": "art2",
+      "chapter": "TÍTULO PRIMERO - Disposiciones Generales",
+      "section": "2",
+      "title": "Finalidades",
+      "content": "Artículo 2.- Son objetivos de la presente Ley: I. Distribuir competencias entre los Organismos garantes de la Federación y las Entidades Federativas, en materia de protección de datos personales en posesión de sujetos obligados; II. Establecer las bases mínimas y condiciones homogéneas que regirán el tratamiento de los datos personales y el ejercicio de los derechos de acceso, rectificación, cancelación y oposición, mediante procedimientos sencillos y expeditos; III. Regular la organización y operación del Sistema Nacional de Transparencia, Acceso a la Información Pública y Protección de Datos Personales a que se refieren esta Ley y la Ley General de Transparencia y Acceso a la Información Pública, en lo relativo a sus funciones para la protección de datos personales en posesión de sujetos obligados; IV. Garantizar la observancia de los principios de protección de datos personales previstos en la presente Ley y demás disposiciones que resulten aplicables en la materia; V. Proteger los datos personales en posesión de cualquier autoridad, entidad, órgano y organismo de los Poderes Ejecutivo, Legislativo y Judicial, órganos autónomos, partidos políticos, fideicomisos y fondos públicos, de la Federación, las Entidades Federativas y los municipios, con la finalidad de regular su debido tratamiento; VI. Garantizar que toda persona pueda ejercer el derecho a la protección de sus datos personales; VII. Promover, fomentar y difundir una cultura de protección de datos personales; VIII. Establecer los mecanismos para garantizar el cumplimiento y la efectiva aplicación de las medidas de apremio que correspondan para aquellas conductas que contravengan las disposiciones previstas en esta Ley, y IX. Establecer las bases y procedimientos para que los sujetos obligados realicen el debido tratamiento de los datos personales."
+    },
+    {
+      "provision_ref": "art3",
+      "chapter": "TÍTULO PRIMERO - Disposiciones Generales",
+      "section": "3",
+      "title": "Definiciones",
+      "content": "Artículo 3.- Para los efectos de la presente Ley se entenderá por: I. Bases de datos: Conjunto ordenado de datos personales referentes a una persona física identificada o identificable, condicionados a criterios determinados; II. Bloqueo: La identificación y conservación de datos personales una vez cumplida la finalidad para la cual fueron recabados, con el único propósito de determinar posibles responsabilidades en relación con su tratamiento, hasta el plazo de prescripción legal o contractual de éstas; III. Cómputo en la nube: Modelo de provisión externa de servicios de cómputo bajo demanda; IV. Consentimiento: Manifestación de la voluntad libre, específica e informada del titular de los datos mediante la cual se efectúa el tratamiento de los mismos; V. Datos personales: Cualquier información concerniente a una persona física identificada o identificable; VI. Datos personales sensibles: Aquellos que se refieran a la esfera más íntima de su titular, o cuya utilización indebida pueda dar origen a discriminación o conlleve un riesgo grave para éste; VII. Derechos ARCO: Los derechos de acceso, rectificación, cancelación y oposición; VIII. Evaluación de impacto en la protección de datos personales: Documento mediante el cual los sujetos obligados que pretendan poner en operación o modificar políticas públicas, programas, sistemas o plataformas informáticas, aplicaciones electrónicas o cualquier otra tecnología que implique el tratamiento intensivo o relevante de datos personales, valoran los impactos reales respecto de determinado tratamiento de datos personales."
+    },
+    {
+      "provision_ref": "art16",
+      "chapter": "TÍTULO SEGUNDO - Principios y Deberes",
+      "section": "16",
+      "title": "Principios",
+      "content": "Artículo 16.- El responsable deberá observar los principios de licitud, finalidad, lealtad, consentimiento, calidad, proporcionalidad, información y responsabilidad en el tratamiento de datos personales."
+    },
+    {
+      "provision_ref": "art31",
+      "chapter": "TÍTULO SEGUNDO - Principios y Deberes",
+      "section": "31",
+      "title": "Medidas de seguridad",
+      "content": "Artículo 31.- Con independencia del tipo de sistema en el que se encuentren los datos personales o el tipo de tratamiento que se efectúe, el responsable deberá establecer y mantener las medidas de seguridad de carácter administrativo, físico y técnico para la protección de los datos personales, que permitan protegerlos contra daño, pérdida, alteración, destrucción o su uso, acceso o tratamiento no autorizado, así como garantizar su confidencialidad, integridad y disponibilidad."
+    },
+    {
+      "provision_ref": "art41",
+      "chapter": "TÍTULO SEGUNDO - Principios y Deberes",
+      "section": "41",
+      "title": "Notificación de vulneraciones",
+      "content": "Artículo 41.- El responsable deberá informar sin dilación alguna al titular, y según corresponda, al Instituto y a los Organismos garantes de las Entidades Federativas, las vulneraciones que afecten de forma significativa los derechos patrimoniales o morales de los titulares."
+    },
+    {
+      "provision_ref": "art44",
+      "chapter": "TÍTULO TERCERO - Derechos de los Titulares y su Ejercicio",
+      "section": "44",
+      "title": "Derechos ARCO del titular",
+      "content": "Artículo 44.- El titular tendrá derecho de acceder a sus datos personales que obren en posesión del responsable, así como conocer el Aviso de Privacidad al que está sujeto el tratamiento."
+    },
+    {
+      "provision_ref": "art68",
+      "chapter": "TÍTULO QUINTO - Evaluación de Impacto en la Protección de Datos Personales",
+      "section": "68",
+      "title": "Evaluación de impacto",
+      "content": "Artículo 68.- El responsable deberá realizar una Evaluación de impacto en la protección de datos personales, cuando pretenda poner en operación o modificar políticas públicas, programas, sistemas o plataformas informáticas, aplicaciones electrónicas o cualquier otra tecnología que implique el tratamiento intensivo o relevante de datos personales."
+    },
+    {
+      "provision_ref": "art163",
+      "chapter": "TÍTULO OCTAVO - De las Infracciones y Sanciones",
+      "section": "163",
+      "title": "Infracciones",
+      "content": "Artículo 163.- Constituyen infracciones a esta Ley, las siguientes: I. El incumplimiento de las resoluciones firmes que emitan los Organismos garantes; II. Actuar con negligencia, dolo o mala fe en la sustanciación de los procedimientos de protección de derechos; III. Declarar dolosamente la inexistencia de datos personales; IV. Dar tratamiento a los datos personales en contravención a los principios y deberes establecidos en la presente Ley; V. No cumplir con la obligación de confidencialidad establecida en esta Ley; VI. Cambiar sustancialmente la finalidad originaria del tratamiento de los datos, sin observar lo dispuesto en la presente Ley; VII. Obstruir los actos de verificación del Organismo garante; VIII. Recabar datos personales sin proporcionar el Aviso de Privacidad, y IX. Obtener datos personales por engaño."
+    }
+  ],
+  "definitions": [
+    {
+      "term": "Derechos ARCO",
+      "definition": "Los derechos de acceso, rectificación, cancelación y oposición al tratamiento de datos personales.",
+      "source_provision": "art3"
+    },
+    {
+      "term": "Evaluación de impacto en la protección de datos personales",
+      "definition": "Documento mediante el cual los sujetos obligados valoran los impactos reales respecto de determinado tratamiento de datos personales en políticas públicas, programas, sistemas o plataformas informáticas.",
+      "source_provision": "art3"
+    },
+    {
+      "term": "Cómputo en la nube",
+      "definition": "Modelo de provisión externa de servicios de cómputo bajo demanda, que involucra el suministro de infraestructura, plataforma o software.",
+      "source_provision": "art3"
+    }
+  ]
+}

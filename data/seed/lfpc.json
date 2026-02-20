@@ -1,0 +1,43 @@
+{
+  "id": "lfpc",
+  "type": "statute",
+  "title": "Ley Federal de Protección al Consumidor",
+  "title_en": "Federal Consumer Protection Law",
+  "short_name": "LFPC",
+  "status": "in_force",
+  "issued_date": "1992-12-24",
+  "in_force_date": "1993-03-25",
+  "url": "https://www.diputados.gob.mx/LeyesBiblio/ref/lfpc.htm",
+  "description": "Federal Consumer Protection Law. Establishes consumer rights, advertising standards, e-commerce consumer protections, PROFECO enforcement powers, and collective action procedures. Contains provisions on digital transactions and online consumer rights.",
+  "provisions": [
+    {
+      "provision_ref": "art1",
+      "chapter": "CAPÍTULO I - Disposiciones Generales",
+      "section": "1",
+      "title": "Objeto de la Ley",
+      "content": "Artículo 1.- La presente ley es de orden público e interés social y de observancia en toda la República. Su objeto es promover y proteger los derechos y cultura del consumidor y procurar la equidad, certeza y seguridad jurídica en las relaciones entre proveedores y consumidores. Son principios básicos en las relaciones de consumo: I. La protección de la vida, salud y seguridad del consumidor contra los riesgos provocados por productos, prácticas en el abastecimiento de productos y servicios considerados peligrosos o nocivos; II. La educación y divulgación sobre el consumo adecuado de los productos y servicios; III. La información adecuada y clara sobre los diferentes productos y servicios; IV. La efectiva prevención y reparación de daños patrimoniales y morales; V. El acceso a los órganos administrativos con vistas a la prevención de daños patrimoniales y morales, individuales o colectivos; VI. El otorgamiento de información y de facilidades a los consumidores para la defensa de sus derechos; VII. La protección contra la publicidad engañosa y abusiva, métodos comerciales coercitivos y desleales, así como contra prácticas y cláusulas abusivas o impuestas en el abastecimiento de productos y servicios; VIII. La real y efectiva protección al consumidor en las transacciones efectuadas a través del uso de medios convencionales, electrónicos, ópticos o de cualquier otra tecnología y la adecuada utilización de los datos aportados; IX. El respeto a los derechos y obligaciones derivados de las relaciones de consumo y las medidas que garanticen su efectividad y cumplimiento; X. La protección de los derechos de la infancia, adultos mayores, personas con discapacidad e indígenas."
+    },
+    {
+      "provision_ref": "art76bis",
+      "chapter": "CAPÍTULO VIII BIS - De los Derechos de los Consumidores en las Transacciones Efectuadas a Través del Uso de Medios Electrónicos",
+      "section": "76 Bis",
+      "title": "Transacciones electrónicas - derechos del consumidor",
+      "content": "Artículo 76 BIS.- Las disposiciones del presente Capítulo aplican a las relaciones entre proveedores y consumidores en las transacciones efectuadas a través del uso de medios electrónicos, ópticos o de cualquier otra tecnología. En la celebración de dichas transacciones se cumplirá con lo siguiente: I. El proveedor utilizará la información proporcionada por el consumidor en forma confidencial, por lo que no podrá difundirla o transmitirla a otros proveedores ajenos a la transacción, salvo autorización expresa del propio consumidor o por requerimiento de autoridad competente; II. El proveedor utilizará alguno de los elementos técnicos disponibles para brindar seguridad y confidencialidad a la información proporcionada por el consumidor e informará a éste, previamente a la celebración de la transacción, de las características generales de dichos elementos; III. El proveedor deberá proporcionar al consumidor, antes de celebrar la transacción, su domicilio físico, números telefónicos y demás medios a los que pueda acudir el propio consumidor para presentarle sus reclamaciones o solicitarle aclaraciones; IV. El proveedor evitará las prácticas comerciales engañosas respecto de las características de los productos; V. El consumidor tendrá derecho a conocer toda la información sobre los términos, condiciones, costos, cargos adicionales, en su caso, formas de pago de los bienes y servicios ofrecidos por el proveedor; VI. El proveedor respetará la decisión del consumidor en cuanto a la cantidad y calidad de los productos que desea recibir, así como la de no recibir avisos comerciales, y VII. El proveedor deberá abstenerse de utilizar estrategias de venta o publicitarias que no proporcionen al consumidor información clara y suficiente sobre los servicios ofrecidos."
+    },
+    {
+      "provision_ref": "art32",
+      "chapter": "CAPÍTULO III - De la Información y Publicidad",
+      "section": "32",
+      "title": "Publicidad veraz",
+      "content": "Artículo 32.- La información o publicidad relativa a bienes, productos o servicios que se difundan por cualquier medio o forma, deberán ser veraces, comprobables y exentos de textos, diálogos, sonidos, imágenes, marcas, denominaciones de origen y otras descripciones que induzcan o puedan inducir a error o confusión por engañosas o abusivas. Para los efectos de esta ley, se entiende por información o publicidad engañosa o abusiva aquella que refiere características o información relacionadas con algún bien, producto o servicio que pudiendo o no ser verdaderas, inducen a error o confusión al consumidor por la forma inexacta, falsa, exagerada, parcial, artificiosa o tendenciosa en que se presenta."
+    },
+    {
+      "provision_ref": "art128",
+      "chapter": "CAPÍTULO XIV - Sanciones",
+      "section": "128",
+      "title": "Sanciones administrativas",
+      "content": "Artículo 128.- Las infracciones a lo dispuesto por los artículos 7 BIS, 13, 17, 18 BIS, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 45, 47, 48, 49, 50, 52, 53, 54, 55, 57, 58, 59, 60, 61, 62, 67, 68, 69, 70, 72, 75, 77, 78, 79, 81, 82, 85, 86 QUÁTER, 87 BIS, 90, 91, 93, 95 y 113 serán sancionadas con multa de $594.34 a $2'380,709.07."
+    }
+  ],
+  "definitions": []
+}

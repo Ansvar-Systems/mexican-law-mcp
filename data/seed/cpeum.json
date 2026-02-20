@@ -1,0 +1,78 @@
+{
+  "id": "cpeum",
+  "type": "statute",
+  "title": "Constitución Política de los Estados Unidos Mexicanos",
+  "title_en": "Political Constitution of the United Mexican States",
+  "short_name": "Constitución",
+  "status": "in_force",
+  "issued_date": "1917-02-05",
+  "in_force_date": "1917-05-01",
+  "url": "https://www.diputados.gob.mx/LeyesBiblio/ref/cpeum.htm",
+  "description": "Constitution of Mexico (1917). Article 6 establishes the right to information and creates INAI. Article 16 establishes the fundamental right to privacy and data protection. Article 73 grants Congress power to legislate on data protection.",
+  "provisions": [
+    {
+      "provision_ref": "art1",
+      "chapter": "TÍTULO PRIMERO - De los Derechos Humanos y sus Garantías",
+      "section": "1",
+      "title": "Derechos humanos y garantías",
+      "content": "Artículo 1o.- En los Estados Unidos Mexicanos todas las personas gozarán de los derechos humanos reconocidos en esta Constitución y en los tratados internacionales de los que el Estado Mexicano sea parte, así como de las garantías para su protección, cuyo ejercicio no podrá restringirse ni suspenderse, salvo en los casos y bajo las condiciones que esta Constitución establece. Las normas relativas a los derechos humanos se interpretarán de conformidad con esta Constitución y con los tratados internacionales de la materia favoreciendo en todo tiempo a las personas la protección más amplia. Todas las autoridades, en el ámbito de sus competencias, tienen la obligación de promover, respetar, proteger y garantizar los derechos humanos de conformidad con los principios de universalidad, interdependencia, indivisibilidad y progresividad."
+    },
+    {
+      "provision_ref": "art6",
+      "chapter": "TÍTULO PRIMERO - De los Derechos Humanos y sus Garantías",
+      "section": "6",
+      "title": "Derecho a la información y transparencia",
+      "content": "Artículo 6o.- La manifestación de las ideas no será objeto de ninguna inquisición judicial o administrativa, sino en el caso de que ataque a la moral, la vida privada o los derechos de terceros, provoque algún delito, o perturbe el orden público; el derecho de réplica será ejercido en los términos dispuestos por la ley. El derecho a la información será garantizado por el Estado. Toda persona tiene derecho al libre acceso a información plural y oportuna, así como a buscar, recibir y difundir información e ideas de toda índole por cualquier medio de expresión. A. Para el ejercicio del derecho de acceso a la información, la Federación y las entidades federativas, en el ámbito de sus respectivas competencias, se regirán por los siguientes principios y bases: VIII. La Federación contará con un organismo autónomo, especializado, imparcial, colegiado, con personalidad jurídica y patrimonio propio, con plena autonomía técnica, de gestión, capacidad para decidir sobre el ejercicio de su presupuesto y determinar su organización interna, responsable de garantizar el cumplimiento del derecho de acceso a la información pública y a la protección de datos personales en posesión de los sujetos obligados en los términos que establezca la ley."
+    },
+    {
+      "provision_ref": "art14",
+      "chapter": "TÍTULO PRIMERO - De los Derechos Humanos y sus Garantías",
+      "section": "14",
+      "title": "Debido proceso",
+      "content": "Artículo 14.- A ninguna ley se dará efecto retroactivo en perjuicio de persona alguna. Nadie podrá ser privado de la libertad o de sus propiedades, posesiones o derechos, sino mediante juicio seguido ante los tribunales previamente establecidos, en el que se cumplan las formalidades esenciales del procedimiento y conforme a las Leyes expedidas con anterioridad al hecho."
+    },
+    {
+      "provision_ref": "art16",
+      "chapter": "TÍTULO PRIMERO - De los Derechos Humanos y sus Garantías",
+      "section": "16",
+      "title": "Derecho a la privacidad y protección de datos personales",
+      "content": "Artículo 16.- Nadie puede ser molestado en su persona, familia, domicilio, papeles o posesiones, sino en virtud de mandamiento escrito de la autoridad competente, que funde y motive la causa legal del procedimiento. Toda persona tiene derecho a la protección de sus datos personales, al acceso, rectificación y cancelación de los mismos, así como a manifestar su oposición, en los términos que fije la ley, la cual establecerá los supuestos de excepción a los principios que rijan el tratamiento de datos, por razones de seguridad nacional, disposiciones de orden público, seguridad y salud públicas o para proteger los derechos de terceros. Las comunicaciones privadas son inviolables. La ley sancionará penalmente cualquier acto que atente contra la libertad y privacía de las mismas, excepto cuando sean aportadas de forma voluntaria por alguno de los particulares que participen en ellas."
+    },
+    {
+      "provision_ref": "art17",
+      "chapter": "TÍTULO PRIMERO - De los Derechos Humanos y sus Garantías",
+      "section": "17",
+      "title": "Acceso a la justicia",
+      "content": "Artículo 17.- Ninguna persona podrá hacerse justicia por sí misma, ni ejercer violencia para reclamar su derecho. Toda persona tiene derecho a que se le administre justicia por tribunales que estarán expeditos para impartirla en los plazos y términos que fijen las leyes, emitiendo sus resoluciones de manera pronta, completa e imparcial. Su servicio será gratuito, quedando, en consecuencia, prohibidas las costas judiciales."
+    },
+    {
+      "provision_ref": "art28",
+      "chapter": "TÍTULO PRIMERO - De los Derechos Humanos y sus Garantías",
+      "section": "28",
+      "title": "Competencia económica y organismos reguladores",
+      "content": "Artículo 28.- En los Estados Unidos Mexicanos quedan prohibidos los monopolios, las prácticas monopólicas, los estancos, las condonaciones de impuestos y las exenciones de impuestos en los términos y condiciones que fijan las leyes. El Instituto Federal de Telecomunicaciones es un órgano autónomo, con personalidad jurídica y patrimonio propio, que tiene por objeto el desarrollo eficiente de la radiodifusión y las telecomunicaciones, conforme a lo dispuesto en esta Constitución y en los términos que fijen las leyes."
+    },
+    {
+      "provision_ref": "art73",
+      "chapter": "TÍTULO TERCERO - Del Poder Legislativo",
+      "section": "73",
+      "title": "Facultades del Congreso - datos personales y telecomunicaciones",
+      "content": "Artículo 73.- El Congreso tiene facultad: XXIX-O. Para legislar en materia de protección de datos personales en posesión de particulares. XXIX-R. Para expedir la ley general que armonice y homologue la organización y el funcionamiento de los registros civiles, los registros públicos inmobiliarios y de personas morales de las entidades federativas y los catastros municipales."
+    },
+    {
+      "provision_ref": "art89",
+      "chapter": "TÍTULO TERCERO - Del Poder Ejecutivo",
+      "section": "89",
+      "title": "Facultades del Presidente - tratados internacionales",
+      "content": "Artículo 89.- Las facultades y obligaciones del Presidente, son las siguientes: X. Dirigir la política exterior y celebrar tratados internacionales, así como terminar, denunciar, suspender, modificar, enmendar, retirar reservas y formular declaraciones interpretativas sobre los mismos, sometiéndolos a la aprobación del Senado."
+    },
+    {
+      "provision_ref": "art133",
+      "chapter": "TÍTULO SÉPTIMO - Prevenciones Generales",
+      "section": "133",
+      "title": "Supremacía constitucional y tratados",
+      "content": "Artículo 133.- Esta Constitución, las leyes del Congreso de la Unión que emanen de ella y todos los tratados que estén de acuerdo con la misma, celebrados y que se celebren por el Presidente de la República, con aprobación del Senado, serán la Ley Suprema de toda la Unión. Los jueces de cada entidad federativa se arreglarán a dicha Constitución, leyes y tratados, a pesar de las disposiciones en contrario que pueda haber en las Constituciones o leyes de las entidades federativas."
+    }
+  ],
+  "definitions": []
+}

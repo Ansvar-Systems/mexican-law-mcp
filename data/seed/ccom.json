@@ -1,0 +1,82 @@
+{
+  "id": "ccom",
+  "type": "statute",
+  "title": "Código de Comercio",
+  "title_en": "Commercial Code",
+  "short_name": "Código de Comercio",
+  "status": "in_force",
+  "issued_date": "1889-12-15",
+  "in_force_date": "1890-01-01",
+  "url": "https://www.diputados.gob.mx/LeyesBiblio/ref/ccom.htm",
+  "description": "Commercial Code. Governs commercial acts, electronic commerce (Título Segundo - Del Comercio Electrónico), commercial contracts, and merchant obligations. Contains provisions on electronic signatures and digital records.",
+  "provisions": [
+    {
+      "provision_ref": "art1",
+      "chapter": "LIBRO PRIMERO - De los Comerciantes y del Comercio en General",
+      "section": "1",
+      "title": "Aplicación del Código",
+      "content": "Artículo 1o.- Los actos comerciales sólo se regirán por lo dispuesto en este Código y las demás leyes mercantiles aplicables."
+    },
+    {
+      "provision_ref": "art75",
+      "chapter": "LIBRO PRIMERO - De los Comerciantes y del Comercio en General",
+      "section": "75",
+      "title": "Actos de comercio",
+      "content": "Artículo 75.- La ley reputa actos de comercio: I. Todas las adquisiciones, enajenaciones y alquileres verificados con propósito de especulación comercial; II. Las compras y ventas de bienes inmuebles, cuando se hagan con dicho propósito de especulación comercial; III. Las compras y ventas de porciones, acciones y obligaciones de las sociedades mercantiles; IV. Los contratos relativos y obligaciones del Estado ú otros títulos de crédito corrientes en el comercio; V. Las empresas de abastecimientos y suministros; En caso de duda, la naturaleza comercial del acto será fijada por arbitrio judicial."
+    },
+    {
+      "provision_ref": "art89",
+      "chapter": "TÍTULO SEGUNDO - Del Comercio Electrónico",
+      "section": "89",
+      "title": "Comercio electrónico - disposiciones generales",
+      "content": "Artículo 89.- En los actos de comercio y en la formación de los mismos podrán emplearse los medios electrónicos, ópticos o cualquier otra tecnología. Para efecto del presente Código, se entenderá por: Mensaje de Datos: la información generada, enviada, recibida o archivada por medios electrónicos, ópticos o cualquier otra tecnología. Firma Electrónica: los datos en forma electrónica consignados en un Mensaje de Datos, o adjuntados o lógicamente asociados al mismo por cualquier tecnología, que son utilizados para identificar al Firmante en relación con el Mensaje de Datos e indicar que el Firmante aprueba la información contenida en el Mensaje de Datos."
+    },
+    {
+      "provision_ref": "art89bis",
+      "chapter": "TÍTULO SEGUNDO - Del Comercio Electrónico",
+      "section": "89 Bis",
+      "title": "Equivalencia funcional",
+      "content": "Artículo 89 bis.- No se negarán efectos jurídicos, validez o fuerza obligatoria a cualquier tipo de información por la sola razón de que esté contenida en un Mensaje de Datos."
+    },
+    {
+      "provision_ref": "art90",
+      "chapter": "TÍTULO SEGUNDO - Del Comercio Electrónico",
+      "section": "90",
+      "title": "Información escrita en medios electrónicos",
+      "content": "Artículo 90.- Se presumirá que un Mensaje de Datos proviene del Emisor si ha sido enviado: I. Por el propio Emisor; II. Usando medios de identificación, tales como claves o contraseñas del Emisor o por alguna persona facultada para actuar en nombre del Emisor respecto a ese Mensaje de Datos, o III. Por un sistema de información programado por el Emisor o en su nombre para que opere automáticamente."
+    },
+    {
+      "provision_ref": "art91",
+      "chapter": "TÍTULO SEGUNDO - Del Comercio Electrónico",
+      "section": "91",
+      "title": "Acuse de recibo",
+      "content": "Artículo 91.- El momento de recepción de un Mensaje de Datos se determinará de la forma siguiente: I. Si el Destinatario ha designado un Sistema de Información para la recepción, la recepción tendrá lugar en el momento en que ingrese en dicho Sistema; II. De enviarse a un Sistema de Información del Destinatario que no sea el Sistema designado, en el momento en que el Destinatario recupere el Mensaje de Datos; III. Si el Destinatario no ha designado un Sistema de Información, la recepción tendrá lugar cuando el Mensaje de Datos ingrese a un Sistema de Información del Destinatario."
+    },
+    {
+      "provision_ref": "art93",
+      "chapter": "TÍTULO SEGUNDO - Del Comercio Electrónico",
+      "section": "93",
+      "title": "Conservación de mensajes de datos",
+      "content": "Artículo 93.- Cuando la ley requiera que la información sea presentada y conservada en su forma original, ese requisito quedará satisfecho respecto a un Mensaje de Datos si se acredita que la información que contiene se ha mantenido íntegra e inalterada a partir del momento en que se generó por primera vez en su forma definitiva, como Mensaje de Datos o en alguna otra forma."
+    },
+    {
+      "provision_ref": "art97",
+      "chapter": "TÍTULO SEGUNDO - Del Comercio Electrónico",
+      "section": "97",
+      "title": "Firma electrónica avanzada",
+      "content": "Artículo 97.- Cuando la ley requiera o las partes acuerden la existencia de una Firma en relación con un Mensaje de Datos, se entenderá satisfecho dicho requerimiento si se utiliza una Firma Electrónica que resulte apropiada para los fines para los cuales se generó o comunicó ese Mensaje de Datos."
+    }
+  ],
+  "definitions": [
+    {
+      "term": "Mensaje de Datos",
+      "definition": "La información generada, enviada, recibida o archivada por medios electrónicos, ópticos o cualquier otra tecnología.",
+      "source_provision": "art89"
+    },
+    {
+      "term": "Firma Electrónica",
+      "definition": "Los datos en forma electrónica consignados en un Mensaje de Datos, o adjuntados o lógicamente asociados al mismo por cualquier tecnología, que son utilizados para identificar al Firmante en relación con el Mensaje de Datos e indicar que el Firmante aprueba la información contenida en el Mensaje de Datos.",
+      "source_provision": "art89"
+    }
+  ]
+}
