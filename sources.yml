@@ -1,0 +1,88 @@
+# sources.yml
+schema_version: "1.0"
+mcp_name: "Mexican Law MCP"
+jurisdiction: "MX"
+
+sources:
+  - name: "Camara de Diputados (Official Legislation Portal)"
+    authority: "Camara de Diputados del H. Congreso de la Union, Mexico"
+    official_portal: "https://www.diputados.gob.mx/LeyesBiblio/index.htm"
+    canonical_identifier: "N/A (Mexican legislation identified by law title, DOF publication date, and reform date; no standardized URI scheme)"
+    retrieval_method: "HTML_SCRAPE"
+    api_documentation: "N/A (no public API; legislation available as HTML/PDF/DOC)"
+    update_frequency: "on_change"
+    last_ingested: "PENDING_FIRST_INGEST"
+    license_or_terms:
+      type: "Government Public Data"
+      url: "https://www.diputados.gob.mx"
+      summary: "Mexican federal legislation is public domain as government publication; the Camara de Diputados maintains the official compilation of all federal laws with consolidated reform texts"
+    coverage:
+      scope: "All federal laws of Mexico including LFPDPPP (Ley Federal de Proteccion de Datos Personales en Posesion de los Particulares 2010), Ley General de Proteccion de Datos Personales en Posesion de Sujetos Obligados 2017, Ley Fintech (Ley para Regular las Instituciones de Tecnologia Financiera 2018), Codigo Penal Federal (cybercrime provisions), Ley General de Sociedades Mercantiles, Codigo de Comercio, Ley Federal de Proteccion al Consumidor"
+      limitations: "State legislation not included; subsidiary regulations (reglamentos) may lag behind primary law reforms; historical versions of laws prior to consolidation may be incomplete; DOF (Diario Oficial) publication dates are authoritative but not always linked"
+    languages:
+      - "es"
+
+  - name: "Orden Juridico Nacional"
+    authority: "Secretaria de Gobernacion, Mexico"
+    official_portal: "https://www.ordenjuridico.gob.mx"
+    canonical_identifier: "N/A"
+    retrieval_method: "HTML_SCRAPE"
+    api_documentation: "N/A"
+    update_frequency: "on_change"
+    last_ingested: "PENDING_FIRST_INGEST"
+    license_or_terms:
+      type: "Government Public Data"
+      url: "https://www.ordenjuridico.gob.mx"
+      summary: "The Orden Juridico Nacional is the official repository maintained by the Secretaria de Gobernacion containing the full hierarchy of Mexican legal norms including the Constitution, federal laws, regulations, and international treaties"
+    coverage:
+      scope: "Federal Constitution, federal laws, regulations (reglamentos), decrees, international treaties ratified by Mexico, NOM (Normas Oficiales Mexicanas) standards relevant to data protection and cybersecurity"
+      limitations: "May not include the most recent reforms immediately; coverage of state-level norms varies; search functionality is limited"
+    languages:
+      - "es"
+
+  - name: "INAI (Instituto Nacional de Transparencia, Acceso a la Informacion y Proteccion de Datos Personales)"
+    authority: "INAI"
+    official_portal: "https://home.inai.org.mx"
+    canonical_identifier: "N/A"
+    retrieval_method: "HTML_SCRAPE"
+    api_documentation: "N/A"
+    update_frequency: "on_change"
+    last_ingested: "PENDING_FIRST_INGEST"
+    license_or_terms:
+      type: "Government Public Data"
+      url: "https://home.inai.org.mx"
+      summary: "INAI publications including resolutions, guidelines, criteria, and recommendations are public government documents; INAI is a constitutional autonomous body"
+    coverage:
+      scope: "LFPDPPP implementing regulations, INAI guidelines and criteria, data protection impact assessment guidance, cross-border transfer authorization decisions, sanction resolutions, binding self-regulation parameters"
+      limitations: "INAI has faced political pressure and budget constraints since 2023; some commissioner positions have been vacant; enforcement activity documentation may be delayed; INAI's constitutional autonomy has been politically contested"
+    languages:
+      - "es"
+
+data_freshness:
+  automated_checks: true
+  check_frequency: "weekly"
+  last_verified: "PENDING_FIRST_INGEST"
+
+# Notes:
+# - Mexico has two separate data protection laws: LFPDPPP (2010) for the private
+#   sector and the Ley General de Proteccion de Datos Personales en Posesion de
+#   Sujetos Obligados (2017) for the public sector
+# - INAI is a constitutional autonomous body (organismo constitucional autonomo)
+#   established by Article 6 of the Mexican Constitution; it oversees both data
+#   protection and freedom of information/transparency
+# - INAI has been under significant political pressure since 2023, with proposals
+#   to merge or dissolve it as part of broader autonomous body reforms
+# - The Ley Fintech (2018) is one of the most comprehensive fintech regulatory
+#   frameworks in Latin America, covering crowdfunding, e-money, crypto assets,
+#   open banking, and regulatory sandboxes
+# - The Constitution of Mexico (Constitucion Politica de los Estados Unidos
+#   Mexicanos) Article 16 establishes the right to privacy and data protection
+#   as a fundamental right
+# - Mexico is a civil law jurisdiction; the DOF (Diario Oficial de la Federacion)
+#   is the official gazette where all laws must be published to take effect
+# - The legal language is Spanish; there are no official English translations of
+#   federal legislation
+# - Mexico is a member of APEC (Cross-Border Privacy Rules system), OECD, and
+#   has the USMCA/T-MEC trade agreement with data flow provisions
+# - The Codigo Penal Federal contains cybercrime provisions (Articles 211bis 1-7)
+#   covering unauthorized access to computer systems and data

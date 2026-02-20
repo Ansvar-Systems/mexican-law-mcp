@@ -1,0 +1,183 @@
+{
+  "$schema": "./golden-tests.schema.json",
+  "version": "1.0",
+  "mcp_name": "Mexican Law MCP",
+  "description": "Golden contract tests for the Mexican Law MCP covering data protection (LFPDPPP), fintech, cybercrime, commercial law, and consumer protection legislation",
+  "tests": [
+    {
+      "id": "mx-001",
+      "category": "article_retrieval",
+      "description": "Retrieve Article 1 of the LFPDPPP (Ley Federal de Proteccion de Datos Personales en Posesion de los Particulares 2010) -- scope and object of the law",
+      "tool": "get_provision",
+      "input": {
+        "law_identifier": "Ley Federal de Proteccion de Datos Personales en Posesion de los Particulares",
+        "article": "1"
+      },
+      "assertions": {
+        "result_not_empty": true,
+        "any_result_contains": ["datos personales", "particulares", "proteccion"],
+        "fields_present": ["text", "article_number"],
+        "text_not_empty": true
+      }
+    },
+    {
+      "id": "mx-002",
+      "category": "article_retrieval",
+      "description": "Retrieve Article 1 of the Ley Fintech (Ley para Regular las Instituciones de Tecnologia Financiera 2018) -- object and scope",
+      "tool": "get_provision",
+      "input": {
+        "law_identifier": "Ley para Regular las Instituciones de Tecnologia Financiera",
+        "article": "1"
+      },
+      "assertions": {
+        "result_not_empty": true,
+        "any_result_contains": ["tecnologia financiera", "instituciones", "Fintech"],
+        "fields_present": ["text", "article_number"],
+        "text_not_empty": true
+      }
+    },
+    {
+      "id": "mx-003",
+      "category": "article_retrieval",
+      "description": "Retrieve Article 211bis 1 of the Codigo Penal Federal -- cybercrime provisions on unauthorized access to computer systems",
+      "tool": "get_provision",
+      "input": {
+        "law_identifier": "Codigo Penal Federal",
+        "article": "211bis1"
+      },
+      "assertions": {
+        "result_not_empty": true,
+        "any_result_contains": ["sistema", "informatica", "acceso"],
+        "fields_present": ["text"],
+        "text_not_empty": true
+      }
+    },
+    {
+      "id": "mx-004",
+      "category": "article_retrieval",
+      "description": "Retrieve Article 1 of the Ley General de Sociedades Mercantiles -- scope of commercial companies law",
+      "tool": "get_provision",
+      "input": {
+        "law_identifier": "Ley General de Sociedades Mercantiles",
+        "article": "1"
+      },
+      "assertions": {
+        "result_not_empty": true,
+        "any_result_contains": ["sociedades mercantiles", "sociedad"],
+        "fields_present": ["text"],
+        "text_not_empty": true
+      }
+    },
+    {
+      "id": "mx-005",
+      "category": "search",
+      "description": "Full-text search for 'datos personales' returns LFPDPPP provisions",
+      "tool": "search_legislation",
+      "input": {
+        "query": "datos personales"
+      },
+      "assertions": {
+        "result_not_empty": true,
+        "min_results": 1,
+        "any_result_contains": ["Proteccion de Datos Personales", "LFPDPPP", "datos personales", "titular"]
+      }
+    },
+    {
+      "id": "mx-006",
+      "category": "search",
+      "description": "Full-text search for 'ciberdelito' returns Codigo Penal Federal cybercrime provisions",
+      "tool": "search_legislation",
+      "input": {
+        "query": "ciberdelito"
+      },
+      "assertions": {
+        "result_not_empty": true,
+        "min_results": 1,
+        "any_result_contains": ["Codigo Penal", "informatica", "sistema", "acceso"]
+      }
+    },
+    {
+      "id": "mx-007",
+      "category": "search",
+      "description": "Full-text search for 'comercio electronico' returns Codigo de Comercio and related provisions",
+      "tool": "search_legislation",
+      "input": {
+        "query": "comercio electronico"
+      },
+      "assertions": {
+        "result_not_empty": true,
+        "min_results": 1,
+        "any_result_contains": ["Comercio", "electronico", "comercio"]
+      }
+    },
+    {
+      "id": "mx-008",
+      "category": "citation_roundtrip",
+      "description": "Citation for LFPDPPP Article 1 includes diputados.gob.mx or DOF reference",
+      "tool": "get_provision",
+      "input": {
+        "law_identifier": "Ley Federal de Proteccion de Datos Personales en Posesion de los Particulares",
+        "article": "1"
+      },
+      "assertions": {
+        "result_not_empty": true,
+        "citation_url_pattern": "(diputados\\.gob\\.mx|dof\\.gob\\.mx)",
+        "text_not_empty": true
+      }
+    },
+    {
+      "id": "mx-009",
+      "category": "citation_roundtrip",
+      "description": "Citation for Codigo de Comercio Article 1 includes official source reference",
+      "tool": "get_provision",
+      "input": {
+        "law_identifier": "Codigo de Comercio",
+        "article": "1"
+      },
+      "assertions": {
+        "result_not_empty": true,
+        "fields_present": ["text"],
+        "text_not_empty": true
+      }
+    },
+    {
+      "id": "mx-010",
+      "category": "eu_cross_reference",
+      "description": "LFPDPPP cross-reference to GDPR/EU Data Protection Directive -- Mexico's LFPDPPP was influenced by the EU Directive 95/46/EC",
+      "tool": "get_provision_eu_basis",
+      "input": {
+        "law_identifier": "Ley Federal de Proteccion de Datos Personales en Posesion de los Particulares"
+      },
+      "assertions": {
+        "result_not_empty": true,
+        "any_result_contains": ["GDPR", "General Data Protection Regulation", "2016/679", "Directive 95/46", "data protection"]
+      }
+    },
+    {
+      "id": "mx-011",
+      "category": "negative_test",
+      "description": "Non-existent Mexican law returns graceful error or empty result",
+      "tool": "get_provision",
+      "input": {
+        "law_identifier": "Ley Federal de Proteccion de Unicornios Digitales 2099",
+        "article": "1"
+      },
+      "assertions": {
+        "handles_gracefully": true
+      }
+    },
+    {
+      "id": "mx-012",
+      "category": "negative_test",
+      "description": "Malformed article number returns graceful error or empty result",
+      "tool": "get_provision",
+      "input": {
+        "law_identifier": "Ley Federal de Proteccion de Datos Personales en Posesion de los Particulares",
+        "article": "999ZZZ-INVALID"
+      },
+      "assertions": {
+        "handles_gracefully": true
+      }
+    }
+  ]
+}

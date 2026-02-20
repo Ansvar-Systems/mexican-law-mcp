@@ -1,0 +1,56 @@
+{
+  "$schema": "./golden-hashes.schema.json",
+  "version": "1.0",
+  "mcp_name": "Mexican Law MCP",
+  "jurisdiction": "MX",
+  "provisions": [
+    {
+      "id": "mx-hash-001",
+      "description": "Constitution of Mexico (Constitucion Politica de los Estados Unidos Mexicanos), Article 16 -- right to privacy, protection of personal data, and inviolability of communications",
+      "upstream_url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CPEUM.pdf",
+      "selector_hint": "Articulo 16 - Derecho a la privacidad",
+      "expected_sha256": "COMPUTE_ON_FIRST_INGEST",
+      "expected_snippet": "proteccion de sus datos personales"
+    },
+    {
+      "id": "mx-hash-002",
+      "description": "LFPDPPP (Ley Federal de Proteccion de Datos Personales en Posesion de los Particulares 2010), Article 1 -- object of the law, protection of personal data held by private parties",
+      "upstream_url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFPDPPP.pdf",
+      "selector_hint": "Articulo 1 - Objeto de la Ley",
+      "expected_sha256": "COMPUTE_ON_FIRST_INGEST",
+      "expected_snippet": "datos personales"
+    },
+    {
+      "id": "mx-hash-003",
+      "description": "Codigo Penal Federal, Article 211bis 1 -- cybercrime provisions on unauthorized access to information systems and protected data",
+      "upstream_url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CPF.pdf",
+      "selector_hint": "Articulo 211 Bis 1 - Acceso ilicito a sistemas",
+      "expected_sha256": "COMPUTE_ON_FIRST_INGEST",
+      "expected_snippet": "sistema de computo"
+    },
+    {
+      "id": "mx-hash-004",
+      "description": "Ley General de Sociedades Mercantiles, Article 1 -- recognized types of commercial companies under Mexican law",
+      "upstream_url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LGSM.pdf",
+      "selector_hint": "Articulo 1 - Especies de sociedades mercantiles",
+      "expected_sha256": "COMPUTE_ON_FIRST_INGEST",
+      "expected_snippet": "sociedades mercantiles"
+    },
+    {
+      "id": "mx-hash-005",
+      "description": "Ley para Regular las Instituciones de Tecnologia Financiera (Ley Fintech 2018), Article 1 -- object and scope of fintech regulation",
+      "upstream_url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LRITF.pdf",
+      "selector_hint": "Articulo 1 - Objeto de la Ley",
+      "expected_sha256": "COMPUTE_ON_FIRST_INGEST",
+      "expected_snippet": "tecnologia financiera"
+    },
+    {
+      "id": "mx-hash-006",
+      "description": "Codigo de Comercio, Article 1 -- scope of application of commercial law provisions",
+      "upstream_url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CCom.pdf",
+      "selector_hint": "Articulo 1 - Aplicacion del Codigo",
+      "expected_sha256": "COMPUTE_ON_FIRST_INGEST",
+      "expected_snippet": "actos comerciales"
+    }
+  ]
+}
