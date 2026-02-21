@@ -8,63 +8,245 @@
   "issued_date": "1889-12-15",
   "in_force_date": "1890-01-01",
   "url": "https://www.diputados.gob.mx/LeyesBiblio/ref/ccom.htm",
-  "description": "Commercial Code. Governs commercial acts, electronic commerce (Título Segundo - Del Comercio Electrónico), commercial contracts, and merchant obligations. Contains provisions on electronic signatures and digital records.",
+  "description": "Commercial Code (1889, continuously amended). Governs commercial acts, electronic commerce (Título Segundo - Del Comercio Electrónico), commercial contracts, digital signatures, electronic records, data messages, and merchant obligations. Core e-commerce framework for Mexico.",
   "provisions": [
     {
       "provision_ref": "art1",
-      "chapter": "LIBRO PRIMERO - De los Comerciantes y del Comercio en General",
+      "chapter": "LIBRO PRIMERO - De los Comerciantes y del Comercio en General, TÍTULO PRIMERO",
       "section": "1",
       "title": "Aplicación del Código",
       "content": "Artículo 1o.- Los actos comerciales sólo se regirán por lo dispuesto en este Código y las demás leyes mercantiles aplicables."
     },
     {
+      "provision_ref": "art3",
+      "chapter": "LIBRO PRIMERO - De los Comerciantes y del Comercio en General, TÍTULO PRIMERO",
+      "section": "3",
+      "title": "Presunción de comerciante",
+      "content": "Artículo 3o.- Se reputan en derecho comerciantes: I. Las personas que teniendo capacidad legal para ejercer el comercio, hacen de él su ocupación ordinaria; II. Las sociedades constituidas con arreglo a las leyes mercantiles; III. Las sociedades extranjeras o las agencias y sucursales de éstas, que dentro del territorio nacional ejerzan actos de comercio."
+    },
+    {
       "provision_ref": "art75",
-      "chapter": "LIBRO PRIMERO - De los Comerciantes y del Comercio en General",
+      "chapter": "LIBRO PRIMERO - De los Comerciantes y del Comercio en General, TÍTULO PRIMERO",
       "section": "75",
       "title": "Actos de comercio",
-      "content": "Artículo 75.- La ley reputa actos de comercio: I. Todas las adquisiciones, enajenaciones y alquileres verificados con propósito de especulación comercial; II. Las compras y ventas de bienes inmuebles, cuando se hagan con dicho propósito de especulación comercial; III. Las compras y ventas de porciones, acciones y obligaciones de las sociedades mercantiles; IV. Los contratos relativos y obligaciones del Estado ú otros títulos de crédito corrientes en el comercio; V. Las empresas de abastecimientos y suministros; En caso de duda, la naturaleza comercial del acto será fijada por arbitrio judicial."
+      "content": "Artículo 75.- La ley reputa actos de comercio: I. Todas las adquisiciones, enajenaciones y alquileres verificados con propósito de especulación comercial; II. Las compras y ventas de bienes inmuebles, cuando se hagan con dicho propósito de especulación comercial; III. Las compras y ventas de porciones, acciones y obligaciones de las sociedades mercantiles; IV. Los contratos relativos y obligaciones del Estado ú otros títulos de crédito corrientes en el comercio; V. Las empresas de abastecimientos y suministros. En caso de duda, la naturaleza comercial del acto será fijada por arbitrio judicial."
+    },
+    {
+      "provision_ref": "art80",
+      "chapter": "LIBRO PRIMERO - De los Comerciantes y del Comercio en General, TÍTULO SEGUNDO - De las Obligaciones Comunes a los Comerciantes",
+      "section": "80",
+      "title": "Libertad de forma en actos de comercio",
+      "content": "Artículo 80.- Los convenios y contratos mercantiles que se celebren por correspondencia, telégrafo, o mediante el uso de medios electrónicos, ópticos o de cualquier otra tecnología, quedarán perfeccionados desde que se reciba la aceptación de la propuesta o las condiciones con que ésta fuere modificada."
     },
     {
       "provision_ref": "art89",
-      "chapter": "TÍTULO SEGUNDO - Del Comercio Electrónico",
+      "chapter": "TÍTULO SEGUNDO - Del Comercio Electrónico, CAPÍTULO I - De los Mensajes de Datos",
       "section": "89",
       "title": "Comercio electrónico - disposiciones generales",
-      "content": "Artículo 89.- En los actos de comercio y en la formación de los mismos podrán emplearse los medios electrónicos, ópticos o cualquier otra tecnología. Para efecto del presente Código, se entenderá por: Mensaje de Datos: la información generada, enviada, recibida o archivada por medios electrónicos, ópticos o cualquier otra tecnología. Firma Electrónica: los datos en forma electrónica consignados en un Mensaje de Datos, o adjuntados o lógicamente asociados al mismo por cualquier tecnología, que son utilizados para identificar al Firmante en relación con el Mensaje de Datos e indicar que el Firmante aprueba la información contenida en el Mensaje de Datos."
+      "content": "Artículo 89.- En los actos de comercio y en la formación de los mismos podrán emplearse los medios electrónicos, ópticos o cualquier otra tecnología. Para efecto del presente Código, se entenderá por: Mensaje de Datos: la información generada, enviada, recibida o archivada por medios electrónicos, ópticos o cualquier otra tecnología; Firma Electrónica: los datos en forma electrónica consignados en un Mensaje de Datos, o adjuntados o lógicamente asociados al mismo por cualquier tecnología, que son utilizados para identificar al Firmante en relación con el Mensaje de Datos e indicar que el Firmante aprueba la información contenida en el Mensaje de Datos, y que produce los mismos efectos jurídicos que la firma autógrafa; Firma Electrónica Avanzada o Fiable: aquella que cumpla con los requisitos contemplados en las fracciones I a IV del artículo 97; Firmante: la persona que posee los datos de la creación de la firma y que actúa en nombre propio o de la persona a la que representa; Destinatario: la persona designada por el Emisor para recibir el Mensaje de Datos; Emisor: toda persona que, al tenor del Mensaje de Datos, haya actuado a nombre propio o en cuyo nombre se haya enviado o generado dicho mensaje antes de ser archivado; Intermediario: toda persona que, actuando por cuenta de otra, envíe, reciba o archive dicho Mensaje de Datos o preste algún otro servicio con respecto a él; Prestador de Servicios de Certificación: la persona o institución pública que preste servicios relacionados con Firmas Electrónicas; Sistema de Información: todo sistema utilizado para generar, enviar, recibir, archivar o procesar de alguna otra forma Mensajes de Datos."
     },
     {
       "provision_ref": "art89bis",
-      "chapter": "TÍTULO SEGUNDO - Del Comercio Electrónico",
+      "chapter": "TÍTULO SEGUNDO - Del Comercio Electrónico, CAPÍTULO I - De los Mensajes de Datos",
       "section": "89 Bis",
       "title": "Equivalencia funcional",
       "content": "Artículo 89 bis.- No se negarán efectos jurídicos, validez o fuerza obligatoria a cualquier tipo de información por la sola razón de que esté contenida en un Mensaje de Datos."
     },
     {
       "provision_ref": "art90",
-      "chapter": "TÍTULO SEGUNDO - Del Comercio Electrónico",
+      "chapter": "TÍTULO SEGUNDO - Del Comercio Electrónico, CAPÍTULO I - De los Mensajes de Datos",
       "section": "90",
-      "title": "Información escrita en medios electrónicos",
+      "title": "Atribución de mensajes de datos",
       "content": "Artículo 90.- Se presumirá que un Mensaje de Datos proviene del Emisor si ha sido enviado: I. Por el propio Emisor; II. Usando medios de identificación, tales como claves o contraseñas del Emisor o por alguna persona facultada para actuar en nombre del Emisor respecto a ese Mensaje de Datos, o III. Por un sistema de información programado por el Emisor o en su nombre para que opere automáticamente."
     },
     {
+      "provision_ref": "art90bis",
+      "chapter": "TÍTULO SEGUNDO - Del Comercio Electrónico, CAPÍTULO I - De los Mensajes de Datos",
+      "section": "90 Bis",
+      "title": "Validez del mensaje de datos como declaración de voluntad",
+      "content": "Artículo 90 bis.- El Destinatario tendrá derecho a considerar que un Mensaje de Datos proviene del Emisor, y a actuar en consecuencia, cuando: I. Haya aplicado adecuadamente un procedimiento aceptado previamente por el Emisor, con el fin de verificar que el Mensaje de Datos provenía del Emisor, o II. El Mensaje de Datos que reciba resulte de los actos de una persona cuya relación con el Emisor, o con algún mandatario suyo, le haya dado acceso a algún método utilizado por el Emisor para identificar un Mensaje de Datos como propio."
+    },
+    {
       "provision_ref": "art91",
-      "chapter": "TÍTULO SEGUNDO - Del Comercio Electrónico",
+      "chapter": "TÍTULO SEGUNDO - Del Comercio Electrónico, CAPÍTULO I - De los Mensajes de Datos",
       "section": "91",
       "title": "Acuse de recibo",
-      "content": "Artículo 91.- El momento de recepción de un Mensaje de Datos se determinará de la forma siguiente: I. Si el Destinatario ha designado un Sistema de Información para la recepción, la recepción tendrá lugar en el momento en que ingrese en dicho Sistema; II. De enviarse a un Sistema de Información del Destinatario que no sea el Sistema designado, en el momento en que el Destinatario recupere el Mensaje de Datos; III. Si el Destinatario no ha designado un Sistema de Información, la recepción tendrá lugar cuando el Mensaje de Datos ingrese a un Sistema de Información del Destinatario."
+      "content": "Artículo 91.- El momento de recepción de un Mensaje de Datos se determinará como sigue: I. Si el Destinatario ha designado un Sistema de Información para la recepción, la recepción tendrá lugar en el momento en que ingrese en dicho Sistema; II. De enviarse a un Sistema de Información del Destinatario que no sea el Sistema designado, en el momento en que el Destinatario recupere el Mensaje de Datos; III. Si el Destinatario no ha designado un Sistema de Información, la recepción tendrá lugar cuando el Mensaje de Datos ingrese a un Sistema de Información del Destinatario."
+    },
+    {
+      "provision_ref": "art91bis",
+      "chapter": "TÍTULO SEGUNDO - Del Comercio Electrónico, CAPÍTULO I - De los Mensajes de Datos",
+      "section": "91 Bis",
+      "title": "Lugar de envío y recepción",
+      "content": "Artículo 91 bis.- Salvo pacto en contrario entre el Emisor y el Destinatario, el Mensaje de Datos se tendrá por expedido en el lugar donde el Emisor tenga su establecimiento y por recibido en el lugar donde el Destinatario tenga el suyo."
+    },
+    {
+      "provision_ref": "art92",
+      "chapter": "TÍTULO SEGUNDO - Del Comercio Electrónico, CAPÍTULO I - De los Mensajes de Datos",
+      "section": "92",
+      "title": "Integridad del mensaje de datos",
+      "content": "Artículo 92.- Tratándose de la comunicación de Mensajes de Datos que requieran de un acuse de recibo para surtir efectos, bien sea por disposición legal o por así requerirlo el Emisor, se considerará que el Mensaje de Datos ha sido enviado, cuando se haya recibido el acuse respectivo."
     },
     {
       "provision_ref": "art93",
-      "chapter": "TÍTULO SEGUNDO - Del Comercio Electrónico",
+      "chapter": "TÍTULO SEGUNDO - Del Comercio Electrónico, CAPÍTULO I - De los Mensajes de Datos",
       "section": "93",
       "title": "Conservación de mensajes de datos",
-      "content": "Artículo 93.- Cuando la ley requiera que la información sea presentada y conservada en su forma original, ese requisito quedará satisfecho respecto a un Mensaje de Datos si se acredita que la información que contiene se ha mantenido íntegra e inalterada a partir del momento en que se generó por primera vez en su forma definitiva, como Mensaje de Datos o en alguna otra forma."
+      "content": "Artículo 93.- Cuando la ley requiera que la información sea presentada y conservada en su forma original, ese requisito quedará satisfecho respecto a un Mensaje de Datos si se acredita que la información que contiene se ha mantenido íntegra e inalterada a partir del momento en que se generó por primera vez en su forma definitiva, como Mensaje de Datos o en alguna otra forma, y dicha información puede ser accesible para su ulterior consulta."
+    },
+    {
+      "provision_ref": "art93bis",
+      "chapter": "TÍTULO SEGUNDO - Del Comercio Electrónico, CAPÍTULO I - De los Mensajes de Datos",
+      "section": "93 Bis",
+      "title": "Almacenamiento de mensajes de datos por terceros",
+      "content": "Artículo 93 bis.- Los requisitos de conservación de Mensajes de Datos podrán cumplirse a través de terceros, siempre y cuando se cumplan las condiciones señaladas en el artículo anterior y el tercero se obligue a almacenar la información sin modificarla."
+    },
+    {
+      "provision_ref": "art94",
+      "chapter": "TÍTULO SEGUNDO - Del Comercio Electrónico, CAPÍTULO II - De las Firmas",
+      "section": "94",
+      "title": "Firmas electrónicas en actos de comercio",
+      "content": "Artículo 94.- Los actos de comercio podrán celebrarse mediante Firma Electrónica, la cual será equivalente a la firma autógrafa para todos los efectos legales."
+    },
+    {
+      "provision_ref": "art95",
+      "chapter": "TÍTULO SEGUNDO - Del Comercio Electrónico, CAPÍTULO II - De las Firmas",
+      "section": "95",
+      "title": "Reconocimiento de firmas electrónicas",
+      "content": "Artículo 95.- Las disposiciones de este Código serán aplicadas de modo que no excluyan, restrinjan o priven de efecto jurídico cualquier método para crear una Firma Electrónica."
+    },
+    {
+      "provision_ref": "art96",
+      "chapter": "TÍTULO SEGUNDO - Del Comercio Electrónico, CAPÍTULO II - De las Firmas",
+      "section": "96",
+      "title": "Obligaciones del firmante",
+      "content": "Artículo 96.- Cuando se utilice una Firma Electrónica, ésta se tendrá por válida si: I. Los datos de creación de la firma, en el contexto en que son utilizados, corresponden exclusivamente al Firmante; II. Los datos de creación de la firma estaban, en el momento de la firma, bajo el control exclusivo del Firmante; III. Es posible detectar cualquier alteración de la Firma Electrónica hecha después del momento de la firma."
     },
     {
       "provision_ref": "art97",
-      "chapter": "TÍTULO SEGUNDO - Del Comercio Electrónico",
+      "chapter": "TÍTULO SEGUNDO - Del Comercio Electrónico, CAPÍTULO II - De las Firmas",
       "section": "97",
-      "title": "Firma electrónica avanzada",
-      "content": "Artículo 97.- Cuando la ley requiera o las partes acuerden la existencia de una Firma en relación con un Mensaje de Datos, se entenderá satisfecho dicho requerimiento si se utiliza una Firma Electrónica que resulte apropiada para los fines para los cuales se generó o comunicó ese Mensaje de Datos."
+      "title": "Firma electrónica avanzada o fiable",
+      "content": "Artículo 97.- Cuando la ley requiera o las partes acuerden la existencia de una Firma en relación con un Mensaje de Datos, se entenderá satisfecho dicho requerimiento si se utiliza una Firma Electrónica que resulte apropiada para los fines para los cuales se generó o comunicó ese Mensaje de Datos. Una Firma Electrónica se considerará Avanzada o Fiable si cumple por lo menos los siguientes requisitos: I. Los datos de creación de la firma, en el contexto en que son utilizados, corresponden exclusivamente al Firmante; II. Los datos de creación de la firma estaban, en el momento de la firma, bajo el control exclusivo del Firmante; III. Es posible detectar cualquier alteración de la Firma Electrónica hecha después del momento de la firma, y IV. Respecto a la integridad de la información de un Mensaje de Datos, es posible detectar cualquier alteración de ésta, hecha después del momento de la firma."
+    },
+    {
+      "provision_ref": "art97bis",
+      "chapter": "TÍTULO SEGUNDO - Del Comercio Electrónico, CAPÍTULO II - De las Firmas",
+      "section": "97 Bis",
+      "title": "Certificados de firma electrónica",
+      "content": "Artículo 97 bis.- Los certificados que acrediten la vinculación entre un firmante y los datos de creación de una Firma Electrónica Avanzada o Fiable, deberán contener, al menos: I. La indicación de que se expide como tal; II. Los datos de identificación del firmante y su domicilio; III. La clave pública del firmante; IV. Los datos de identificación del Prestador de Servicios de Certificación que lo expide; V. La fecha de inicio de vigencia del certificado, y VI. El número de serie del certificado."
+    },
+    {
+      "provision_ref": "art98",
+      "chapter": "TÍTULO SEGUNDO - Del Comercio Electrónico, CAPÍTULO III - De los Prestadores de Servicios de Certificación",
+      "section": "98",
+      "title": "Prestadores de servicios de certificación",
+      "content": "Artículo 98.- Los Prestadores de Servicios de Certificación podrán ser: I. Los notarios públicos y los corredores públicos; II. Las personas morales de carácter privado, y III. Las instituciones públicas, conforme a las leyes que les son aplicables. Los Prestadores de Servicios de Certificación deberán acreditar ante la Secretaría de Economía que cuentan con los elementos humanos, materiales, económicos y tecnológicos requeridos para prestar el servicio."
+    },
+    {
+      "provision_ref": "art99",
+      "chapter": "TÍTULO SEGUNDO - Del Comercio Electrónico, CAPÍTULO III - De los Prestadores de Servicios de Certificación",
+      "section": "99",
+      "title": "Obligaciones de los prestadores de servicios de certificación",
+      "content": "Artículo 99.- Los Prestadores de Servicios de Certificación deberán: I. Verificar la identidad de los solicitantes y la autenticidad de la información que soporte la solicitud de certificado; II. Garantizar la seriedad de los certificados que expidan; III. Guardar confidencialidad respecto de la información que hayan recibido para la prestación del servicio de certificación; IV. Comunicar al firmante de manera clara la forma en que se protege la información contenida en el certificado; V. Contar con una página de Internet en la que se publiquen los certificados vigentes y revocados; VI. Llevar un registro de los certificados que emitan y de los que revoquen; VII. Conservar, por al menos quince años, la información relacionada con los certificados que expida."
+    },
+    {
+      "provision_ref": "art100",
+      "chapter": "TÍTULO SEGUNDO - Del Comercio Electrónico, CAPÍTULO III - De los Prestadores de Servicios de Certificación",
+      "section": "100",
+      "title": "Suspensión y revocación de certificados",
+      "content": "Artículo 100.- Los certificados se tendrán por revocados cuando: I. Lo solicite el firmante; II. Exista resolución judicial o administrativa que lo ordene; III. Fallezca el firmante; IV. La información contenida en el certificado sea inexacta o se hayan modificado las circunstancias verificadas en el momento de la expedición; V. Se compruebe que el certificado fue expedido sin verificar todos los requisitos."
+    },
+    {
+      "provision_ref": "art100bis",
+      "chapter": "TÍTULO SEGUNDO - Del Comercio Electrónico, CAPÍTULO III - De los Prestadores de Servicios de Certificación",
+      "section": "100 Bis",
+      "title": "Responsabilidad de los prestadores de servicios",
+      "content": "Artículo 100 bis.- Los Prestadores de Servicios de Certificación serán responsables de los daños y perjuicios causados a cualquier persona, derivados de: I. El incumplimiento de las obligaciones que les impone la presente Ley; II. La no revocación oportuna de un certificado; III. La emisión de certificados que contengan información inexacta."
+    },
+    {
+      "provision_ref": "art101",
+      "chapter": "TÍTULO SEGUNDO - Del Comercio Electrónico, CAPÍTULO IV - Del Reconocimiento de Certificados y Firmas Electrónicas Extranjeros",
+      "section": "101",
+      "title": "Reconocimiento de certificados extranjeros",
+      "content": "Artículo 101.- Los certificados expedidos en el extranjero producirán los mismos efectos jurídicos que un certificado expedido en territorio nacional, siempre que presenten un grado de fiabilidad equivalente."
+    },
+    {
+      "provision_ref": "art101bis",
+      "chapter": "TÍTULO SEGUNDO - Del Comercio Electrónico, CAPÍTULO IV - Del Reconocimiento de Certificados y Firmas Electrónicas Extranjeros",
+      "section": "101 Bis",
+      "title": "Determinación de equivalencia",
+      "content": "Artículo 101 bis.- Para determinar si un certificado o una Firma Electrónica expedidos en el extranjero producen efectos jurídicos o en qué medida los producen, no se tomará en consideración el lugar en que se haya expedido el certificado o en que se haya creado o utilizado la Firma Electrónica, ni el lugar en que se encuentre el establecimiento del Prestador de Servicios de Certificación o del Firmante."
+    },
+    {
+      "provision_ref": "art1205",
+      "chapter": "LIBRO QUINTO - De los Juicios Mercantiles, TÍTULO PRIMERO - De las Pruebas",
+      "section": "1205",
+      "title": "Valor probatorio de documentos electrónicos",
+      "content": "Artículo 1205.- Son admisibles como medios de prueba todos aquellos elementos que puedan producir convicción en el ánimo del juzgador acerca de los hechos controvertidos o dudosos y en consecuencia serán tomadas como pruebas las declaraciones de las partes, terceros, peritos, documentos públicos y privados, inspección judicial, fotografías, facsímiles, cintas cinematográficas, de videos, de sonido, mensajes de datos, reconstrucciones de hechos y en general cualquier otra similar u objeto que sirva para averiguar la verdad."
+    },
+    {
+      "provision_ref": "art1298a",
+      "chapter": "LIBRO QUINTO - De los Juicios Mercantiles, TÍTULO PRIMERO - De las Pruebas",
+      "section": "1298-A",
+      "title": "Prueba de mensajes de datos",
+      "content": "Artículo 1298-A.- Para valorar la fuerza probatoria de dichos mensajes de datos, se estimará primordialmente la fiabilidad del método en que haya sido generada, archivada, comunicada o conservada."
+    },
+    {
+      "provision_ref": "art18",
+      "chapter": "LIBRO PRIMERO - De los Comerciantes y del Comercio en General, TÍTULO SEGUNDO - De las Obligaciones Comunes a los Comerciantes",
+      "section": "18",
+      "title": "Inscripción en el Registro Público de Comercio",
+      "content": "Artículo 18.- En el Registro Público de Comercio se inscriben los actos mercantiles, así como aquellos que se relacionan con los comerciantes y que conforme a la legislación lo requieran. La operación del Registro Público de Comercio estará a cargo de la Secretaría de Economía, y se llevará en medios electrónicos."
+    },
+    {
+      "provision_ref": "art20",
+      "chapter": "LIBRO PRIMERO - De los Comerciantes y del Comercio en General, TÍTULO SEGUNDO - De las Obligaciones Comunes a los Comerciantes",
+      "section": "20",
+      "title": "Sistema Integral de Gestión Registral (SIGER)",
+      "content": "Artículo 20.- El Sistema Integral de Gestión Registral es la base de datos central del Registro Público de Comercio y contendrá la información relativa a las inscripciones de los actos mercantiles. Dicho sistema funcionará en medios electrónicos."
+    },
+    {
+      "provision_ref": "art20bis",
+      "chapter": "LIBRO PRIMERO - De los Comerciantes y del Comercio en General, TÍTULO SEGUNDO - De las Obligaciones Comunes a los Comerciantes",
+      "section": "20 Bis",
+      "title": "Firma electrónica para actos registrales",
+      "content": "Artículo 20 bis.- Los actos que se inscriban en el Registro Público de Comercio y que se realicen mediante mensajes de datos, deberán contener la Firma Electrónica Avanzada del solicitante o de los fedatarios públicos que los autoricen."
+    },
+    {
+      "provision_ref": "art21",
+      "chapter": "LIBRO PRIMERO - De los Comerciantes y del Comercio en General, TÍTULO SEGUNDO - De las Obligaciones Comunes a los Comerciantes",
+      "section": "21",
+      "title": "Inscripciones obligatorias",
+      "content": "Artículo 21.- Se inscribirán en el Registro Público de Comercio: I. Las escrituras constitutivas de sociedades mercantiles y sus reformas; II. Las actas de asambleas generales de accionistas que contengan modificaciones al capital social; III. Los poderes generales y sus revocaciones; IV. Los avisos de constitución de sociedades por acciones simplificadas."
+    },
+    {
+      "provision_ref": "art32bis",
+      "chapter": "LIBRO PRIMERO - De los Comerciantes y del Comercio en General, TÍTULO SEGUNDO - De las Obligaciones Comunes a los Comerciantes",
+      "section": "32 Bis",
+      "title": "Contabilidad electrónica",
+      "content": "Artículo 32 bis.- Los comerciantes podrán llevar su contabilidad en medios electrónicos conforme a las disposiciones que al efecto emita la Secretaría de Hacienda y Crédito Público."
+    },
+    {
+      "provision_ref": "art33",
+      "chapter": "LIBRO PRIMERO - De los Comerciantes y del Comercio en General, TÍTULO SEGUNDO - De las Obligaciones Comunes a los Comerciantes",
+      "section": "33",
+      "title": "Obligaciones contables",
+      "content": "Artículo 33.- El comerciante está obligado a llevar y mantener un sistema de contabilidad adecuado. Este sistema podrá llevarse mediante los instrumentos, recursos y sistemas de registro y procesamiento que mejor se acomoden a las características particulares del negocio, incluidos los medios electrónicos."
+    },
+    {
+      "provision_ref": "art46",
+      "chapter": "LIBRO PRIMERO - De los Comerciantes y del Comercio en General, TÍTULO SEGUNDO - De las Obligaciones Comunes a los Comerciantes",
+      "section": "46",
+      "title": "Conservación de documentación comercial",
+      "content": "Artículo 46.- Todo comerciante está obligado a conservar por un plazo mínimo de diez años los originales de aquellas cartas, telegramas, mensajes de datos o cualesquiera otros documentos en que se consignen contratos, convenios o compromisos que den nacimiento a derechos y obligaciones."
+    },
+    {
+      "provision_ref": "art49",
+      "chapter": "LIBRO PRIMERO - De los Comerciantes y del Comercio en General, TÍTULO SEGUNDO - De las Obligaciones Comunes a los Comerciantes",
+      "section": "49",
+      "title": "Medios de reproducción de documentos",
+      "content": "Artículo 49.- Los comerciantes están obligados a conservar debidamente archivados los comprobantes originales de sus operaciones, de tal manera que puedan relacionarse con dichas operaciones y con el registro que de ellas se haga, y a conservarlos por un plazo mínimo de diez años. Los documentos podrán conservarse mediante el uso de medios electrónicos, ópticos o de cualquier otra tecnología."
     }
   ],
   "definitions": [
@@ -75,7 +257,22 @@
     },
     {
       "term": "Firma Electrónica",
-      "definition": "Los datos en forma electrónica consignados en un Mensaje de Datos, o adjuntados o lógicamente asociados al mismo por cualquier tecnología, que son utilizados para identificar al Firmante en relación con el Mensaje de Datos e indicar que el Firmante aprueba la información contenida en el Mensaje de Datos.",
+      "definition": "Los datos en forma electrónica consignados en un Mensaje de Datos, o adjuntados o lógicamente asociados al mismo por cualquier tecnología, que son utilizados para identificar al Firmante y que producen los mismos efectos jurídicos que la firma autógrafa.",
+      "source_provision": "art89"
+    },
+    {
+      "term": "Firma Electrónica Avanzada o Fiable",
+      "definition": "Aquella Firma Electrónica que cumple con los requisitos de vinculación exclusiva al firmante, control exclusivo, detección de alteraciones de la firma y detección de alteraciones del contenido.",
+      "source_provision": "art97"
+    },
+    {
+      "term": "Prestador de Servicios de Certificación",
+      "definition": "La persona o institución pública que preste servicios relacionados con Firmas Electrónicas, incluyendo notarios públicos, corredores públicos y personas morales acreditadas.",
+      "source_provision": "art98"
+    },
+    {
+      "term": "Sistema de Información",
+      "definition": "Todo sistema utilizado para generar, enviar, recibir, archivar o procesar de alguna otra forma Mensajes de Datos.",
       "source_provision": "art89"
     }
   ]

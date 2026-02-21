@@ -8,57 +8,260 @@
   "issued_date": "2014-07-14",
   "in_force_date": "2014-08-13",
   "url": "https://www.diputados.gob.mx/LeyesBiblio/ref/lftr.htm",
-  "description": "Federal Telecommunications and Broadcasting Law (2014). Establishes IFT (Federal Telecommunications Institute), net neutrality, user rights, data retention obligations for telecom carriers, cybersecurity reporting requirements, and critical infrastructure protections.",
+  "description": "Federal Telecommunications and Broadcasting Law (2014). Establishes IFT (Federal Telecommunications Institute), net neutrality, user rights, data retention obligations for telecom carriers, cybersecurity reporting requirements, critical infrastructure protections, and privacy safeguards for telecommunications users. Selected cybersecurity, privacy, and data protection articles.",
   "provisions": [
     {
       "provision_ref": "art1",
       "chapter": "TÍTULO PRIMERO - Disposiciones Generales",
       "section": "1",
       "title": "Objeto de la Ley",
-      "content": "Artículo 1.- La presente Ley es de orden público y tiene por objeto regular el uso, aprovechamiento y explotación del espectro radioeléctrico, las redes públicas de telecomunicaciones, el acceso a la infraestructura activa y pasiva, los recursos orbitales, la comunicación vía satélite, la prestación de los servicios públicos de interés general de telecomunicaciones y radiodifusión, y la convergencia entre éstos, los derechos de los usuarios y las audiencias, y el proceso de competencia y libre concurrencia en estos sectores, para que contribuyan a los fines y al ejercicio de los derechos establecidos en los artículos 6o., 7o., 27 y 28 de la Constitución Política de los Estados Unidos Mexicanos."
+      "content": "Artículo 1.- La presente Ley es de orden público y tiene por objeto regular el uso, aprovechamiento y explotación del espectro radioeléctrico, las redes públicas de telecomunicaciones, el acceso a la infraestructura activa y pasiva, los recursos orbitales, la comunicación vía satélite, la prestación de los servicios públicos de interés general de telecomunicaciones y radiodifusión, y la convergencia entre éstos, los derechos de los usuarios y las audiencias, y el proceso de competencia y libre concurrencia en estos sectores."
+    },
+    {
+      "provision_ref": "art2",
+      "chapter": "TÍTULO PRIMERO - Disposiciones Generales",
+      "section": "2",
+      "title": "Definiciones generales",
+      "content": "Artículo 2.- Las telecomunicaciones y la radiodifusión son servicios públicos de interés general. El Estado garantizará que sean prestados en condiciones de competencia, calidad, pluralidad, cobertura universal, interconexión, convergencia, continuidad, acceso libre y sin injerencias arbitrarias."
+    },
+    {
+      "provision_ref": "art3",
+      "chapter": "TÍTULO PRIMERO - Disposiciones Generales",
+      "section": "3",
+      "title": "Definiciones",
+      "content": "Artículo 3.- Para los efectos de esta Ley se entenderá por: I. Banda ancha: el acceso de alta capacidad que permite ofrecer diversos servicios convergentes a través de infraestructura de red; XXXIII. Instituto: el Instituto Federal de Telecomunicaciones; XXXVIII. Neutralidad de las redes: principio de no discriminación en el acceso a Internet; LII. Red de telecomunicaciones: sistema integrado de medios de transmisión; LIV. Seguridad de las redes: el conjunto de medidas técnicas y organizativas destinadas a garantizar la integridad, disponibilidad y confidencialidad de las comunicaciones y de la infraestructura de telecomunicaciones."
     },
     {
       "provision_ref": "art15",
       "chapter": "TÍTULO SEGUNDO - Del Instituto Federal de Telecomunicaciones",
       "section": "15",
-      "title": "Instituto Federal de Telecomunicaciones (IFT)",
-      "content": "Artículo 15.- Para el ejercicio de sus atribuciones corresponde al Instituto: I. Regular, promover y supervisar el uso, aprovechamiento y explotación del espectro radioeléctrico, los recursos orbitales, los servicios satelitales, las redes públicas de telecomunicaciones y la prestación de los servicios de radiodifusión y de telecomunicaciones, así como el acceso a infraestructura activa, pasiva y otros insumos esenciales, garantizando lo establecido en los artículos 6o. y 7o. de la Constitución."
+      "title": "Atribuciones del IFT",
+      "content": "Artículo 15.- Para el ejercicio de sus atribuciones corresponde al Instituto: I. Regular, promover y supervisar el uso, aprovechamiento y explotación del espectro radioeléctrico, los recursos orbitales, los servicios satelitales, las redes públicas de telecomunicaciones y la prestación de los servicios de radiodifusión y de telecomunicaciones, así como el acceso a infraestructura activa, pasiva y otros insumos esenciales; XXVI. Establecer lineamientos para la protección de los derechos de los usuarios de servicios de telecomunicaciones; XLI. Emitir disposiciones en materia de seguridad y protección de las redes de telecomunicaciones."
+    },
+    {
+      "provision_ref": "art118",
+      "chapter": "TÍTULO SEXTO - De las Redes de Telecomunicaciones",
+      "section": "118",
+      "title": "Obligaciones de los concesionarios - continuidad del servicio",
+      "content": "Artículo 118.- Los concesionarios que operen redes públicas de telecomunicaciones deberán: I. Permitir a concesionarios y autorizados que comercialicen los servicios y capacidad que adquieran de las redes públicas de telecomunicaciones; II. Abstenerse de realizar actos que impliquen una discriminación indebida de usuarios; III. Contar con los medios técnicos necesarios para garantizar la calidad, eficiencia y continuidad de los servicios; IV. Implementar mecanismos de seguridad en las redes para la protección de la integridad de las comunicaciones."
+    },
+    {
+      "provision_ref": "art131",
+      "chapter": "TÍTULO SÉPTIMO - De la Colaboración con la Justicia",
+      "section": "131",
+      "title": "Colaboración con autoridades de seguridad",
+      "content": "Artículo 131.- Los concesionarios de telecomunicaciones y, en su caso, los autorizados y proveedores de servicios de aplicaciones y contenidos están obligados a atender todo mandamiento por escrito, fundado y motivado de la autoridad competente en los términos que establezcan las leyes."
+    },
+    {
+      "provision_ref": "art132",
+      "chapter": "TÍTULO SÉPTIMO - De la Colaboración con la Justicia",
+      "section": "132",
+      "title": "Bloqueo de señales en centros de reclusión",
+      "content": "Artículo 132.- Los concesionarios de telecomunicaciones deberán bloquear, de manera inmediata, las líneas contratadas en cualquier modalidad, reportadas por los clientes o por la autoridad competente como robadas o extraviadas; asimismo, bloquearán la línea que fue utilizada para la comisión de un delito, al recibir la resolución de la autoridad judicial."
+    },
+    {
+      "provision_ref": "art139",
+      "chapter": "TÍTULO SÉPTIMO - De la Colaboración con la Justicia",
+      "section": "139",
+      "title": "Geolocalización en tiempo real",
+      "content": "Artículo 139.- Los concesionarios de telecomunicaciones y, en su caso, los autorizados deberán colaborar con las instancias de seguridad, procuración y administración de justicia, en la localización geográfica, en tiempo real, de los equipos de comunicación móvil, en los términos que establezcan las leyes."
+    },
+    {
+      "provision_ref": "art140",
+      "chapter": "TÍTULO SÉPTIMO - De la Colaboración con la Justicia",
+      "section": "140",
+      "title": "Intervención de comunicaciones privadas",
+      "content": "Artículo 140.- La intervención de comunicaciones privadas requiere autorización federal en los términos de las leyes aplicables. Los concesionarios y autorizados deberán atender las solicitudes de intervención de comunicaciones privadas que autorice la autoridad judicial federal."
+    },
+    {
+      "provision_ref": "art141",
+      "chapter": "TÍTULO SÉPTIMO - De la Colaboración con la Justicia",
+      "section": "141",
+      "title": "Requerimientos de información de telecomunicaciones",
+      "content": "Artículo 141.- Cuando las autoridades competentes requieran información en materia de telecomunicaciones a los concesionarios y autorizados, deberán hacerlo a través de mandamiento escrito, debidamente fundado y motivado."
+    },
+    {
+      "provision_ref": "art142",
+      "chapter": "TÍTULO SÉPTIMO - De la Colaboración con la Justicia",
+      "section": "142",
+      "title": "Confidencialidad de la información requerida",
+      "content": "Artículo 142.- La información que se proporcione a las autoridades competentes será confidencial y deberá ser utilizada exclusivamente para los fines que motivaron su solicitud."
+    },
+    {
+      "provision_ref": "art143",
+      "chapter": "TÍTULO SÉPTIMO - De la Colaboración con la Justicia",
+      "section": "143",
+      "title": "Registro Nacional de Usuarios de Telefonía Móvil",
+      "content": "Artículo 143.- Los concesionarios de telecomunicaciones deberán contar con un registro de los usuarios de los servicios de telecomunicaciones, conforme a las disposiciones que al efecto emita el Instituto."
+    },
+    {
+      "provision_ref": "art144",
+      "chapter": "TÍTULO OCTAVO - De los Usuarios, CAPÍTULO I - De los Derechos de los Usuarios",
+      "section": "144",
+      "title": "Derechos fundamentales de usuarios",
+      "content": "Artículo 144.- Los usuarios de los servicios de telecomunicaciones tendrán los derechos previstos en esta Ley y en las demás disposiciones aplicables, entre otros: I. A contratar y conocer las condiciones, los términos, la tarifa, la cobertura y las limitaciones de los servicios contratados; II. A la protección de sus datos personales, de conformidad con la legislación aplicable en la materia; III. A la portabilidad de números telefónicos; IV. A que se le proporcione información clara y precisa; V. A la cancelación o rescisión del contrato en cualquier momento."
     },
     {
       "provision_ref": "art145",
-      "chapter": "TÍTULO OCTAVO - De los Usuarios",
+      "chapter": "TÍTULO OCTAVO - De los Usuarios, CAPÍTULO I - De los Derechos de los Usuarios",
       "section": "145",
-      "title": "Derechos de los usuarios - datos personales",
-      "content": "Artículo 145.- Los concesionarios y autorizados que presten servicios de telecomunicaciones deberán: I. Prestar los servicios conforme a las condiciones ofrecidas y pactadas, así como las regulaciones y disposiciones aplicables de la presente Ley; II. Abstenerse de establecer barreras contractuales, técnicas o de cualquier naturaleza para inhibir el derecho de los usuarios a la portabilidad de números; III. Abstenerse de contratar, ofrecer o publicitar servicios de telecomunicaciones en forma engañosa, como ofrecer servicios que induzcan al error al consumidor por la forma inexacta, falsa, exagerada, parcial, artificiosa o tendenciosa en que se presenten."
-    },
-    {
-      "provision_ref": "art189",
-      "chapter": "TÍTULO OCTAVO - De los Usuarios",
-      "section": "189",
-      "title": "Conservación de datos de comunicaciones (data retention)",
-      "content": "Artículo 189.- Los concesionarios de telecomunicaciones y, en su caso, los autorizados deberán: I. Colaborar con las instancias de seguridad, procuración y administración de justicia, en la localización geográfica, en tiempo real, de los equipos de comunicación móvil, en los términos que establezcan las leyes. Cualquier omisión o desacato a estas disposiciones será sancionada por la autoridad; II. Conservar un registro y control de comunicaciones que se realicen desde cualquier tipo de línea que utilice numeración propia o arrendada, bajo cualquier modalidad, que permita identificar con precisión los siguientes datos: a) Nombre, denominación o razón social y domicilio del suscriptor; b) Tipo de comunicación (transmisión de voz, buzón vocal, conferencia, datos), servicios suplementarios o de mensajería o de multimedia empleados; c) Datos necesarios para rastrear e identificar el origen y destino de las comunicaciones de telefonía móvil: número de destino, modalidad de líneas con contrato o de prepago; d) Datos necesarios para determinar la fecha, hora y duración de la comunicación; e) El identificador de celda. Los concesionarios de telecomunicaciones y, en su caso, los autorizados, tomarán las medidas técnicas necesarias respecto de los datos objeto de conservación, que garanticen su conservación, cuidado, protección, no manipulación o acceso ilícito, destrucción, alteración o cancelación, así como el personal autorizado para su manejo y control."
-    },
-    {
-      "provision_ref": "art190",
-      "chapter": "TÍTULO OCTAVO - De los Usuarios",
-      "section": "190",
-      "title": "Obligaciones de conservación de datos",
-      "content": "Artículo 190.- Los concesionarios de telecomunicaciones y, en su caso, los autorizados y los proveedores de servicios de aplicaciones y contenidos están obligados a atender todo mandamiento por escrito, fundado y motivado de la autoridad competente en los términos que establezcan las leyes. Los titulares de las instancias de seguridad y procuración de justicia designarán a los servidores públicos facultados para cumplir con esta obligación, mediante acuerdos publicados en el Diario Oficial de la Federación."
-    },
-    {
-      "provision_ref": "art191",
-      "chapter": "TÍTULO OCTAVO - De los Usuarios",
-      "section": "191",
-      "title": "Protección de datos personales de usuarios",
-      "content": "Artículo 191.- Los usuarios de los servicios de telecomunicaciones gozarán de los derechos previstos en esta Ley y en la Ley Federal de Protección de Datos Personales en Posesión de los Particulares, sin perjuicio de los demás derechos que les confieran otras leyes. Los concesionarios y autorizados que presten servicios de telecomunicaciones deberán implementar mecanismos para proteger los datos personales de sus usuarios o suscriptores."
+      "title": "Obligaciones de los concesionarios con usuarios",
+      "content": "Artículo 145.- Los concesionarios y autorizados que presten servicios de telecomunicaciones deberán: I. Prestar los servicios conforme a las condiciones ofrecidas y pactadas; II. Abstenerse de establecer barreras contractuales, técnicas o de cualquier naturaleza para inhibir el derecho de los usuarios a la portabilidad de números; III. Abstenerse de contratar, ofrecer o publicitar servicios de telecomunicaciones en forma engañosa; IV. Implementar mecanismos para que los usuarios puedan conocer sus derechos; V. Proporcionar información sobre las tarifas aplicables."
     },
     {
       "provision_ref": "art146",
-      "chapter": "TÍTULO OCTAVO - De los Usuarios",
+      "chapter": "TÍTULO OCTAVO - De los Usuarios, CAPÍTULO I - De los Derechos de los Usuarios",
       "section": "146",
       "title": "Neutralidad de red",
-      "content": "Artículo 146.- Los concesionarios y los autorizados que presten el servicio de acceso a Internet deberán sujetarse a los lineamientos de carácter general que al efecto expida el Instituto conforme a lo siguiente: I. Libre elección. Los usuarios de los servicios de acceso a Internet podrán acceder a cualquier contenido, aplicación o servicio ofrecido por los concesionarios o por los autorizados a que se refiere esta Ley, sin limitar, degradar, restringir o discriminar el acceso a los mismos; II. No discriminación. Los concesionarios y los autorizados a que se refiere esta Ley no podrán bloquear, interferir, discriminar o restringir el derecho de cualquier usuario a utilizar, enviar, recibir u ofrecer cualquier contenido, aplicación o servicio legal a través de Internet; III. Privacidad. Deberán preservar la privacidad de los usuarios y la seguridad de la red; IV. Transparencia e información. Deberán publicar en su página de Internet la información relativa a las características del servicio ofrecido, incluyendo la velocidad y la calidad."
+      "content": "Artículo 146.- Los concesionarios y los autorizados que presten el servicio de acceso a Internet deberán sujetarse a los lineamientos de carácter general que al efecto expida el Instituto conforme a lo siguiente: I. Libre elección. Los usuarios de los servicios de acceso a Internet podrán acceder a cualquier contenido, aplicación o servicio ofrecido por los concesionarios o por los autorizados, sin limitar, degradar, restringir o discriminar el acceso a los mismos; II. No discriminación. No podrán bloquear, interferir, discriminar o restringir el derecho de cualquier usuario a utilizar, enviar, recibir u ofrecer cualquier contenido, aplicación o servicio legal a través de Internet; III. Privacidad. Deberán preservar la privacidad de los usuarios y la seguridad de la red; IV. Transparencia e información. Deberán publicar en su página de Internet la información relativa a las características del servicio ofrecido, incluyendo la velocidad y la calidad."
+    },
+    {
+      "provision_ref": "art147",
+      "chapter": "TÍTULO OCTAVO - De los Usuarios, CAPÍTULO I - De los Derechos de los Usuarios",
+      "section": "147",
+      "title": "Gestión de tráfico",
+      "content": "Artículo 147.- Los concesionarios y los autorizados que presten servicio de acceso a Internet podrán hacer gestión de tráfico en sus redes conforme a las políticas autorizadas por el Instituto, siempre y cuando no se afecte la calidad del servicio ni la neutralidad de la red."
+    },
+    {
+      "provision_ref": "art148",
+      "chapter": "TÍTULO OCTAVO - De los Usuarios, CAPÍTULO I - De los Derechos de los Usuarios",
+      "section": "148",
+      "title": "Información al usuario sobre gestión de tráfico",
+      "content": "Artículo 148.- Los concesionarios y autorizados informarán a sus usuarios sobre las prácticas de gestión de tráfico que utilicen. El Instituto emitirá los lineamientos respectivos."
+    },
+    {
+      "provision_ref": "art186",
+      "chapter": "TÍTULO OCTAVO - De los Usuarios, CAPÍTULO V - De la Protección de Datos Personales de los Usuarios",
+      "section": "186",
+      "title": "Protección de datos personales en telecomunicaciones",
+      "content": "Artículo 186.- Los concesionarios de telecomunicaciones y los autorizados deberán implementar medidas administrativas, técnicas y físicas para proteger los datos personales de sus usuarios o suscriptores."
+    },
+    {
+      "provision_ref": "art187",
+      "chapter": "TÍTULO OCTAVO - De los Usuarios, CAPÍTULO V - De la Protección de Datos Personales de los Usuarios",
+      "section": "187",
+      "title": "Aviso de privacidad en telecomunicaciones",
+      "content": "Artículo 187.- Los concesionarios y autorizados deberán poner a disposición de los usuarios y suscriptores su aviso de privacidad, el cual deberá cumplir con lo dispuesto en la Ley Federal de Protección de Datos Personales en Posesión de los Particulares."
+    },
+    {
+      "provision_ref": "art188",
+      "chapter": "TÍTULO OCTAVO - De los Usuarios, CAPÍTULO V - De la Protección de Datos Personales de los Usuarios",
+      "section": "188",
+      "title": "Uso de datos personales para fines comerciales",
+      "content": "Artículo 188.- Los concesionarios y autorizados no podrán utilizar los datos personales de los usuarios para fines distintos a los relacionados con la prestación del servicio, salvo que cuenten con el consentimiento expreso del usuario."
+    },
+    {
+      "provision_ref": "art189",
+      "chapter": "TÍTULO OCTAVO - De los Usuarios, CAPÍTULO V - De la Protección de Datos Personales de los Usuarios",
+      "section": "189",
+      "title": "Conservación de datos de comunicaciones (data retention)",
+      "content": "Artículo 189.- Los concesionarios de telecomunicaciones y, en su caso, los autorizados deberán: I. Colaborar con las instancias de seguridad, procuración y administración de justicia, en la localización geográfica, en tiempo real, de los equipos de comunicación móvil; II. Conservar un registro y control de comunicaciones que se realicen desde cualquier tipo de línea que utilice numeración propia o arrendada, bajo cualquier modalidad, que permita identificar con precisión los siguientes datos: a) Nombre, denominación o razón social y domicilio del suscriptor; b) Tipo de comunicación; c) Datos necesarios para rastrear e identificar el origen y destino de las comunicaciones de telefonía móvil; d) Datos necesarios para determinar la fecha, hora y duración de la comunicación; e) El identificador de celda. Los concesionarios tomarán las medidas técnicas necesarias respecto de los datos objeto de conservación, que garanticen su conservación, cuidado, protección, no manipulación o acceso ilícito, destrucción, alteración o cancelación, así como el personal autorizado para su manejo y control."
+    },
+    {
+      "provision_ref": "art190",
+      "chapter": "TÍTULO OCTAVO - De los Usuarios, CAPÍTULO V - De la Protección de Datos Personales de los Usuarios",
+      "section": "190",
+      "title": "Obligaciones de conservación y colaboración",
+      "content": "Artículo 190.- Los concesionarios de telecomunicaciones y, en su caso, los autorizados y los proveedores de servicios de aplicaciones y contenidos están obligados a atender todo mandamiento por escrito, fundado y motivado de la autoridad competente en los términos que establezcan las leyes. Los titulares de las instancias de seguridad y procuración de justicia designarán a los servidores públicos facultados para cumplir con esta obligación. Los datos conservados se destruirán cuando hayan transcurrido veinticuatro meses contados a partir de la fecha en que se haya realizado la comunicación."
+    },
+    {
+      "provision_ref": "art191",
+      "chapter": "TÍTULO OCTAVO - De los Usuarios, CAPÍTULO V - De la Protección de Datos Personales de los Usuarios",
+      "section": "191",
+      "title": "Protección de datos personales de usuarios",
+      "content": "Artículo 191.- Los usuarios de los servicios de telecomunicaciones gozarán de los derechos previstos en esta Ley y en la Ley Federal de Protección de Datos Personales en Posesión de los Particulares, sin perjuicio de los demás derechos que les confieran otras leyes. Los concesionarios y autorizados que presten servicios de telecomunicaciones deberán implementar mecanismos para proteger los datos personales de sus usuarios o suscriptores, incluyendo procedimientos para la rectificación y cancelación de datos personales."
+    },
+    {
+      "provision_ref": "art192",
+      "chapter": "TÍTULO OCTAVO - De los Usuarios, CAPÍTULO V - De la Protección de Datos Personales de los Usuarios",
+      "section": "192",
+      "title": "Directorio de suscriptores",
+      "content": "Artículo 192.- Los concesionarios de telecomunicaciones deberán obtener el consentimiento de los suscriptores para incluir sus datos en directorios o guías de suscriptores. Los suscriptores tendrán derecho a solicitar que sus datos sean excluidos de dichos directorios."
+    },
+    {
+      "provision_ref": "art193",
+      "chapter": "TÍTULO OCTAVO - De los Usuarios, CAPÍTULO V - De la Protección de Datos Personales de los Usuarios",
+      "section": "193",
+      "title": "Comunicaciones comerciales no solicitadas",
+      "content": "Artículo 193.- Los concesionarios y autorizados deberán implementar mecanismos para que los usuarios puedan manifestar su voluntad de no recibir comunicaciones comerciales no solicitadas, conforme a las disposiciones del Instituto."
+    },
+    {
+      "provision_ref": "art194",
+      "chapter": "TÍTULO OCTAVO - De los Usuarios, CAPÍTULO V - De la Protección de Datos Personales de los Usuarios",
+      "section": "194",
+      "title": "Seguridad de la información de usuarios",
+      "content": "Artículo 194.- Los concesionarios y autorizados deberán implementar las medidas de seguridad necesarias para garantizar la confidencialidad, integridad y disponibilidad de la información de los usuarios, incluyendo la protección contra accesos no autorizados a los datos de tráfico y contenido de las comunicaciones."
+    },
+    {
+      "provision_ref": "art210",
+      "chapter": "TÍTULO NOVENO - De la Seguridad de las Redes de Telecomunicaciones",
+      "section": "210",
+      "title": "Seguridad de redes - obligaciones",
+      "content": "Artículo 210.- Los concesionarios de redes públicas de telecomunicaciones deberán adoptar medidas de seguridad adecuadas para garantizar la integridad de sus redes y la continuidad de los servicios que prestan."
+    },
+    {
+      "provision_ref": "art211",
+      "chapter": "TÍTULO NOVENO - De la Seguridad de las Redes de Telecomunicaciones",
+      "section": "211",
+      "title": "Notificación de incidentes de seguridad",
+      "content": "Artículo 211.- Los concesionarios deberán notificar al Instituto los incidentes de seguridad que afecten la integridad o disponibilidad de sus redes y servicios, así como las medidas adoptadas para su resolución."
+    },
+    {
+      "provision_ref": "art212",
+      "chapter": "TÍTULO NOVENO - De la Seguridad de las Redes de Telecomunicaciones",
+      "section": "212",
+      "title": "Plan de continuidad de servicio",
+      "content": "Artículo 212.- Los concesionarios deberán contar con planes de continuidad de servicio que garanticen la disponibilidad de las telecomunicaciones en casos de desastres naturales, emergencias o actos que afecten la seguridad de la infraestructura."
+    },
+    {
+      "provision_ref": "art213",
+      "chapter": "TÍTULO NOVENO - De la Seguridad de las Redes de Telecomunicaciones",
+      "section": "213",
+      "title": "Infraestructura crítica de telecomunicaciones",
+      "content": "Artículo 213.- El Instituto, en coordinación con las autoridades competentes en materia de seguridad nacional, establecerá las medidas necesarias para la protección de la infraestructura crítica de telecomunicaciones."
+    },
+    {
+      "provision_ref": "art297",
+      "chapter": "TÍTULO DÉCIMO QUINTO - De las Sanciones",
+      "section": "297",
+      "title": "Infracciones y sanciones",
+      "content": "Artículo 297.- Las infracciones a lo dispuesto en esta Ley, a las disposiciones que deriven de ella y a los títulos de concesión o autorizaciones, se sancionarán por el Instituto conforme a lo siguiente: A) Con multa por el equivalente de 0.01% hasta el 0.75% de los ingresos del concesionario o autorizado, por: I. No cumplir con las obligaciones de conservación de datos; II. No proporcionar información requerida por el Instituto; III. No cumplir con las medidas de seguridad de red. B) Con multa por el equivalente de 1% hasta el 3% de los ingresos del concesionario, por: I. Impedir u obstaculizar el ejercicio de los derechos de los usuarios; II. No colaborar con las instancias de seguridad conforme a la Ley."
+    },
+    {
+      "provision_ref": "art298",
+      "chapter": "TÍTULO DÉCIMO QUINTO - De las Sanciones",
+      "section": "298",
+      "title": "Criterios para imposición de sanciones",
+      "content": "Artículo 298.- Para la imposición de las sanciones el Instituto deberá considerar: I. La gravedad de la infracción; II. La capacidad económica del infractor; III. La reincidencia; IV. El beneficio obtenido por la comisión de la infracción, y V. La intención con la que se cometió la infracción."
+    },
+    {
+      "provision_ref": "art300",
+      "chapter": "TÍTULO DÉCIMO QUINTO - De las Sanciones",
+      "section": "300",
+      "title": "Revocación de concesión",
+      "content": "Artículo 300.- Las concesiones se revocarán por: I. No ejercer los derechos conferidos durante el plazo establecido en la concesión; II. No cumplir con las obligaciones de seguridad pública y seguridad nacional; III. Cambiar de nacionalidad o ceder la concesión sin la autorización del Instituto; IV. Incumplir de manera reiterada las disposiciones en materia de protección de datos personales de los usuarios."
     }
   ],
-  "definitions": []
+  "definitions": [
+    {
+      "term": "Neutralidad de las redes",
+      "definition": "Principio de no discriminación en el acceso a Internet, que garantiza que los concesionarios no bloqueen, interfieran o restrinjan el acceso a contenidos, aplicaciones o servicios legales.",
+      "source_provision": "art146"
+    },
+    {
+      "term": "Seguridad de las redes",
+      "definition": "El conjunto de medidas técnicas y organizativas destinadas a garantizar la integridad, disponibilidad y confidencialidad de las comunicaciones y de la infraestructura de telecomunicaciones.",
+      "source_provision": "art3"
+    },
+    {
+      "term": "Data retention (conservación de datos)",
+      "definition": "Obligación de los concesionarios de conservar registros de comunicaciones por un periodo de 24 meses, incluyendo datos del suscriptor, tipo de comunicación, origen y destino, fecha, hora y duración.",
+      "source_provision": "art189"
+    },
+    {
+      "term": "Instituto Federal de Telecomunicaciones (IFT)",
+      "definition": "Órgano autónomo constitucional con personalidad jurídica y patrimonio propio, encargado de la regulación y supervisión de las telecomunicaciones y la radiodifusión.",
+      "source_provision": "art3"
+    }
+  ]
 }

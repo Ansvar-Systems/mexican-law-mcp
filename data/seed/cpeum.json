@@ -8,71 +8,174 @@
   "issued_date": "1917-02-05",
   "in_force_date": "1917-05-01",
   "url": "https://www.diputados.gob.mx/LeyesBiblio/ref/cpeum.htm",
-  "description": "Constitution of Mexico (1917). Article 6 establishes the right to information and creates INAI. Article 16 establishes the fundamental right to privacy and data protection. Article 73 grants Congress power to legislate on data protection.",
+  "description": "Constitution of Mexico (1917, continuously amended). Article 6 establishes the right to information, creates INAI, and guarantees data protection in the public sector. Article 16 establishes the fundamental right to privacy and data protection. Article 28 creates IFT. Article 73 grants Congress power to legislate on data protection. Selected articles on privacy, data protection, telecommunications, digital rights, and rule of law.",
   "provisions": [
     {
       "provision_ref": "art1",
-      "chapter": "TÍTULO PRIMERO - De los Derechos Humanos y sus Garantías",
+      "chapter": "TÍTULO PRIMERO - De los Derechos Humanos y sus Garantías, CAPÍTULO I",
       "section": "1",
       "title": "Derechos humanos y garantías",
-      "content": "Artículo 1o.- En los Estados Unidos Mexicanos todas las personas gozarán de los derechos humanos reconocidos en esta Constitución y en los tratados internacionales de los que el Estado Mexicano sea parte, así como de las garantías para su protección, cuyo ejercicio no podrá restringirse ni suspenderse, salvo en los casos y bajo las condiciones que esta Constitución establece. Las normas relativas a los derechos humanos se interpretarán de conformidad con esta Constitución y con los tratados internacionales de la materia favoreciendo en todo tiempo a las personas la protección más amplia. Todas las autoridades, en el ámbito de sus competencias, tienen la obligación de promover, respetar, proteger y garantizar los derechos humanos de conformidad con los principios de universalidad, interdependencia, indivisibilidad y progresividad."
+      "content": "Artículo 1o.- En los Estados Unidos Mexicanos todas las personas gozarán de los derechos humanos reconocidos en esta Constitución y en los tratados internacionales de los que el Estado Mexicano sea parte, así como de las garantías para su protección, cuyo ejercicio no podrá restringirse ni suspenderse, salvo en los casos y bajo las condiciones que esta Constitución establece. Las normas relativas a los derechos humanos se interpretarán de conformidad con esta Constitución y con los tratados internacionales de la materia favoreciendo en todo tiempo a las personas la protección más amplia. Todas las autoridades, en el ámbito de sus competencias, tienen la obligación de promover, respetar, proteger y garantizar los derechos humanos de conformidad con los principios de universalidad, interdependencia, indivisibilidad y progresividad. En consecuencia, el Estado deberá prevenir, investigar, sancionar y reparar las violaciones a los derechos humanos, en los términos que establezca la ley."
     },
     {
       "provision_ref": "art6",
-      "chapter": "TÍTULO PRIMERO - De los Derechos Humanos y sus Garantías",
+      "chapter": "TÍTULO PRIMERO - De los Derechos Humanos y sus Garantías, CAPÍTULO I",
       "section": "6",
-      "title": "Derecho a la información y transparencia",
-      "content": "Artículo 6o.- La manifestación de las ideas no será objeto de ninguna inquisición judicial o administrativa, sino en el caso de que ataque a la moral, la vida privada o los derechos de terceros, provoque algún delito, o perturbe el orden público; el derecho de réplica será ejercido en los términos dispuestos por la ley. El derecho a la información será garantizado por el Estado. Toda persona tiene derecho al libre acceso a información plural y oportuna, así como a buscar, recibir y difundir información e ideas de toda índole por cualquier medio de expresión. A. Para el ejercicio del derecho de acceso a la información, la Federación y las entidades federativas, en el ámbito de sus respectivas competencias, se regirán por los siguientes principios y bases: VIII. La Federación contará con un organismo autónomo, especializado, imparcial, colegiado, con personalidad jurídica y patrimonio propio, con plena autonomía técnica, de gestión, capacidad para decidir sobre el ejercicio de su presupuesto y determinar su organización interna, responsable de garantizar el cumplimiento del derecho de acceso a la información pública y a la protección de datos personales en posesión de los sujetos obligados en los términos que establezca la ley."
+      "title": "Derecho a la información, transparencia y protección de datos personales",
+      "content": "Artículo 6o.- La manifestación de las ideas no será objeto de ninguna inquisición judicial o administrativa, sino en el caso de que ataque a la moral, la vida privada o los derechos de terceros, provoque algún delito, o perturbe el orden público; el derecho de réplica será ejercido en los términos dispuestos por la ley. El derecho a la información será garantizado por el Estado. Toda persona tiene derecho al libre acceso a información plural y oportuna, así como a buscar, recibir y difundir información e ideas de toda índole por cualquier medio de expresión. El Estado garantizará el derecho de acceso a las tecnologías de la información y comunicación, así como a los servicios de radiodifusión y telecomunicaciones, incluido el de banda ancha e internet. A. Para el ejercicio del derecho de acceso a la información, la Federación y las entidades federativas se regirán por los siguientes principios y bases: I. Toda la información en posesión de cualquier autoridad, entidad, órgano y organismo es pública; II. La información que se refiere a la vida privada y los datos personales será protegida en los términos y con las excepciones que fijen las leyes; III. Toda persona, sin necesidad de acreditar interés alguno o justificar su utilización, tendrá acceso gratuito a la información pública; VIII. La Federación contará con un organismo autónomo, especializado, imparcial, colegiado, con personalidad jurídica y patrimonio propio, con plena autonomía técnica, de gestión, capacidad para decidir sobre el ejercicio de su presupuesto y determinar su organización interna, responsable de garantizar el cumplimiento del derecho de acceso a la información pública y a la protección de datos personales en posesión de los sujetos obligados en los términos que establezca la ley. B. En materia de radiodifusión y telecomunicaciones: I. El Estado garantizará a la población su integración a la sociedad de la información y el conocimiento, mediante una política de inclusión digital universal."
+    },
+    {
+      "provision_ref": "art7",
+      "chapter": "TÍTULO PRIMERO - De los Derechos Humanos y sus Garantías, CAPÍTULO I",
+      "section": "7",
+      "title": "Libertad de expresión y prensa",
+      "content": "Artículo 7o.- Es inviolable la libertad de difundir opiniones, información e ideas, a través de cualquier medio. No se puede restringir este derecho por vías o medios indirectos, tales como el abuso de controles oficiales o particulares, de papel para periódicos, de frecuencias radioeléctricas o de enseres y aparatos usados en la difusión de información o por cualesquiera otros medios y tecnologías de la información y comunicación encaminados a impedir la transmisión y circulación de ideas y opiniones."
+    },
+    {
+      "provision_ref": "art8",
+      "chapter": "TÍTULO PRIMERO - De los Derechos Humanos y sus Garantías, CAPÍTULO I",
+      "section": "8",
+      "title": "Derecho de petición",
+      "content": "Artículo 8o.- Los funcionarios y empleados públicos respetarán el ejercicio del derecho de petición, siempre que ésta se formule por escrito, de manera pacífica y respetuosa; pero en materia política sólo podrán hacer uso de ese derecho los ciudadanos de la República. A toda petición deberá recaer un acuerdo escrito de la autoridad a quien se haya dirigido, la cual tiene obligación de hacerlo conocer en breve término al peticionario."
     },
     {
       "provision_ref": "art14",
-      "chapter": "TÍTULO PRIMERO - De los Derechos Humanos y sus Garantías",
+      "chapter": "TÍTULO PRIMERO - De los Derechos Humanos y sus Garantías, CAPÍTULO I",
       "section": "14",
-      "title": "Debido proceso",
-      "content": "Artículo 14.- A ninguna ley se dará efecto retroactivo en perjuicio de persona alguna. Nadie podrá ser privado de la libertad o de sus propiedades, posesiones o derechos, sino mediante juicio seguido ante los tribunales previamente establecidos, en el que se cumplan las formalidades esenciales del procedimiento y conforme a las Leyes expedidas con anterioridad al hecho."
+      "title": "Debido proceso y no retroactividad",
+      "content": "Artículo 14.- A ninguna ley se dará efecto retroactivo en perjuicio de persona alguna. Nadie podrá ser privado de la libertad o de sus propiedades, posesiones o derechos, sino mediante juicio seguido ante los tribunales previamente establecidos, en el que se cumplan las formalidades esenciales del procedimiento y conforme a las Leyes expedidas con anterioridad al hecho. En los juicios del orden criminal queda prohibido imponer, por simple analogía, y aún por mayoría de razón, pena alguna que no esté decretada por una ley exactamente aplicable al delito de que se trata. En los juicios del orden civil, la sentencia definitiva deberá ser conforme a la letra o a la interpretación jurídica de la ley, y a falta de ésta se fundará en los principios generales del derecho."
     },
     {
       "provision_ref": "art16",
-      "chapter": "TÍTULO PRIMERO - De los Derechos Humanos y sus Garantías",
+      "chapter": "TÍTULO PRIMERO - De los Derechos Humanos y sus Garantías, CAPÍTULO I",
       "section": "16",
       "title": "Derecho a la privacidad y protección de datos personales",
-      "content": "Artículo 16.- Nadie puede ser molestado en su persona, familia, domicilio, papeles o posesiones, sino en virtud de mandamiento escrito de la autoridad competente, que funde y motive la causa legal del procedimiento. Toda persona tiene derecho a la protección de sus datos personales, al acceso, rectificación y cancelación de los mismos, así como a manifestar su oposición, en los términos que fije la ley, la cual establecerá los supuestos de excepción a los principios que rijan el tratamiento de datos, por razones de seguridad nacional, disposiciones de orden público, seguridad y salud públicas o para proteger los derechos de terceros. Las comunicaciones privadas son inviolables. La ley sancionará penalmente cualquier acto que atente contra la libertad y privacía de las mismas, excepto cuando sean aportadas de forma voluntaria por alguno de los particulares que participen en ellas."
+      "content": "Artículo 16.- Nadie puede ser molestado en su persona, familia, domicilio, papeles o posesiones, sino en virtud de mandamiento escrito de la autoridad competente, que funde y motive la causa legal del procedimiento. Toda persona tiene derecho a la protección de sus datos personales, al acceso, rectificación y cancelación de los mismos, así como a manifestar su oposición, en los términos que fije la ley, la cual establecerá los supuestos de excepción a los principios que rijan el tratamiento de datos, por razones de seguridad nacional, disposiciones de orden público, seguridad y salud públicas o para proteger los derechos de terceros. No podrá librarse orden de aprehensión sino por la autoridad judicial y sin que preceda denuncia o querella de un hecho que la ley señale como delito, sancionado con pena privativa de libertad y obren datos que establezcan que se ha cometido ese hecho y que exista la probabilidad de que el indiciado lo cometió o participó en su comisión. Las comunicaciones privadas son inviolables. La ley sancionará penalmente cualquier acto que atente contra la libertad y privacía de las mismas, excepto cuando sean aportadas de forma voluntaria por alguno de los particulares que participen en ellas. El juez valorará el alcance de éstas, siempre y cuando contengan información relacionada con la comisión de un delito. En ningún caso se admitirán comunicaciones que violen el deber de confidencialidad que establezca la ley. Exclusivamente la autoridad judicial federal, a petición de la autoridad federal que faculte la ley o del titular del Ministerio Público de la entidad federativa correspondiente, podrá autorizar la intervención de cualquier comunicación privada. Las intervenciones autorizadas se ajustarán a los requisitos y límites previstos en las leyes."
     },
     {
       "provision_ref": "art17",
-      "chapter": "TÍTULO PRIMERO - De los Derechos Humanos y sus Garantías",
+      "chapter": "TÍTULO PRIMERO - De los Derechos Humanos y sus Garantías, CAPÍTULO I",
       "section": "17",
-      "title": "Acceso a la justicia",
-      "content": "Artículo 17.- Ninguna persona podrá hacerse justicia por sí misma, ni ejercer violencia para reclamar su derecho. Toda persona tiene derecho a que se le administre justicia por tribunales que estarán expeditos para impartirla en los plazos y términos que fijen las leyes, emitiendo sus resoluciones de manera pronta, completa e imparcial. Su servicio será gratuito, quedando, en consecuencia, prohibidas las costas judiciales."
+      "title": "Acceso a la justicia y medios electrónicos",
+      "content": "Artículo 17.- Ninguna persona podrá hacerse justicia por sí misma, ni ejercer violencia para reclamar su derecho. Toda persona tiene derecho a que se le administre justicia por tribunales que estarán expeditos para impartirla en los plazos y términos que fijen las leyes, emitiendo sus resoluciones de manera pronta, completa e imparcial. Su servicio será gratuito, quedando, en consecuencia, prohibidas las costas judiciales. Siempre que no se afecte la igualdad entre las partes, el debido proceso u otros derechos en los juicios o procedimientos seguidos en forma de juicio, las autoridades deberán privilegiar la solución del conflicto sobre los formalismos procedimentales. El Congreso de la Unión expedirá las leyes que regulen las acciones colectivas."
+    },
+    {
+      "provision_ref": "art19",
+      "chapter": "TÍTULO PRIMERO - De los Derechos Humanos y sus Garantías, CAPÍTULO I",
+      "section": "19",
+      "title": "Prisión preventiva y delitos graves",
+      "content": "Artículo 19.- Ninguna detención ante autoridad judicial podrá exceder del plazo de setenta y dos horas, a partir de que el indiciado sea puesto a su disposición, sin que se justifique con un auto de vinculación a proceso. El Ministerio Público sólo podrá solicitar al juez la prisión preventiva cuando otras medidas cautelares no sean suficientes para garantizar la comparecencia del imputado en el juicio."
+    },
+    {
+      "provision_ref": "art21",
+      "chapter": "TÍTULO PRIMERO - De los Derechos Humanos y sus Garantías, CAPÍTULO I",
+      "section": "21",
+      "title": "Investigación de los delitos y seguridad pública",
+      "content": "Artículo 21.- La investigación de los delitos corresponde al Ministerio Público y a las policías, las cuales actuarán bajo la conducción y mando de aquél en el ejercicio de esta función. La seguridad pública es una función del Estado a cargo de la Federación, las entidades federativas y los Municipios, cuyos fines son salvaguardar la vida, las libertades, la integridad y el patrimonio de las personas, así como contribuir a la generación y preservación del orden público y la paz social."
     },
     {
       "provision_ref": "art28",
-      "chapter": "TÍTULO PRIMERO - De los Derechos Humanos y sus Garantías",
+      "chapter": "TÍTULO PRIMERO - De los Derechos Humanos y sus Garantías, CAPÍTULO I",
       "section": "28",
-      "title": "Competencia económica y organismos reguladores",
-      "content": "Artículo 28.- En los Estados Unidos Mexicanos quedan prohibidos los monopolios, las prácticas monopólicas, los estancos, las condonaciones de impuestos y las exenciones de impuestos en los términos y condiciones que fijan las leyes. El Instituto Federal de Telecomunicaciones es un órgano autónomo, con personalidad jurídica y patrimonio propio, que tiene por objeto el desarrollo eficiente de la radiodifusión y las telecomunicaciones, conforme a lo dispuesto en esta Constitución y en los términos que fijen las leyes."
+      "title": "Competencia económica, IFT y organismos reguladores",
+      "content": "Artículo 28.- En los Estados Unidos Mexicanos quedan prohibidos los monopolios, las prácticas monopólicas, los estancos, las condonaciones de impuestos y las exenciones de impuestos en los términos y condiciones que fijan las leyes. El Instituto Federal de Telecomunicaciones es un órgano autónomo, con personalidad jurídica y patrimonio propio, que tiene por objeto el desarrollo eficiente de la radiodifusión y las telecomunicaciones, conforme a lo dispuesto en esta Constitución y en los términos que fijen las leyes. Para tal efecto, tendrá a su cargo la regulación, promoción y supervisión del uso, aprovechamiento y explotación del espectro radioeléctrico, las redes y la prestación de los servicios de radiodifusión y telecomunicaciones, así como del acceso a infraestructura activa, pasiva y otros insumos esenciales. El Instituto también será la autoridad en materia de competencia económica de los sectores de radiodifusión y telecomunicaciones."
+    },
+    {
+      "provision_ref": "art29",
+      "chapter": "TÍTULO PRIMERO - De los Derechos Humanos y sus Garantías, CAPÍTULO I",
+      "section": "29",
+      "title": "Suspensión de garantías",
+      "content": "Artículo 29.- En los casos de invasión, perturbación grave de la paz pública, o de cualquier otro que ponga a la sociedad en grave peligro o conflicto, solamente el Presidente de los Estados Unidos Mexicanos, con la aprobación del Congreso de la Unión o de la Comisión Permanente cuando aquel no estuviere reunido, podrá restringir o suspender en todo el país o en lugar determinado el ejercicio de los derechos y las garantías que fuesen obstáculo para hacer frente, rápida y fácilmente a la situación. En ningún caso podrán restringirse ni suspenderse los derechos a la no discriminación, al reconocimiento de la personalidad jurídica, a la vida, a la integridad personal, a la protección a la familia, al nombre, a la nacionalidad; los derechos de la niñez; los derechos políticos; las libertades de pensamiento, conciencia y de profesar creencia religiosa alguna; el principio de legalidad y retroactividad; la prohibición de la pena de muerte; la prohibición de la esclavitud y la servidumbre; la prohibición de la desaparición forzada y la tortura; ni las garantías judiciales indispensables para la protección de tales derechos."
     },
     {
       "provision_ref": "art73",
-      "chapter": "TÍTULO TERCERO - Del Poder Legislativo",
+      "chapter": "TÍTULO TERCERO - Del Poder Legislativo, SECCIÓN III - De las Facultades del Congreso",
       "section": "73",
-      "title": "Facultades del Congreso - datos personales y telecomunicaciones",
-      "content": "Artículo 73.- El Congreso tiene facultad: XXIX-O. Para legislar en materia de protección de datos personales en posesión de particulares. XXIX-R. Para expedir la ley general que armonice y homologue la organización y el funcionamiento de los registros civiles, los registros públicos inmobiliarios y de personas morales de las entidades federativas y los catastros municipales."
+      "title": "Facultades del Congreso en materia de datos personales y telecomunicaciones",
+      "content": "Artículo 73.- El Congreso tiene facultad: XVII. Para dictar leyes sobre vías generales de comunicación, tecnologías de la información y la comunicación, radiodifusión, telecomunicaciones, incluida la banda ancha e Internet, postas y correos; XXIX-O. Para legislar en materia de protección de datos personales en posesión de particulares; XXIX-R. Para expedir la ley general que armonice y homologue la organización y el funcionamiento de los registros civiles, los registros públicos inmobiliarios y de personas morales de las entidades federativas y los catastros municipales; XXIX-S. Para expedir las leyes generales reglamentarias que desarrollen los principios y bases en materia de transparencia gubernamental, acceso a la información, protección de datos personales en posesión de las autoridades, entidades, órganos y organismos gubernamentales de todos los niveles de gobierno; XXIX-X. Para expedir la ley general que establezca la concurrencia de la federación, las entidades federativas, los municipios y, en su caso, las demarcaciones territoriales de la Ciudad de México, en el ámbito de sus respectivas competencias, en materia de derechos de las víctimas."
     },
     {
       "provision_ref": "art89",
       "chapter": "TÍTULO TERCERO - Del Poder Ejecutivo",
       "section": "89",
       "title": "Facultades del Presidente - tratados internacionales",
-      "content": "Artículo 89.- Las facultades y obligaciones del Presidente, son las siguientes: X. Dirigir la política exterior y celebrar tratados internacionales, así como terminar, denunciar, suspender, modificar, enmendar, retirar reservas y formular declaraciones interpretativas sobre los mismos, sometiéndolos a la aprobación del Senado."
+      "content": "Artículo 89.- Las facultades y obligaciones del Presidente, son las siguientes: X. Dirigir la política exterior y celebrar tratados internacionales, así como terminar, denunciar, suspender, modificar, enmendar, retirar reservas y formular declaraciones interpretativas sobre los mismos, sometiéndolos a la aprobación del Senado. En la conducción de tal política, el titular del Poder Ejecutivo observará los siguientes principios normativos: la autodeterminación de los pueblos; la no intervención; la solución pacífica de controversias; la proscripción de la amenaza o el uso de la fuerza en las relaciones internacionales; la igualdad jurídica de los Estados; la cooperación internacional para el desarrollo; el respeto, la protección y promoción de los derechos humanos y la lucha por la paz y la seguridad internacionales."
+    },
+    {
+      "provision_ref": "art102",
+      "chapter": "TÍTULO TERCERO - Del Poder Judicial",
+      "section": "102",
+      "title": "Derechos humanos - Comisión Nacional",
+      "content": "Artículo 102, Apartado B.- El Congreso de la Unión y las legislaturas de las entidades federativas, en el ámbito de sus respectivas competencias, establecerán organismos de protección de los derechos humanos que ampara el orden jurídico mexicano, los que conocerán de quejas en contra de actos u omisiones de naturaleza administrativa provenientes de cualquier autoridad o servidor público, con excepción de los del Poder Judicial de la Federación, que violen estos derechos."
+    },
+    {
+      "provision_ref": "art103",
+      "chapter": "TÍTULO TERCERO - Del Poder Judicial",
+      "section": "103",
+      "title": "Juicio de amparo",
+      "content": "Artículo 103.- Los Tribunales de la Federación resolverán toda controversia que se suscite: I. Por normas generales, actos u omisiones de la autoridad que violen los derechos humanos reconocidos y las garantías otorgadas para su protección por esta Constitución, así como por los tratados internacionales de los que el Estado Mexicano sea parte."
+    },
+    {
+      "provision_ref": "art105",
+      "chapter": "TÍTULO TERCERO - Del Poder Judicial",
+      "section": "105",
+      "title": "Controversias constitucionales y acciones de inconstitucionalidad",
+      "content": "Artículo 105.- La Suprema Corte de Justicia de la Nación conocerá, en los términos que señale la ley reglamentaria, de los asuntos siguientes: I. De las controversias constitucionales que, con excepción de las que se refieran a la materia electoral, se susciten entre diversos órganos del Estado; II. De las acciones de inconstitucionalidad que tengan por objeto plantear la posible contradicción entre una norma de carácter general y esta Constitución."
+    },
+    {
+      "provision_ref": "art107",
+      "chapter": "TÍTULO TERCERO - Del Poder Judicial",
+      "section": "107",
+      "title": "Procedimiento de amparo",
+      "content": "Artículo 107.- Las controversias de que habla el artículo 103 de esta Constitución, con excepción de aquellas en materia electoral, se sujetarán a los procedimientos que determine la ley reglamentaria. El juicio de amparo se seguirá siempre a instancia de parte agraviada, teniendo tal carácter quien aduce ser titular de un derecho o de un interés legítimo individual o colectivo."
     },
     {
       "provision_ref": "art133",
       "chapter": "TÍTULO SÉPTIMO - Prevenciones Generales",
       "section": "133",
-      "title": "Supremacía constitucional y tratados",
+      "title": "Supremacía constitucional y tratados internacionales",
       "content": "Artículo 133.- Esta Constitución, las leyes del Congreso de la Unión que emanen de ella y todos los tratados que estén de acuerdo con la misma, celebrados y que se celebren por el Presidente de la República, con aprobación del Senado, serán la Ley Suprema de toda la Unión. Los jueces de cada entidad federativa se arreglarán a dicha Constitución, leyes y tratados, a pesar de las disposiciones en contrario que pueda haber en las Constituciones o leyes de las entidades federativas."
+    },
+    {
+      "provision_ref": "art134",
+      "chapter": "TÍTULO SÉPTIMO - Prevenciones Generales",
+      "section": "134",
+      "title": "Uso de recursos públicos y contrataciones",
+      "content": "Artículo 134.- Los recursos económicos de que dispongan la Federación, las entidades federativas, los Municipios y las demarcaciones territoriales de la Ciudad de México, se administrarán con eficiencia, eficacia, economía, transparencia y honradez para satisfacer los objetivos a los que estén destinados. Las adquisiciones, arrendamientos y enajenaciones de todo tipo de bienes, prestación de servicios de cualquier naturaleza y la contratación de obra que realicen, se adjudicarán o llevarán a cabo a través de licitaciones públicas mediante convocatoria pública para que libremente se presenten proposiciones solventes en sobre cerrado, que será abierto públicamente."
+    },
+    {
+      "provision_ref": "art135",
+      "chapter": "TÍTULO OCTAVO - De las Reformas de la Constitución",
+      "section": "135",
+      "title": "Reformas constitucionales",
+      "content": "Artículo 135.- La presente Constitución puede ser adicionada o reformada. Para que las adiciones o reformas lleguen a ser parte de la misma, se requiere que el Congreso de la Unión, por el voto de las dos terceras partes de los individuos presentes, acuerde las reformas o adiciones, y que éstas sean aprobadas por la mayoría de las legislaturas de los Estados y de la Ciudad de México."
     }
   ],
-  "definitions": []
+  "definitions": [
+    {
+      "term": "Derechos ARCO (constitucional)",
+      "definition": "Derechos constitucionales de acceso, rectificación, cancelación y oposición al tratamiento de datos personales, consagrados en el artículo 16 de la Constitución.",
+      "source_provision": "art16"
+    },
+    {
+      "term": "INAI",
+      "definition": "Organismo autónomo constitucional responsable de garantizar el derecho de acceso a la información pública y la protección de datos personales en posesión de sujetos obligados, creado por el artículo 6 de la Constitución.",
+      "source_provision": "art6"
+    },
+    {
+      "term": "Instituto Federal de Telecomunicaciones (IFT)",
+      "definition": "Órgano autónomo constitucional con personalidad jurídica y patrimonio propio, encargado de la regulación, promoción y supervisión de las telecomunicaciones y la radiodifusión.",
+      "source_provision": "art28"
+    },
+    {
+      "term": "Comunicaciones privadas",
+      "definition": "Comunicaciones protegidas constitucionalmente cuya inviolabilidad solo puede ser excepcionada por autorización de la autoridad judicial federal conforme a los requisitos y límites previstos en las leyes.",
+      "source_provision": "art16"
+    },
+    {
+      "term": "Juicio de amparo",
+      "definition": "Recurso constitucional para la protección de derechos humanos y garantías, que procede contra normas generales, actos u omisiones de la autoridad que los violen.",
+      "source_provision": "art103"
+    }
+  ]
 }

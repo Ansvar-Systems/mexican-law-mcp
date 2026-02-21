@@ -29,7 +29,21 @@
       "chapter": "CAPÍTULO I - Disposiciones Generales",
       "section": "3",
       "title": "Definiciones",
-      "content": "Artículo 3.- Para los efectos de esta Ley, se entenderá por: I. Aviso de Privacidad: Documento físico, electrónico o en cualquier otro formato generado por el responsable que es puesto a disposición del titular, previo al tratamiento de sus datos personales; II. Bases de datos: El conjunto ordenado de datos personales referentes a una persona identificada o identificable; III. Bloqueo: La identificación y conservación de datos personales una vez cumplida la finalidad para la cual fueron recabados; IV. Consentimiento: Manifestación de la voluntad del titular de los datos mediante la cual se efectúa el tratamiento de los mismos; V. Datos personales: Cualquier información concerniente a una persona física identificada o identificable; VI. Datos personales sensibles: Aquellos datos personales que afecten a la esfera más íntima de su titular, o cuya utilización indebida pueda dar origen a discriminación o conlleve un riesgo grave para éste; VII. Días: Días hábiles; VIII. Disociación: El procedimiento mediante el cual los datos personales no pueden asociarse al titular ni permitir, por su estructura, contenido o grado de desagregación, la identificación del mismo; IX. Encargado: La persona física o jurídica que sola o conjuntamente con otras trate datos personales por cuenta del responsable; X. Fuente de acceso público: Aquellas bases de datos cuya consulta puede ser realizada por cualquier persona; XI. Instituto: Instituto Federal de Acceso a la Información y Protección de Datos (ahora INAI); XII. Responsable: Persona física o moral de carácter privado que decide sobre el tratamiento de datos personales; XIII. Tercero: La persona física o moral, nacional o extranjera, distinta del titular o del responsable de los datos; XIV. Titular: La persona física a quien corresponden los datos personales; XV. Tratamiento: La obtención, uso, divulgación o almacenamiento de datos personales, por cualquier medio; XVI. Transferencia: Toda comunicación de datos realizada a persona distinta del responsable o encargado del tratamiento."
+      "content": "Artículo 3.- Para los efectos de esta Ley, se entenderá por: I. Aviso de Privacidad: Documento físico, electrónico o en cualquier otro formato generado por el responsable que es puesto a disposición del titular, previo al tratamiento de sus datos personales; II. Bases de datos: El conjunto ordenado de datos personales referentes a una persona identificada o identificable; III. Bloqueo: La identificación y conservación de datos personales una vez cumplida la finalidad para la cual fueron recabados, con el único propósito de determinar posibles responsabilidades en relación con su tratamiento, hasta el plazo de prescripción legal o contractual de éstas. Durante dicho periodo, los datos personales no podrán ser objeto de tratamiento y transcurrido éste, se procederá a su cancelación; IV. Consentimiento: Manifestación de la voluntad del titular de los datos mediante la cual se efectúa el tratamiento de los mismos; V. Datos personales: Cualquier información concerniente a una persona física identificada o identificable; VI. Datos personales sensibles: Aquellos datos personales que afecten a la esfera más íntima de su titular, o cuya utilización indebida pueda dar origen a discriminación o conlleve un riesgo grave para éste. En particular, se consideran sensibles aquellos que puedan revelar aspectos como origen racial o étnico, estado de salud presente y futuro, información genética, creencias religiosas, filosóficas y morales, afiliación sindical, opiniones políticas, preferencia sexual; VII. Días: Días hábiles; VIII. Disociación: El procedimiento mediante el cual los datos personales no pueden asociarse al titular ni permitir, por su estructura, contenido o grado de desagregación, la identificación del mismo; IX. Encargado: La persona física o jurídica que sola o conjuntamente con otras trate datos personales por cuenta del responsable; X. Fuente de acceso público: Aquellas bases de datos cuya consulta puede ser realizada por cualquier persona, sin más requisito que, en su caso, el pago de una contraprestación; XI. Instituto: Instituto Federal de Acceso a la Información y Protección de Datos, a que hace referencia la Ley Federal de Transparencia y Acceso a la Información Pública Gubernamental; XII. Responsable: Persona física o moral de carácter privado que decide sobre el tratamiento de datos personales; XIII. Tercero: La persona física o moral, nacional o extranjera, distinta del titular o del responsable de los datos; XIV. Titular: La persona física a quien corresponden los datos personales; XV. Tratamiento: La obtención, uso, divulgación o almacenamiento de datos personales, por cualquier medio. El uso abarca cualquier acción de acceso, manejo, aprovechamiento, transferencia o disposición de datos personales; XVI. Transferencia: Toda comunicación de datos realizada a persona distinta del responsable o encargado del tratamiento."
+    },
+    {
+      "provision_ref": "art4",
+      "chapter": "CAPÍTULO I - Disposiciones Generales",
+      "section": "4",
+      "title": "Supletoriedad",
+      "content": "Artículo 4.- Los particulares que recolecten, almacenen, utilicen, circulen o cancelen datos personales en el ejercicio de las actividades propias de las personas morales a que se refiere la Ley de Instituciones de Crédito, la Ley del Mercado de Valores, la Ley General de Instituciones y Sociedades Mutualistas de Seguros, la Ley Federal de Instituciones de Fianzas, la Ley de los Sistemas de Ahorro para el Retiro, la Ley para Regular las Sociedades de Información Crediticia y demás leyes relativas al sistema financiero, quedarán sujetas a las disposiciones de la presente Ley, sin perjuicio de lo previsto en las leyes señaladas."
+    },
+    {
+      "provision_ref": "art5",
+      "chapter": "CAPÍTULO I - Disposiciones Generales",
+      "section": "5",
+      "title": "Irrenunciabilidad de derechos",
+      "content": "Artículo 5.- A falta de disposición expresa en esta Ley, se aplicarán de manera supletoria las disposiciones del Código Federal de Procedimientos Civiles y la Ley Federal de Procedimiento Administrativo."
     },
     {
       "provision_ref": "art6",
@@ -43,14 +57,14 @@
       "chapter": "CAPÍTULO II - De los Principios de Protección de Datos Personales",
       "section": "7",
       "title": "Principio de licitud",
-      "content": "Artículo 7.- Los datos personales deberán recabarse y tratarse de manera lícita conforme a las disposiciones establecidas por esta Ley y demás normatividad aplicable. La obtención de datos personales no debe hacerse a través de medios engañosos o fraudulentos."
+      "content": "Artículo 7.- Los datos personales deberán recabarse y tratarse de manera lícita conforme a las disposiciones establecidas por esta Ley y demás normatividad aplicable. La obtención de datos personales no debe hacerse a través de medios engañosos o fraudulentos. En todo tratamiento de datos personales, se presume que existe la expectativa razonable de privacidad, entendida como la confianza que deposita cualquier persona en otra, respecto de que los datos personales proporcionados entre ellos serán tratados conforme a lo que acordaron las partes en los términos establecidos por esta Ley."
     },
     {
       "provision_ref": "art8",
       "chapter": "CAPÍTULO II - De los Principios de Protección de Datos Personales",
       "section": "8",
       "title": "Consentimiento",
-      "content": "Artículo 8.- Todo tratamiento de datos personales estará sujeto al consentimiento de su titular, salvo las excepciones previstas por la presente Ley. El consentimiento será expreso cuando la voluntad se manifieste verbalmente, por escrito, por medios electrónicos, ópticos o por cualquier otra tecnología, o por signos inequívocos."
+      "content": "Artículo 8.- Todo tratamiento de datos personales estará sujeto al consentimiento de su titular, salvo las excepciones previstas por la presente Ley. El consentimiento será expreso cuando la voluntad se manifieste verbalmente, por escrito, por medios electrónicos, ópticos o por cualquier otra tecnología, o por signos inequívocos. Se entenderá que el titular consiente tácitamente el tratamiento de sus datos, cuando habiéndose puesto a su disposición el aviso de privacidad, no manifieste su oposición."
     },
     {
       "provision_ref": "art9",
@@ -58,6 +72,41 @@
       "section": "9",
       "title": "Consentimiento para datos sensibles",
       "content": "Artículo 9.- Tratándose de datos personales sensibles, el responsable deberá obtener el consentimiento expreso y por escrito del titular para su tratamiento, a través de su firma autógrafa, firma electrónica, o cualquier mecanismo de autenticación que al efecto se establezca. No podrán crearse bases de datos que contengan datos personales sensibles, sin que se justifique la creación de las mismas para finalidades legítimas, concretas y acordes con las actividades o fines explícitos que persigue el sujeto regulado."
+    },
+    {
+      "provision_ref": "art10",
+      "chapter": "CAPÍTULO II - De los Principios de Protección de Datos Personales",
+      "section": "10",
+      "title": "Excepciones al consentimiento",
+      "content": "Artículo 10.- No será necesario el consentimiento para el tratamiento de los datos personales cuando: I. Esté previsto en una Ley; II. Los datos figuren en fuentes de acceso público; III. Los datos personales se sometan a un procedimiento previo de disociación; IV. Tenga el propósito de cumplir obligaciones derivadas de una relación jurídica entre el titular y el responsable; V. Exista una situación de emergencia que potencialmente pueda dañar a un individuo en su persona o en sus bienes; VI. Sean indispensables para la atención médica, la prevención, diagnóstico, la prestación de asistencia sanitaria, tratamientos médicos o la gestión de servicios sanitarios; VII. Se dicte resolución de autoridad competente."
+    },
+    {
+      "provision_ref": "art11",
+      "chapter": "CAPÍTULO II - De los Principios de Protección de Datos Personales",
+      "section": "11",
+      "title": "Principio de información",
+      "content": "Artículo 11.- El responsable procurará que los datos personales contenidos en las bases de datos sean pertinentes, correctos y actualizados para los fines para los cuales fueron recabados. Cuando los datos de carácter personal hayan dejado de ser necesarios para el cumplimiento de las finalidades previstas por el aviso de privacidad y las disposiciones legales aplicables, deberán ser cancelados."
+    },
+    {
+      "provision_ref": "art12",
+      "chapter": "CAPÍTULO II - De los Principios de Protección de Datos Personales",
+      "section": "12",
+      "title": "Principio de finalidad",
+      "content": "Artículo 12.- El tratamiento de datos personales deberá limitarse al cumplimiento de las finalidades previstas en el aviso de privacidad. Si el responsable pretende tratar los datos para un fin distinto que no resulte compatible o análogo a los fines establecidos en aviso de privacidad, se requerirá obtener nuevamente el consentimiento del titular."
+    },
+    {
+      "provision_ref": "art13",
+      "chapter": "CAPÍTULO II - De los Principios de Protección de Datos Personales",
+      "section": "13",
+      "title": "Principio de lealtad",
+      "content": "Artículo 13.- El tratamiento de datos personales deberá ser el que resulte necesario, adecuado y relevante en relación con las finalidades previstas en el aviso de privacidad. En particular para datos personales sensibles, el responsable deberá realizar esfuerzos razonables para limitar el periodo de tratamiento de los mismos a efecto de que sea el mínimo indispensable."
+    },
+    {
+      "provision_ref": "art14",
+      "chapter": "CAPÍTULO II - De los Principios de Protección de Datos Personales",
+      "section": "14",
+      "title": "Principio de proporcionalidad",
+      "content": "Artículo 14.- El responsable velará por el cumplimiento de los principios de protección de datos personales establecidos por esta Ley, debiendo adoptar las medidas necesarias para su aplicación. Lo anterior aplicará aun cuando estos datos fueren tratados por un tercero a solicitud del responsable. El responsable deberá tomar las medidas necesarias y suficientes para garantizar que el aviso de privacidad dado a conocer al titular, sea respetado en todo momento por él o por terceros con los que guarde alguna relación jurídica."
     },
     {
       "provision_ref": "art15",
@@ -71,7 +120,42 @@
       "chapter": "CAPÍTULO III - De los Derechos de los Titulares de Datos Personales",
       "section": "16",
       "title": "Contenido del aviso de privacidad",
-      "content": "Artículo 16.- El aviso de privacidad deberá contener, al menos, la siguiente información: I. La identidad y domicilio del responsable que los recaba; II. Las finalidades del tratamiento de datos; III. Las opciones y medios que el responsable ofrezca a los titulares para limitar el uso o divulgación de los datos; IV. Los medios para ejercer los derechos de acceso, rectificación, cancelación u oposición, de conformidad con lo dispuesto en esta Ley; V. En su caso, las transferencias de datos que se efectúen, y VI. El procedimiento y medio por el cual el responsable comunicará a los titulares de cambios al aviso de privacidad."
+      "content": "Artículo 16.- El aviso de privacidad deberá contener, al menos, la siguiente información: I. La identidad y domicilio del responsable que los recaba; II. Las finalidades del tratamiento de datos; III. Las opciones y medios que el responsable ofrezca a los titulares para limitar el uso o divulgación de los datos; IV. Los medios para ejercer los derechos de acceso, rectificación, cancelación u oposición, de conformidad con lo dispuesto en esta Ley; V. En su caso, las transferencias de datos que se efectúen, y VI. El procedimiento y medio por el cual el responsable comunicará a los titulares de cambios al aviso de privacidad, de conformidad con lo previsto en esta Ley. En el caso de datos personales sensibles, el aviso de privacidad deberá señalar expresamente que se trata de este tipo de datos."
+    },
+    {
+      "provision_ref": "art17",
+      "chapter": "CAPÍTULO III - De los Derechos de los Titulares de Datos Personales",
+      "section": "17",
+      "title": "Disponibilidad del aviso de privacidad",
+      "content": "Artículo 17.- El aviso de privacidad debe ponerse a disposición de los titulares a través de formatos impresos, digitales, visuales, sonoros o cualquier otra tecnología, de la siguiente manera: I. Cuando los datos personales hayan sido obtenidos personalmente del titular, el aviso de privacidad deberá ser facilitado en el momento en que se recaba el dato de forma clara y fehaciente, a través de los formatos por los que se recaban, salvo que se hubiera facilitado el aviso con anterioridad, y II. Cuando los datos personales sean obtenidos directamente del titular por cualquier medio electrónico, óptico, sonoro, visual, o a través de cualquier otra tecnología, el responsable deberá proporcionar al titular de manera inmediata, al menos la información a que se refiere las fracciones I y II del artículo anterior, así como proveer los mecanismos para que el titular conozca el texto completo del aviso de privacidad."
+    },
+    {
+      "provision_ref": "art18",
+      "chapter": "CAPÍTULO III - De los Derechos de los Titulares de Datos Personales",
+      "section": "18",
+      "title": "Datos obtenidos indirectamente",
+      "content": "Artículo 18.- Cuando los datos no hayan sido obtenidos directamente del titular, el responsable deberá darle a conocer, cuando se realice el primer contacto, el aviso de privacidad, así como los criterios de realización del tratamiento."
+    },
+    {
+      "provision_ref": "art19",
+      "chapter": "CAPÍTULO III - De los Derechos de los Titulares de Datos Personales",
+      "section": "19",
+      "title": "Medidas de seguridad",
+      "content": "Artículo 19.- Todo responsable que lleve a cabo tratamiento de datos personales deberá establecer y mantener medidas de seguridad administrativas, técnicas y físicas que permitan proteger los datos personales contra daño, pérdida, alteración, destrucción o el uso, acceso o tratamiento no autorizado. Los responsables no adoptarán medidas de seguridad menores a aquellas que mantengan para el manejo de su propia información. Asimismo se tomará en cuenta el riesgo existente, las posibles consecuencias para los titulares, la sensibilidad de los datos y el desarrollo tecnológico."
+    },
+    {
+      "provision_ref": "art20",
+      "chapter": "CAPÍTULO III - De los Derechos de los Titulares de Datos Personales",
+      "section": "20",
+      "title": "Notificación de vulneraciones de seguridad",
+      "content": "Artículo 20.- Las vulneraciones de seguridad ocurridas en cualquier fase del tratamiento que afecten de forma significativa los derechos patrimoniales o morales de los titulares, serán informadas de forma inmediata por el responsable al titular, a fin de que este último pueda tomar las medidas correspondientes a la defensa de sus derechos."
+    },
+    {
+      "provision_ref": "art21",
+      "chapter": "CAPÍTULO III - De los Derechos de los Titulares de Datos Personales",
+      "section": "21",
+      "title": "Deber de confidencialidad",
+      "content": "Artículo 21.- El responsable o terceros que intervengan en cualquier fase del tratamiento de datos personales deberán guardar confidencialidad respecto de éstos, obligación que subsistirá aun después de finalizar sus relaciones con el titular o, en su caso, con el responsable."
     },
     {
       "provision_ref": "art22",
@@ -81,10 +165,101 @@
       "content": "Artículo 22.- Cualquier titular, o en su caso su representante legal, podrá ejercer los derechos de acceso, rectificación, cancelación y oposición previstos en la presente Ley. El ejercicio de cualquiera de ellos no es requisito previo ni impide el ejercicio de otro. Los datos personales deben ser resguardados de tal manera que permitan el ejercicio sin dilación de estos derechos."
     },
     {
+      "provision_ref": "art23",
+      "chapter": "CAPÍTULO IV - Del Ejercicio de los Derechos de Acceso, Rectificación, Cancelación y Oposición",
+      "section": "23",
+      "title": "Derecho de acceso",
+      "content": "Artículo 23.- Los titulares tienen derecho a acceder a sus datos personales que obren en poder del responsable, así como conocer el Aviso de Privacidad al que está sujeto el tratamiento."
+    },
+    {
+      "provision_ref": "art24",
+      "chapter": "CAPÍTULO IV - Del Ejercicio de los Derechos de Acceso, Rectificación, Cancelación y Oposición",
+      "section": "24",
+      "title": "Derecho de rectificación",
+      "content": "Artículo 24.- El titular de los datos tendrá derecho a rectificarlos cuando sean inexactos o incompletos."
+    },
+    {
+      "provision_ref": "art25",
+      "chapter": "CAPÍTULO IV - Del Ejercicio de los Derechos de Acceso, Rectificación, Cancelación y Oposición",
+      "section": "25",
+      "title": "Derecho de cancelación",
+      "content": "Artículo 25.- El titular tendrá en todo momento el derecho a cancelar sus datos personales. La cancelación de datos personales dará lugar a un periodo de bloqueo tras el cual se procederá a la supresión del dato. El responsable podrá conservarlos exclusivamente para efectos de las responsabilidades nacidas del tratamiento. El periodo de bloqueo será equivalente al plazo de prescripción de las acciones derivadas de la relación jurídica que funda el tratamiento en los términos de la legislación aplicable."
+    },
+    {
+      "provision_ref": "art26",
+      "chapter": "CAPÍTULO IV - Del Ejercicio de los Derechos de Acceso, Rectificación, Cancelación y Oposición",
+      "section": "26",
+      "title": "Excepciones a cancelación y oposición",
+      "content": "Artículo 26.- El responsable no estará obligado a cancelar los datos personales cuando: I. Se refiera a las partes de un contrato privado, social o administrativo y sean necesarios para su desarrollo y cumplimiento; II. Deban ser tratados por disposición legal; III. Obstaculice actuaciones judiciales o administrativas vinculadas a obligaciones fiscales, la investigación y persecución de delitos o la actualización de sanciones administrativas; IV. Sean necesarios para proteger los intereses jurídicamente tutelados del titular; V. Sean necesarios para realizar una acción en función del interés público; VI. Sean necesarios para cumplir con una obligación legalmente adquirida por el titular, y VII. Sean objeto de tratamiento para la prevención o para el diagnóstico médico o la gestión de servicios de salud, siempre que dicho tratamiento se realice por un profesional de la salud sujeto a un deber de secreto."
+    },
+    {
+      "provision_ref": "art27",
+      "chapter": "CAPÍTULO IV - Del Ejercicio de los Derechos de Acceso, Rectificación, Cancelación y Oposición",
+      "section": "27",
+      "title": "Derecho de oposición",
+      "content": "Artículo 27.- El titular tendrá derecho en todo momento y por causa legítima a oponerse al tratamiento de sus datos. De resultar procedente, el responsable no podrá tratar los datos relativos al titular."
+    },
+    {
+      "provision_ref": "art28",
+      "chapter": "CAPÍTULO IV - Del Ejercicio de los Derechos de Acceso, Rectificación, Cancelación y Oposición",
+      "section": "28",
+      "title": "Solicitud de derechos ARCO",
+      "content": "Artículo 28.- El titular o su representante legal podrá solicitar al responsable en cualquier momento el acceso, rectificación, cancelación u oposición, respecto de los datos personales que le conciernen. La solicitud de acceso, rectificación, cancelación u oposición deberá contener y acompañar lo siguiente: I. El nombre del titular y domicilio u otro medio para comunicarle la respuesta a su solicitud; II. Los documentos que acrediten la identidad o, en su caso, la representación legal del titular; III. La descripción clara y precisa de los datos personales respecto de los que se busca ejercer alguno de los derechos antes mencionados, y IV. Cualquier otro elemento o documento que facilite la localización de los datos personales."
+    },
+    {
+      "provision_ref": "art29",
+      "chapter": "CAPÍTULO IV - Del Ejercicio de los Derechos de Acceso, Rectificación, Cancelación y Oposición",
+      "section": "29",
+      "title": "Plazo de respuesta",
+      "content": "Artículo 29.- El responsable comunicará al titular, en un plazo máximo de veinte días, contados desde la fecha en que se recibió la solicitud de acceso, rectificación, cancelación u oposición, la determinación adoptada, a efecto de que, si resulta procedente, se haga efectiva la misma dentro de los quince días siguientes a la fecha en que se comunica la respuesta. Tratándose de solicitudes de acceso a datos personales, procederá la entrega previa acreditación de la identidad del solicitante o representante legal, según corresponda."
+    },
+    {
+      "provision_ref": "art30",
+      "chapter": "CAPÍTULO IV - Del Ejercicio de los Derechos de Acceso, Rectificación, Cancelación y Oposición",
+      "section": "30",
+      "title": "Ampliación de plazo",
+      "content": "Artículo 30.- Los plazos referidos en el artículo anterior podrán ser ampliados una sola vez por un periodo igual, siempre y cuando así lo justifiquen las circunstancias del caso."
+    },
+    {
+      "provision_ref": "art31",
+      "chapter": "CAPÍTULO IV - Del Ejercicio de los Derechos de Acceso, Rectificación, Cancelación y Oposición",
+      "section": "31",
+      "title": "Gratuidad de la entrega",
+      "content": "Artículo 31.- La entrega de los datos personales será gratuita, debiendo cubrir el titular únicamente los gastos justificados de envío o con el costo de reproducción en copias u otros formatos. Dicho derecho se ejercerá por el titular en forma gratuita, previa acreditación de su identidad ante el responsable. No obstante, si la misma persona reitera su solicitud en un periodo menor a doce meses, los costos no serán mayores a tres días de Salario Mínimo General Vigente en el Distrito Federal, a menos que existan modificaciones sustanciales al aviso de privacidad que motiven nuevas consultas."
+    },
+    {
+      "provision_ref": "art32",
+      "chapter": "CAPÍTULO IV - Del Ejercicio de los Derechos de Acceso, Rectificación, Cancelación y Oposición",
+      "section": "32",
+      "title": "Negación de solicitud ARCO",
+      "content": "Artículo 32.- Cuando el responsable no sea titular de los datos personales, o por algún motivo no sea posible atender la solicitud del titular, el responsable deberá dar respuesta al titular haciéndole saber dicha situación. Si los datos personales fueron tratados por un encargado, el responsable deberá comunicar la solicitud del titular al encargado para que proceda a hacer efectivos los derechos."
+    },
+    {
+      "provision_ref": "art33",
+      "chapter": "CAPÍTULO IV - Del Ejercicio de los Derechos de Acceso, Rectificación, Cancelación y Oposición",
+      "section": "33",
+      "title": "Negativa de ejercicio ARCO",
+      "content": "Artículo 33.- La obligación de acceso a los datos personales se dará por cumplida cuando se pongan a disposición del titular los datos personales; o bien, mediante la expedición de copias simples, documentos electrónicos o cualquier otro medio que determine el responsable en el aviso de privacidad."
+    },
+    {
+      "provision_ref": "art34",
+      "chapter": "CAPÍTULO IV - Del Ejercicio de los Derechos de Acceso, Rectificación, Cancelación y Oposición",
+      "section": "34",
+      "title": "Motivos de negativa",
+      "content": "Artículo 34.- El responsable podrá negar el acceso a los datos personales, o a realizar la rectificación o cancelación o conceder la oposición, en los siguientes supuestos: I. Cuando el solicitante no sea el titular de los datos personales, o el representante legal no esté debidamente acreditado para ello; II. Cuando en su base de datos, no se encuentren los datos personales del solicitante; III. Cuando se lesionen los derechos de un tercero; IV. Cuando exista un impedimento legal, o la resolución de una autoridad competente, que restrinja el acceso a los datos personales, o no permita la rectificación, cancelación u oposición de los mismos, y V. Cuando la rectificación, cancelación u oposición haya sido previamente realizada. La negativa podrá ser parcial en cuyo caso el responsable efectuará el acceso, rectificación, cancelación u oposición requerida por el titular."
+    },
+    {
+      "provision_ref": "art35",
+      "chapter": "CAPÍTULO IV - Del Ejercicio de los Derechos de Acceso, Rectificación, Cancelación y Oposición",
+      "section": "35",
+      "title": "Falta de respuesta como negativa",
+      "content": "Artículo 35.- Sin perjuicio de lo que dispongan otras leyes, sólo el titular o su representante legal, previa acreditación de su identidad o representación, podrán solicitar al responsable el acceso, rectificación, cancelación u oposición de datos personales. El responsable deberá designar una persona, o departamento de datos personales, quien dará trámite a las solicitudes de los titulares, para el ejercicio de los derechos a que se refiere la presente Ley. Asimismo fomentará la protección de datos personales al interior de la organización."
+    },
+    {
       "provision_ref": "art36",
       "chapter": "CAPÍTULO V - De las Transferencias de Datos",
       "section": "36",
-      "title": "Transferencias internacionales",
+      "title": "Transferencias de datos",
       "content": "Artículo 36.- Cuando el responsable pretenda transferir los datos personales a terceros nacionales o extranjeros, distintos del encargado, deberá comunicar a éstos el aviso de privacidad y las finalidades a las que el titular sujetó su tratamiento. El tratamiento de los datos se hará conforme a lo convenido en el aviso de privacidad, el cual contendrá una cláusula en la que se indique si el titular acepta o no la transferencia de sus datos, de igual manera, el tercero receptor, asumirá las mismas obligaciones que correspondan al responsable que transfirió los datos."
     },
     {
@@ -92,14 +267,189 @@
       "chapter": "CAPÍTULO V - De las Transferencias de Datos",
       "section": "37",
       "title": "Excepciones a transferencias con consentimiento",
-      "content": "Artículo 37.- Las transferencias nacionales o internacionales de datos podrán llevarse a cabo sin el consentimiento del titular cuando: I. Cuando la transferencia esté prevista en una Ley o Tratado en los que México sea parte; II. Cuando la transferencia sea necesaria para la prevención o el diagnóstico médico; III. Cuando la transferencia sea efectuada a sociedades controladoras, subsidiarias o afiliadas bajo el control común del responsable; IV. Cuando la transferencia sea necesaria por virtud de un contrato celebrado o por celebrar en interés del titular; V. Cuando la transferencia sea necesaria o legalmente exigida para la salvaguarda de un interés público; VI. Cuando la transferencia sea precisa para el reconocimiento, ejercicio o defensa de un derecho en un proceso judicial, y VII. Cuando la transferencia sea precisa para el mantenimiento o cumplimiento de una relación jurídica entre el responsable y el titular."
+      "content": "Artículo 37.- Las transferencias nacionales o internacionales de datos podrán llevarse a cabo sin el consentimiento del titular cuando: I. Cuando la transferencia esté prevista en una Ley o Tratado en los que México sea parte; II. Cuando la transferencia sea necesaria para la prevención o el diagnóstico médico, la prestación de asistencia sanitaria, tratamiento médico o la gestión de servicios sanitarios; III. Cuando la transferencia sea efectuada a sociedades controladoras, subsidiarias o afiliadas bajo el control común del responsable, o a una sociedad matriz o a cualquier sociedad del mismo grupo del responsable que opere bajo los mismos procesos y políticas internas; IV. Cuando la transferencia sea necesaria por virtud de un contrato celebrado o por celebrar en interés del titular, por el responsable y un tercero; V. Cuando la transferencia sea necesaria o legalmente exigida para la salvaguarda de un interés público, o para la procuración o administración de justicia; VI. Cuando la transferencia sea precisa para el reconocimiento, ejercicio o defensa de un derecho en un proceso judicial, y VII. Cuando la transferencia sea precisa para el mantenimiento o cumplimiento de una relación jurídica entre el responsable y el titular."
+    },
+    {
+      "provision_ref": "art38",
+      "chapter": "CAPÍTULO V - De las Transferencias de Datos",
+      "section": "38",
+      "title": "Comunicaciones entre responsable y encargado",
+      "content": "Artículo 38.- Las remisiones o comunicaciones de datos personales realizadas entre el responsable y el encargado no requerirán ser informadas al titular ni contar con su consentimiento."
+    },
+    {
+      "provision_ref": "art39",
+      "chapter": "CAPÍTULO VI - De las Autoridades",
+      "section": "39",
+      "title": "Instituto como autoridad",
+      "content": "Artículo 39.- El Instituto, para efectos de esta Ley, tendrá por objeto difundir el conocimiento del derecho a la protección de datos personales en la sociedad mexicana, promover su ejercicio y vigilar por la debida observancia de las disposiciones previstas en la presente Ley y que deriven de la misma; en particular aquellas relacionadas con el cumplimiento de obligaciones por parte de los sujetos regulados por este ordenamiento."
+    },
+    {
+      "provision_ref": "art40",
+      "chapter": "CAPÍTULO VI - De las Autoridades",
+      "section": "40",
+      "title": "Atribuciones del Instituto",
+      "content": "Artículo 40.- Son atribuciones del Instituto: I. Vigilar y verificar el cumplimiento de las disposiciones contenidas en esta Ley, en lo que corresponda a los particulares, con las excepciones previstas por la legislación; II. Interpretar en el ámbito administrativo la presente Ley; III. Conocer y resolver los procedimientos de protección de derechos y de verificación señalados en esta Ley e imponer las sanciones según corresponda; IV. Cooperar con otras autoridades de supervisión y organismos nacionales e internacionales, a efecto de coadyuvar en materia de protección de datos; V. Emitir los criterios y recomendaciones, en los términos previstos en esta Ley, para efectos de su funcionamiento y operación; VI. Divulgar estándares y mejores prácticas internacionales en materia de seguridad de la información, en atención a la naturaleza de los datos; las finalidades del tratamiento, y las capacidades técnicas y económicas del responsable; VII. Conocer y resolver los procedimientos de verificación e imponer las sanciones que correspondan, en los términos previstos en esta Ley."
+    },
+    {
+      "provision_ref": "art41",
+      "chapter": "CAPÍTULO VI - De las Autoridades",
+      "section": "41",
+      "title": "Autorregulación",
+      "content": "Artículo 41.- La Secretaría, en coordinación con el Instituto, emitirán los parámetros necesarios para el correcto desarrollo de los mecanismos y medidas de autorregulación a que se refiere el presente artículo, incluyendo la promoción de mejores prácticas y esquemas de autorregulación vinculante."
+    },
+    {
+      "provision_ref": "art42",
+      "chapter": "CAPÍTULO VI - De las Autoridades",
+      "section": "42",
+      "title": "Esquemas de autorregulación vinculante",
+      "content": "Artículo 42.- Los responsables podrán convenir entre ellos o con organizaciones civiles, gremiales, empresariales o de cualquier naturaleza, nacionales o extranjeras, esquemas de autorregulación vinculante en la materia, que complementen lo dispuesto por la presente Ley. Dichos esquemas deberán contener mecanismos para medir su eficacia en la protección de los datos, consecuencias y medidas correctivas eficaces en caso de incumplimiento."
+    },
+    {
+      "provision_ref": "art43",
+      "chapter": "CAPÍTULO VII - Del Procedimiento de Protección de Derechos",
+      "section": "43",
+      "title": "Inicio del procedimiento de protección de derechos",
+      "content": "Artículo 43.- El titular o su representante legal podrán solicitar al Instituto, la protección de sus derechos, cuando no le sea posible ejercerlos ante el responsable, o cuando el responsable no atienda su solicitud dentro de los plazos establecidos. La solicitud de protección de datos deberá presentarse ante el Instituto dentro de los quince días siguientes a la fecha en que se comunique la respuesta del responsable al titular, o tratándose de denegación tácita, a partir de que venza el plazo de respuesta previsto para el responsable."
+    },
+    {
+      "provision_ref": "art44",
+      "chapter": "CAPÍTULO VII - Del Procedimiento de Protección de Derechos",
+      "section": "44",
+      "title": "Requisitos de la solicitud",
+      "content": "Artículo 44.- La solicitud de protección de datos deberá contener: I. El nombre del titular o de su representante legal, en su caso; II. El nombre y domicilio del responsable ante el cual se presentó la solicitud de ejercicio de los derechos ARCO; III. El acto que motiva la solicitud de protección de datos; IV. La fecha en que fue notificada la respuesta del responsable, la cual deberá acompañar a la solicitud, o bien la fecha en que se presentó la solicitud cuando no haya habido respuesta, y V. Los demás elementos que considere procedentes someter a juicio del Instituto."
+    },
+    {
+      "provision_ref": "art45",
+      "chapter": "CAPÍTULO VII - Del Procedimiento de Protección de Derechos",
+      "section": "45",
+      "title": "Admisión de la solicitud",
+      "content": "Artículo 45.- Recibida la solicitud de protección de datos por el Instituto, éste dará traslado de la misma al responsable, para que dentro del plazo de quince días hábiles emita respuesta, ofrezca las pruebas que estime pertinentes y manifieste por escrito lo que a su derecho convenga."
+    },
+    {
+      "provision_ref": "art46",
+      "chapter": "CAPÍTULO VII - Del Procedimiento de Protección de Derechos",
+      "section": "46",
+      "title": "Conciliación",
+      "content": "Artículo 46.- El Instituto, en cualquier momento del procedimiento de protección de derechos, podrá invitar a las partes a conciliar. De llegarse a un acuerdo de conciliación entre ambas, éste se hará constar por escrito y tendrá efectos vinculantes. La solicitud de protección de datos podrá ser desistida en cualquier momento por el titular."
+    },
+    {
+      "provision_ref": "art47",
+      "chapter": "CAPÍTULO VII - Del Procedimiento de Protección de Derechos",
+      "section": "47",
+      "title": "Resolución del procedimiento",
+      "content": "Artículo 47.- El Instituto resolverá la solicitud de protección de datos una vez analizadas las pruebas y demás elementos de convicción que estime pertinentes, como pueden ser aquellos que deriven de las audiencias que se celebren con las partes."
+    },
+    {
+      "provision_ref": "art48",
+      "chapter": "CAPÍTULO VII - Del Procedimiento de Protección de Derechos",
+      "section": "48",
+      "title": "Plazo de resolución",
+      "content": "Artículo 48.- El procedimiento de protección de derechos previsto en este Capítulo se sustanciará conforme a lo siguiente: I. El Instituto determinará la admisión y dará traslado al responsable; II. El responsable rendirá su informe dentro de los quince días siguientes; III. Rendido el informe o transcurrido el plazo, el Instituto notificará al titular para que manifieste lo que a su derecho convenga; IV. Concluidos los plazos, el Instituto dictará la resolución que corresponda. El plazo máximo para dictar la resolución será de cincuenta días hábiles, contados a partir de la fecha de presentación de la solicitud de protección de datos."
+    },
+    {
+      "provision_ref": "art49",
+      "chapter": "CAPÍTULO VII - Del Procedimiento de Protección de Derechos",
+      "section": "49",
+      "title": "Sentido de la resolución",
+      "content": "Artículo 49.- La resolución que emita el Instituto podrá: I. Sobreseer o desestimar la solicitud de protección de derechos por ser improcedente o bien, por quedar sin materia; II. Confirmar que la actuación del responsable fue adecuada, o III. Ordenar al responsable que lleve a cabo los actos solicitados por el titular, dentro de un plazo de quince días. En caso de resultar procedente, la resolución del Instituto establecerá los plazos para acreditar su cumplimiento."
+    },
+    {
+      "provision_ref": "art50",
+      "chapter": "CAPÍTULO VII - Del Procedimiento de Protección de Derechos",
+      "section": "50",
+      "title": "Impugnación",
+      "content": "Artículo 50.- Contra las resoluciones del Instituto, los particulares podrán promover el juicio de nulidad ante el Tribunal Federal de Justicia Fiscal y Administrativa."
+    },
+    {
+      "provision_ref": "art51",
+      "chapter": "CAPÍTULO VII - Del Procedimiento de Protección de Derechos",
+      "section": "51",
+      "title": "Denuncia por incumplimiento",
+      "content": "Artículo 51.- Cuando el titular aporte indicios que hagan presumir fundadamente que el responsable está tratando sus datos personales en contravención a los principios y disposiciones previstos en esta Ley, el Instituto podrá iniciar el procedimiento de verificación que se establece en el Capítulo IX de esta Ley."
+    },
+    {
+      "provision_ref": "art52",
+      "chapter": "CAPÍTULO VIII - Del Procedimiento de Verificación",
+      "section": "52",
+      "title": "Inicio de verificación",
+      "content": "Artículo 52.- El Instituto verificará el cumplimiento de la presente Ley y de la normatividad que de ésta derive. La verificación podrá iniciarse de oficio o a petición de parte."
+    },
+    {
+      "provision_ref": "art53",
+      "chapter": "CAPÍTULO VIII - Del Procedimiento de Verificación",
+      "section": "53",
+      "title": "Solicitud de verificación",
+      "content": "Artículo 53.- En caso de una solicitud de verificación, el Instituto podrá en todo momento requerir al responsable la exhibición de la información necesaria para verificar el cumplimiento de la presente Ley."
+    },
+    {
+      "provision_ref": "art54",
+      "chapter": "CAPÍTULO VIII - Del Procedimiento de Verificación",
+      "section": "54",
+      "title": "Procedimiento de verificación",
+      "content": "Artículo 54.- El procedimiento de verificación iniciará de oficio o a petición de parte, a que se refiere este capítulo, se sujetará a lo siguiente: I. Se presentará ante el Instituto o, en su caso, se iniciará de oficio, con base en las causas previstas en esta Ley; II. El Instituto requerirá al responsable para que, dentro de los quince días siguientes, manifieste lo que a su derecho convenga y aporte la información y documentos pertinentes, y III. Concluido el plazo, el Instituto emitirá la resolución que corresponda, en la que se determinarán las medidas que procedan para garantizar el debido tratamiento de los datos personales."
+    },
+    {
+      "provision_ref": "art55",
+      "chapter": "CAPÍTULO VIII - Del Procedimiento de Verificación",
+      "section": "55",
+      "title": "Resolución de verificación",
+      "content": "Artículo 55.- En la resolución del procedimiento de verificación el Instituto podrá: I. Orientar al responsable sobre las acciones que debe tomar para adecuar su actuar a las disposiciones de la presente Ley; II. Ordenar las medidas que procedan para hacer efectiva la tutela de los derechos que esta Ley ampara, y III. Imponer las sanciones establecidas en esta Ley."
+    },
+    {
+      "provision_ref": "art56",
+      "chapter": "CAPÍTULO IX - Del Procedimiento de Imposición de Sanciones",
+      "section": "56",
+      "title": "Procedimiento sancionador",
+      "content": "Artículo 56.- El procedimiento de imposición de sanciones dará comienzo con la notificación que efectúe el Instituto al presunto infractor, sobre los hechos que motivaron el inicio del procedimiento y le otorgará un término de quince días para que rinda su declaración al respecto y ofrezca las pruebas que considere convenientes."
+    },
+    {
+      "provision_ref": "art57",
+      "chapter": "CAPÍTULO IX - Del Procedimiento de Imposición de Sanciones",
+      "section": "57",
+      "title": "Desahogo de pruebas",
+      "content": "Artículo 57.- Transcurrido el plazo señalado en el artículo anterior, dentro de los siguientes quince días hábiles el Instituto deberá resolver sobre la admisión de las pruebas, procediendo a su desahogo dentro de los treinta días hábiles siguientes."
+    },
+    {
+      "provision_ref": "art58",
+      "chapter": "CAPÍTULO IX - Del Procedimiento de Imposición de Sanciones",
+      "section": "58",
+      "title": "Resolución sancionadora",
+      "content": "Artículo 58.- El Instituto, al imponer las sanciones que correspondan, fundará y motivará su resolución, considerando: I. La naturaleza del dato personal afectado; II. La notoria improcedencia de la negativa del responsable, para realizar los actos solicitados por el titular, en términos de esta Ley; III. El carácter intencional o no de la acción u omisión constitutiva de la infracción; IV. La capacidad económica del responsable, y V. La reincidencia."
+    },
+    {
+      "provision_ref": "art59",
+      "chapter": "CAPÍTULO IX - Del Procedimiento de Imposición de Sanciones",
+      "section": "59",
+      "title": "Medidas de apremio",
+      "content": "Artículo 59.- El Instituto podrá aplicar las siguientes medidas de apremio para asegurar el cumplimiento de sus determinaciones: I. Apercibimiento; II. Multa de 100 a 10,000 días de salario mínimo vigente en el Distrito Federal; III. En caso de que persista el incumplimiento, el Instituto podrá imponer nueva multa, o IV. Clausura temporal, parcial o total del tratamiento."
+    },
+    {
+      "provision_ref": "art60",
+      "chapter": "CAPÍTULO IX - Del Procedimiento de Imposición de Sanciones",
+      "section": "60",
+      "title": "Recurso de revisión",
+      "content": "Artículo 60.- En contra de las resoluciones del Instituto, los responsables podrán interponer el recurso de revisión previsto en la Ley Federal de Procedimiento Administrativo, dentro de los quince días siguientes a la fecha en que surta efecto la notificación de la resolución que se impugna."
+    },
+    {
+      "provision_ref": "art61",
+      "chapter": "CAPÍTULO IX - Del Procedimiento de Imposición de Sanciones",
+      "section": "61",
+      "title": "Plazo de prescripción",
+      "content": "Artículo 61.- Las infracciones a la presente Ley serán sancionadas por el Instituto con fundamento en lo dispuesto por la Ley Federal de Procedimiento Administrativo. Las facultades del Instituto para imponer las sanciones previstas en esta Ley prescribirán en un plazo de tres años, contados a partir del día siguiente a aquél en que se hubiera cometido la infracción o a partir del día siguiente a aquél en que hubiere cesado, si fuere de carácter continuo."
+    },
+    {
+      "provision_ref": "art62",
+      "chapter": "CAPÍTULO X - De las Infracciones y Sanciones",
+      "section": "62",
+      "title": "Competencia sancionadora",
+      "content": "Artículo 62.- Las infracciones a la presente Ley por los responsables en materia de protección de datos serán sancionadas por el Instituto."
     },
     {
       "provision_ref": "art63",
       "chapter": "CAPÍTULO X - De las Infracciones y Sanciones",
       "section": "63",
       "title": "Infracciones",
-      "content": "Artículo 63.- Constituyen infracciones a esta Ley, las siguientes: I. No cumplir con la solicitud del titular para el acceso, rectificación, cancelación u oposición al tratamiento de sus datos personales, sin razón fundada; II. Actuar con negligencia o dolo en la tramitación y respuesta de solicitudes de acceso, rectificación, cancelación u oposición de datos personales; III. Declarar dolosamente la inexistencia de datos personales; IV. Dar tratamiento a los datos personales en contravención a los principios establecidos en la presente Ley; V. Omitir en el aviso de privacidad, alguno o todos los elementos a que se refiere el artículo 16 de esta Ley; VI. Mantener datos personales inexactos cuando resulte imputable al responsable; VII. No cumplir con el apercibimiento; VIII. Incumplir el deber de confidencialidad establecido en el artículo 21 de esta Ley; IX. Cambiar sustancialmente la finalidad originaria del tratamiento de los datos, sin observar lo dispuesto por el artículo 12; X. Transferir datos a terceros sin comunicar a éstos el aviso de privacidad que contiene las condiciones en las que el titular consintió el tratamiento de sus datos; XI. Vulnerar la seguridad de bases de datos, locales, programas o equipos, cuando resulte imputable al responsable; XII. Llevar a cabo la transferencia o cesión de los datos personales, fuera de los supuestos permitidos por esta Ley; XIII. Recabar o transferir datos personales sin el consentimiento expreso del titular, en los casos en que éste sea exigido; XIV. Obstruir los actos de verificación de la autoridad; XV. Recabar datos en forma engañosa y fraudulenta; XVI. Continuar con el uso ilegítimo de los datos personales cuando se ha solicitado el cese del mismo por el Instituto o los titulares; XVII. Tratar los datos personales de manera que se afecte o impida el ejercicio de los derechos de acceso, rectificación, cancelación y oposición establecidos en el artículo 16 constitucional; XVIII. Crear bases de datos en contravención a lo dispuesto por el artículo 9, segundo párrafo de esta Ley."
+      "content": "Artículo 63.- Constituyen infracciones a esta Ley, las siguientes: I. No cumplir con la solicitud del titular para el acceso, rectificación, cancelación u oposición al tratamiento de sus datos personales, sin razón fundada, en los términos previstos en esta Ley; II. Actuar con negligencia o dolo en la tramitación y respuesta de solicitudes de acceso, rectificación, cancelación u oposición de datos personales; III. Declarar dolosamente la inexistencia de datos personales, cuando exista total o parcialmente en las bases de datos del responsable; IV. Dar tratamiento a los datos personales en contravención a los principios establecidos en la presente Ley; V. Omitir en el aviso de privacidad, alguno o todos los elementos a que se refiere el artículo 16 de esta Ley; VI. Mantener datos personales inexactos cuando resulte imputable al responsable, o no efectuar las rectificaciones o cancelaciones de los mismos que legalmente procedan cuando resulten afectados los derechos de los titulares; VII. No cumplir con el apercibimiento a que se refiere la fracción I del artículo 64; VIII. Incumplir el deber de confidencialidad establecido en el artículo 21 de esta Ley; IX. Cambiar sustancialmente la finalidad originaria del tratamiento de los datos, sin observar lo dispuesto por el artículo 12; X. Transferir datos a terceros sin comunicar a éstos el aviso de privacidad que contiene las condiciones en las que el titular consintió el tratamiento de sus datos; XI. Vulnerar la seguridad de bases de datos, locales, programas o equipos, cuando resulte imputable al responsable; XII. Llevar a cabo la transferencia o cesión de los datos personales, fuera de los supuestos permitidos por esta Ley; XIII. Recabar o transferir datos personales sin el consentimiento expreso del titular, en los casos en que éste sea exigido; XIV. Obstruir los actos de verificación de la autoridad; XV. Recabar datos en forma engañosa y fraudulenta; XVI. Continuar con el uso ilegítimo de los datos personales cuando se ha solicitado el cese del mismo por el Instituto o los titulares; XVII. Tratar los datos personales de manera que se afecte o impida el ejercicio de los derechos de acceso, rectificación, cancelación y oposición establecidos en el artículo 16 constitucional; XVIII. Crear bases de datos en contravención a lo dispuesto por el artículo 9, segundo párrafo de esta Ley."
     },
     {
       "provision_ref": "art64",
@@ -107,6 +457,20 @@
       "section": "64",
       "title": "Sanciones",
       "content": "Artículo 64.- Las infracciones a la presente Ley serán sancionadas por el Instituto con: I. El apercibimiento para que el responsable lleve a cabo los actos solicitados por el titular, en los términos previstos por esta Ley, tratándose de los supuestos previstos en la fracción I del artículo anterior; II. Multa de 100 a 160,000 días de salario mínimo vigente en el Distrito Federal, en los casos previstos en las fracciones II a VII del artículo anterior; III. Multa de 200 a 320,000 días de salario mínimo vigente en el Distrito Federal, en los casos previstos en las fracciones VIII a XVIII del artículo anterior, y IV. En caso de que de manera reiterada persistan las infracciones citadas en los incisos anteriores, se impondrá una multa adicional que irá de 100 a 320,000 días de salario mínimo vigente en el Distrito Federal. En sus resoluciones, el Instituto deberá considerar el carácter intencional de la acción u omisión constitutiva de la infracción, la capacidad económica del infractor y la reincidencia."
+    },
+    {
+      "provision_ref": "art65",
+      "chapter": "CAPÍTULO X - De las Infracciones y Sanciones",
+      "section": "65",
+      "title": "Concurso de infracciones",
+      "content": "Artículo 65.- Cuando resulte que una sola conducta del responsable infrinja varias disposiciones de la presente Ley, se aplicará la sanción correspondiente a la infracción más grave."
+    },
+    {
+      "provision_ref": "art66",
+      "chapter": "CAPÍTULO XI - De los Delitos en Materia del Tratamiento Indebido de Datos Personales",
+      "section": "66",
+      "title": "Delitos en materia de datos personales - tipos",
+      "content": "Artículo 66.- Las sanciones por infracciones a esta Ley y a las disposiciones derivadas de ella, serán aplicadas por el Instituto, conforme a los procedimientos que la misma establece."
     },
     {
       "provision_ref": "art67",
@@ -137,13 +501,13 @@
       "source_provision": "art3"
     },
     {
-      "term": "Datos personales",
-      "definition": "Cualquier información concerniente a una persona física identificada o identificable.",
+      "term": "Bases de datos",
+      "definition": "El conjunto ordenado de datos personales referentes a una persona identificada o identificable.",
       "source_provision": "art3"
     },
     {
-      "term": "Datos personales sensibles",
-      "definition": "Aquellos datos personales que afecten a la esfera más íntima de su titular, o cuya utilización indebida pueda dar origen a discriminación o conlleve un riesgo grave para éste.",
+      "term": "Bloqueo",
+      "definition": "La identificación y conservación de datos personales una vez cumplida la finalidad para la cual fueron recabados, con el único propósito de determinar posibles responsabilidades en relación con su tratamiento.",
       "source_provision": "art3"
     },
     {
@@ -152,13 +516,33 @@
       "source_provision": "art3"
     },
     {
-      "term": "Responsable",
-      "definition": "Persona física o moral de carácter privado que decide sobre el tratamiento de datos personales.",
+      "term": "Datos personales",
+      "definition": "Cualquier información concerniente a una persona física identificada o identificable.",
+      "source_provision": "art3"
+    },
+    {
+      "term": "Datos personales sensibles",
+      "definition": "Aquellos datos personales que afecten a la esfera más íntima de su titular, o cuya utilización indebida pueda dar origen a discriminación o conlleve un riesgo grave para éste. Incluyen origen racial o étnico, estado de salud, información genética, creencias religiosas, opiniones políticas, preferencia sexual.",
+      "source_provision": "art3"
+    },
+    {
+      "term": "Disociación",
+      "definition": "El procedimiento mediante el cual los datos personales no pueden asociarse al titular ni permitir, por su estructura, contenido o grado de desagregación, la identificación del mismo.",
       "source_provision": "art3"
     },
     {
       "term": "Encargado",
       "definition": "La persona física o jurídica que sola o conjuntamente con otras trate datos personales por cuenta del responsable.",
+      "source_provision": "art3"
+    },
+    {
+      "term": "Fuente de acceso público",
+      "definition": "Aquellas bases de datos cuya consulta puede ser realizada por cualquier persona, sin más requisito que, en su caso, el pago de una contraprestación.",
+      "source_provision": "art3"
+    },
+    {
+      "term": "Responsable",
+      "definition": "Persona física o moral de carácter privado que decide sobre el tratamiento de datos personales.",
       "source_provision": "art3"
     },
     {
@@ -168,17 +552,12 @@
     },
     {
       "term": "Tratamiento",
-      "definition": "La obtención, uso, divulgación o almacenamiento de datos personales, por cualquier medio.",
+      "definition": "La obtención, uso, divulgación o almacenamiento de datos personales, por cualquier medio. El uso abarca cualquier acción de acceso, manejo, aprovechamiento, transferencia o disposición de datos personales.",
       "source_provision": "art3"
     },
     {
       "term": "Transferencia",
       "definition": "Toda comunicación de datos realizada a persona distinta del responsable o encargado del tratamiento.",
-      "source_provision": "art3"
-    },
-    {
-      "term": "Disociación",
-      "definition": "El procedimiento mediante el cual los datos personales no pueden asociarse al titular ni permitir, por su estructura, contenido o grado de desagregación, la identificación del mismo.",
       "source_provision": "art3"
     }
   ]
