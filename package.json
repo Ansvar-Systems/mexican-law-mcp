@@ -1,6 +1,6 @@
 {
   "name": "@ansvar/mexican-law-mcp",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "mcpName": "eu.ansvar/mexican-law-mcp",
   "description": "Mexican federal law database covering data protection (LFPDPPP), fintech, cybercrime, commercial law, and consumer protection with Spanish full-text search",
   "author": "Ansvar Systems <hello@ansvar.eu>",
