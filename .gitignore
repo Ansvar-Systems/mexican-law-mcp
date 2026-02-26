@@ -1,6 +1,5 @@
 node_modules/
 dist/
-*.db
 !data/.gitkeep
 .env
 .env.*
@@ -8,3 +7,5 @@ dist/
 coverage/
 .vercel/
 .DS_Store
+data/source/
+data/seed/
