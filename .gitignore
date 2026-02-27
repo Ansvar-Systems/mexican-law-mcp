@@ -9,3 +9,4 @@ coverage/
 .DS_Store
 data/source/
 data/seed/
+.vercel
