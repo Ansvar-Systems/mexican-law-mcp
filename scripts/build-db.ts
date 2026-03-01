@@ -452,6 +452,8 @@ function buildDatabase(): void {
     insertMeta.run('jurisdiction', 'MX');
     insertMeta.run('source', 'official-source');
     insertMeta.run('licence', 'See sources.yml');
+    insertMeta.run('extraction_method', 'pdf-pdftotext');
+    insertMeta.run('accuracy_notice', 'Text extracted from PDF using pdftotext. PDF is a presentation format, not a semantic format — extraction may introduce spacing errors, encoding artifacts, or structural ambiguity. For authoritative text, refer to the official PDF at diputados.gob.mx/LeyesBiblio/pdf/{CODE}.pdf');
   });
   writeMeta();
 

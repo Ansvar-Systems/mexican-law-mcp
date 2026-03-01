@@ -1,5 +1,5 @@
 /**
- * Runtime capability detection for Australian Law MCP.
+ * Runtime capability detection for Mexican Law MCP.
  * Detects which database tables are available to enable/disable features.
  */
 
@@ -39,6 +39,8 @@ export interface DbMetadata {
   schema_version: string;
   built_at?: string;
   builder?: string;
+  extraction_method?: string;
+  accuracy_notice?: string;
 }
 
 export function readDbMetadata(db: InstanceType<typeof Database>): DbMetadata {
@@ -56,6 +58,8 @@ export function readDbMetadata(db: InstanceType<typeof Database>): DbMetadata {
     schema_version: meta.schema_version ?? '1.0',
     built_at: meta.built_at,
     builder: meta.builder,
+    extraction_method: meta.extraction_method,
+    accuracy_notice: meta.accuracy_notice,
   };
 }
 

@@ -21,8 +21,8 @@
 import * as fs from 'fs';
 import * as path from 'path';
 import { fileURLToPath } from 'url';
-import { fetchLawHtml } from './lib/fetcher.js';
-import { parseMexicanHtml, KEY_MEXICAN_ACTS, type LawIndexEntry, type ParsedLaw } from './lib/parser.js';
+import { fetchLawPdf, pdfToText } from './lib/fetcher.js';
+import { parseMexicanText, KEY_MEXICAN_ACTS, type LawIndexEntry, type ParsedLaw } from './lib/parser.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -83,6 +83,7 @@ function censusLawToIndexEntry(censusLaw: CensusLaw): LawIndexEntry {
     issuedDate: '',
     inForceDate: '',
     url: censusLaw.url,
+    pdfUrl: censusLaw.pdfUrl || undefined,
     description: censusLaw.title,
   };
 }
@@ -186,17 +187,20 @@ async function fetchAndParseLaws(laws: LawIndexEntry[], skipFetch: boolean, resu
     }
 
     try {
-      let html: string;
+      let lawText: string;
+      const pdfFile = sourceFile.replace(/\.html$/, '.pdf');
 
       if (fs.existsSync(sourceFile) && skipFetch) {
-        html = fs.readFileSync(sourceFile, 'utf-8');
+        // Reuse cached extracted text
+        lawText = fs.readFileSync(sourceFile, 'utf-8');
         console.log(`  Using cached ${law.shortName} (${law.code})`);
       } else {
+        // Download PDF and extract text
         process.stdout.write(`  [${processed + 1}/${laws.length}] Fetching ${law.shortName} (${law.code})...`);
-        const result = await fetchLawHtml(law.code);
+        const result = await fetchLawPdf(law.code, law.pdfUrl);
 
-        if (result.status !== 200 || result.body.length < 500) {
-          console.log(` HTTP ${result.status} (${result.body.length} bytes) -- creating fallback`);
+        if (result.status !== 200 || result.buffer.length < 1000) {
+          console.log(` HTTP ${result.status} (${result.buffer.length} bytes) -- creating fallback`);
           const fallbackSeed = createFallbackSeed(law);
           fs.writeFileSync(seedFile, JSON.stringify(fallbackSeed, null, 2));
           report.push({ law: law.shortName, provisions: fallbackSeed.provisions.length, definitions: 0, status: `HTTP ${result.status} (fallback)` });
@@ -206,12 +210,17 @@ async function fetchAndParseLaws(laws: LawIndexEntry[], skipFetch: boolean, resu
           continue;
         }
 
-        html = result.body;
-        fs.writeFileSync(sourceFile, html);
-        console.log(` OK (${(html.length / 1024).toFixed(0)} KB)`);
+        console.log(` PDF ${(result.buffer.length / 1024).toFixed(0)} KB`);
+
+        // Save PDF and extract text using pdftotext
+        process.stdout.write(`    Extracting text...`);
+        lawText = await pdfToText(result.buffer, pdfFile);
+        // Save extracted text for --skip-fetch reuse (using .html extension for compatibility)
+        fs.writeFileSync(sourceFile, lawText);
+        console.log(` ${(lawText.length / 1024).toFixed(0)} KB text`);
       }
 
-      const parsed = parseMexicanHtml(html, law);
+      const parsed = parseMexicanText(lawText, law);
 
       // If parsing returned zero provisions, create fallback
       if (parsed.provisions.length === 0) {
@@ -319,8 +328,10 @@ async function main(): Promise<void> {
   console.log('Mexican Law MCP -- Ingestion Pipeline');
   console.log('=====================================\n');
   console.log(`  Source:  Cámara de Diputados (diputados.gob.mx/LeyesBiblio)`);
-  console.log(`  Method:  HTML scrape (ref/*.htm)`);
+  console.log(`  Method:  PDF download + pdftotext extraction`);
   console.log(`  License: Government Public Data (public domain)`);
+  console.log(`  NOTE:    PDF extraction is less accurate than digital sources.`);
+  console.log(`           For authoritative text, refer to the official PDF.`);
 
   if (limit) console.log(`  --limit ${limit}`);
   if (skipFetch) console.log(`  --skip-fetch`);

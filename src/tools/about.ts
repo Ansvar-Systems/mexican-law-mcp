@@ -44,12 +44,14 @@ export function getAbout(db: InstanceType<typeof Database>, context: AboutContex
       eu_references: safeCount(db, 'SELECT COUNT(*) as count FROM eu_references'),
     },
     data_source: {
-      name: 'Federal Register of Legislation',
-      authority: 'Mexican Government, Office of Parliamentary Counsel',
-      url: 'https://www.legislation.gov.au',
-      license: 'Creative Commons Attribution 4.0 International (CC BY 4.0)',
-      jurisdiction: 'AU',
-      languages: ['en'],
+      name: 'Cámara de Diputados — Leyes Federales Vigentes',
+      authority: 'Cámara de Diputados del H. Congreso de la Unión, Mexico',
+      url: 'https://www.diputados.gob.mx/LeyesBiblio/index.htm',
+      license: 'Government Public Data (public domain)',
+      jurisdiction: 'MX',
+      languages: ['es'],
+      extraction_method: meta.extraction_method ?? 'pdf-pdftotext',
+      accuracy_notice: 'Text extracted from official PDF files using pdftotext. PDF is a presentation format — extraction may introduce spacing errors or structural ambiguity. For authoritative text, refer to the official PDF at diputados.gob.mx/LeyesBiblio/pdf/{CODE}.pdf',
     },
   };
 }

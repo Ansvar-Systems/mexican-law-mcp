@@ -44,15 +44,17 @@ export async function listSources(
     results: {
       sources: [
         {
-          name: 'Federal Register of Legislation',
-          authority: 'Mexican Government, Office of Parliamentary Counsel',
-          url: 'https://www.legislation.gov.au',
-          license: 'Creative Commons Attribution 4.0 International (CC BY 4.0)',
+          name: 'Cámara de Diputados — Leyes Federales Vigentes',
+          authority: 'Cámara de Diputados del H. Congreso de la Unión, Mexico',
+          url: 'https://www.diputados.gob.mx/LeyesBiblio/index.htm',
+          license: 'Government Public Data (public domain)',
           coverage:
-            'All Commonwealth (federal) Acts and legislative instruments, ' +
-            'including privacy, cybersecurity, critical infrastructure, ' +
-            'corporations, consumer, telecommunications, and criminal law',
-          languages: ['en'],
+            'Mexican federal legislation: Constitution, federal codes, ' +
+            'federal laws, general laws, organic laws, regulatory laws. ' +
+            'Covers data protection (LFPDPPP, LGPDPPSO), fintech, cybercrime, ' +
+            'commercial law, consumer protection, telecommunications. ' +
+            'Text extracted from official PDF — may contain extraction artifacts.',
+          languages: ['es'],
         },
       ],
       database: {

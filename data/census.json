@@ -2055,9 +2055,9 @@
     }
   ],
   "ingestion": {
-    "completed_at": "2026-02-26T05:39:36.032Z",
+    "completed_at": "2026-03-01T12:18:35.528Z",
     "total_laws": 185,
-    "total_provisions": 583,
+    "total_provisions": 26553,
     "coverage_pct": "100.0"
   }
 }

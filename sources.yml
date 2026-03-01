@@ -8,10 +8,10 @@ sources:
     authority: "Camara de Diputados del H. Congreso de la Union, Mexico"
     official_portal: "https://www.diputados.gob.mx/LeyesBiblio/index.htm"
     canonical_identifier: "N/A (Mexican legislation identified by law title, DOF publication date, and reform date; no standardized URI scheme)"
-    retrieval_method: "HTML_SCRAPE"
-    api_documentation: "N/A (no public API; legislation available as HTML/PDF/DOC)"
+    retrieval_method: "PDF_EXTRACT"
+    api_documentation: "N/A (no public API; legislation available as PDF at /LeyesBiblio/pdf/{CODE}.pdf)"
     update_frequency: "on_change"
-    last_ingested: "PENDING_FIRST_INGEST"
+    last_ingested: "2026-03-01"
     license_or_terms:
       type: "Government Public Data"
       url: "https://www.diputados.gob.mx"

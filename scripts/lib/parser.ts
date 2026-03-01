@@ -1,21 +1,24 @@
 /**
- * HTML parser for Mexican federal legislation from diputados.gob.mx
+ * Parser for Mexican federal legislation from diputados.gob.mx
  *
- * Parses HTML pages from the Cámara de Diputados legislation portal into
- * structured provision data. Mexican legislation follows civil law tradition
- * with "Artículo X" numbering. Laws are organized as:
+ * Parses plain text (extracted from PDF via pdftotext) into structured
+ * provision data. Mexican legislation follows civil law tradition with
+ * "Artículo X" numbering. Laws are organized as:
  *
  *   TÍTULO (Title) > CAPÍTULO (Chapter) > SECCIÓN (Section) > Artículo N
  *
- * Key HTML patterns on diputados.gob.mx:
- *   - Articles:   <p>Artículo N.- ...</p> or <b>Artículo N.</b>
- *   - Chapters:   <b>CAPÍTULO I</b> or <p class="...">Capítulo ...</p>
- *   - Titles:     <b>TÍTULO PRIMERO</b> or <p class="...">Título ...</p>
- *   - Transitory: <b>TRANSITORIOS</b>
+ * Text patterns from PDF extraction:
+ *   - Articles:   "Artículo N.-" or "Artículo N." at line start
+ *   - Chapters:   "CAPÍTULO I" or "Capítulo I"
+ *   - Titles:     "TÍTULO PRIMERO" or "Título Primero"
+ *   - Transitory: "TRANSITORIOS" or "ARTÍCULOS TRANSITORIOS"
  *   - Fractions:  I., II., III., etc. (Roman numeral sub-provisions)
  *
- * Note: diputados.gob.mx serves HTML in windows-1252/ISO-8859-1 encoding.
- * The fetcher returns text, so encoding is handled at the fetch level.
+ * ACCURACY WARNING: Text extracted from PDF is not as accurate as digital
+ * (HTML/API) sources. PDF is a presentation format — text extraction may
+ * introduce spacing errors, encoding artifacts, or structural ambiguity.
+ * For authoritative text, always refer to the official PDF at
+ * diputados.gob.mx/LeyesBiblio/pdf/{CODE}.pdf
  */
 
 export interface LawIndexEntry {
@@ -28,6 +31,7 @@ export interface LawIndexEntry {
   issuedDate: string;
   inForceDate: string;
   url: string;
+  pdfUrl?: string;
   description?: string;
 }
 
@@ -298,6 +302,221 @@ export function parseMexicanHtml(html: string, law: LawIndexEntry): ParsedLaw {
 
   const { provisions, definitions } = extractArticles(html);
   const transitoryProvisions = extractTransitoryArticles(html);
+
+  return {
+    id: law.id,
+    type: 'statute',
+    title: law.title,
+    title_en: law.titleEn,
+    short_name: law.shortName,
+    status: law.status,
+    issued_date: law.issuedDate,
+    in_force_date: law.inForceDate,
+    url: law.url,
+    description: law.description ?? law.title,
+    provisions: [...provisions, ...transitoryProvisions],
+    definitions,
+  };
+}
+
+/**
+ * Extract articles from plain text (pdftotext output).
+ *
+ * PDF text has each article starting with "Artículo N.-" or "Artículo N."
+ * on a new line (sometimes with leading whitespace from layout preservation).
+ * We split on article boundaries and collect text between them.
+ */
+function extractArticlesFromText(text: string): { provisions: ParsedProvision[]; definitions: ParsedDefinition[] } {
+  const provisions: ParsedProvision[] = [];
+  const definitions: ParsedDefinition[] = [];
+
+  // Split text into lines for processing
+  const lines = text.split('\n');
+
+  // Find article start lines and chapter/title context
+  // Pattern: "Artículo N" at start of line (with optional whitespace)
+  const articleStartRe = /^\s*Art[ií]culo\s+([\d]+(?:\s*(?:Bis|Ter|Qu[aá]ter|Quintus|Sextus|Septimus)\s*\d*)?(?:\s*[oa]\.?)?)\s*[\.\-]/i;
+  const chapterRe = /^\s*(T[IÍ]TULO|CAP[IÍ]TULO|SECCI[OÓ]N)\s+(.+)/i;
+  const transitoryRe = /^\s*(TRANSITORIOS?|ART[IÍ]CULOS?\s+TRANSITORIOS?)\s*$/i;
+
+  interface ArticleBlock {
+    num: string;
+    startLine: number;
+    chapter: string;
+  }
+
+  const articleBlocks: ArticleBlock[] = [];
+  let currentChapter = '';
+  let transitoryStart = -1;
+
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i];
+
+    // Check for chapter/title/section headers
+    const chapterMatch = line.match(chapterRe);
+    if (chapterMatch) {
+      currentChapter = `${chapterMatch[1].toUpperCase()} ${chapterMatch[2].trim()}`;
+      // Truncate long chapter names
+      if (currentChapter.length > 200) currentChapter = currentChapter.substring(0, 200);
+      continue;
+    }
+
+    // Check for transitory section start
+    if (transitoryRe.test(line)) {
+      transitoryStart = i;
+      continue;
+    }
+
+    // Check for article start (only before TRANSITORIOS)
+    if (transitoryStart === -1) {
+      const articleMatch = line.match(articleStartRe);
+      if (articleMatch) {
+        articleBlocks.push({
+          num: articleMatch[1].trim(),
+          startLine: i,
+          chapter: currentChapter,
+        });
+      }
+    }
+  }
+
+  // Extract article text between boundaries
+  for (let i = 0; i < articleBlocks.length; i++) {
+    const block = articleBlocks[i];
+    const endLine = i + 1 < articleBlocks.length
+      ? articleBlocks[i + 1].startLine
+      : (transitoryStart !== -1 ? transitoryStart : lines.length);
+
+    // Collect lines for this article
+    let text = lines.slice(block.startLine, endLine).join('\n').trim();
+
+    // Clean up pdftotext layout artifacts (excessive whitespace)
+    text = text
+      .replace(/\n\s*\n\s*\n/g, '\n\n') // collapse triple+ newlines
+      .replace(/[ \t]{3,}/g, '  ')        // collapse excessive horizontal space
+      .trim();
+
+    // Cap at 8000 chars
+    if (text.length > 8000) {
+      text = text.substring(0, 8000);
+    }
+
+    // Skip very short articles
+    if (text.length < 15) continue;
+
+    const ref = normalizeArticleRef(block.num);
+    const sectionNum = block.num.replace(/\s+/g, ' ').trim();
+
+    // Extract a title from the first sentence
+    let title = '';
+    const titleMatch = text.match(/^Art[ií]culo\s+[\d\w\s.]+[\.\-]\s*([^.\n]+\.)/i);
+    if (titleMatch) {
+      title = titleMatch[1].trim();
+      if (title.length > 120) title = title.substring(0, 120);
+    }
+
+    provisions.push({
+      provision_ref: ref,
+      chapter: block.chapter || undefined,
+      section: sectionNum,
+      title,
+      content: text,
+    });
+
+    // Extract definitions
+    if (/se\s+(?:entender[áa]|entiende)\s+por|Para\s+(?:los\s+)?efectos\s+de/i.test(text)) {
+      const defRe = /([IVXLC]+)\.\s*([^:]+):\s*([^;]+(?:;|$))/g;
+      let dm: RegExpExecArray | null;
+      while ((dm = defRe.exec(text)) !== null) {
+        const term = dm[2].trim();
+        const definition = dm[3].trim().replace(/;$/, '').trim();
+        if (term.length > 2 && term.length < 100 && definition.length > 5) {
+          definitions.push({
+            term,
+            definition: `${term}: ${definition}`,
+            source_provision: ref,
+          });
+        }
+      }
+    }
+  }
+
+  return { provisions, definitions };
+}
+
+/**
+ * Extract transitory articles from plain text.
+ */
+function extractTransitoryFromText(text: string): ParsedProvision[] {
+  const provisions: ParsedProvision[] = [];
+
+  // Find the TRANSITORIOS section
+  const transitoryIdx = text.search(/\n\s*(TRANSITORIOS?|ART[IÍ]CULOS?\s+TRANSITORIOS?)\s*\n/i);
+  if (transitoryIdx === -1) return provisions;
+
+  const transitoryText = text.substring(transitoryIdx);
+  const lines = transitoryText.split('\n');
+
+  // Match transitory article patterns
+  const transRe = /^\s*(?:Art[ií]culo\s+)?(?:PRIMERO|SEGUNDO|TERCERO|CUARTO|QUINTO|SEXTO|S[EÉ]PTIMO|OCTAVO|NOVENO|D[EÉ]CIMO|[ÚU]NICO)\s*[\.\-]/i;
+
+  const positions: { label: string; lineIdx: number }[] = [];
+
+  for (let i = 0; i < lines.length; i++) {
+    if (transRe.test(lines[i])) {
+      positions.push({ label: lines[i].trim().substring(0, 80), lineIdx: i });
+    }
+  }
+
+  for (let i = 0; i < positions.length && i < 20; i++) {
+    const pos = positions[i];
+    const endIdx = i + 1 < positions.length ? positions[i + 1].lineIdx : lines.length;
+
+    const content = lines.slice(pos.lineIdx, endIdx).join('\n').trim();
+    if (content.length < 15) continue;
+
+    provisions.push({
+      provision_ref: `trans${i + 1}`,
+      chapter: 'TRANSITORIOS',
+      section: `Transitorio ${i + 1}`,
+      title: pos.label,
+      content: content.substring(0, 8000),
+    });
+  }
+
+  return provisions;
+}
+
+/**
+ * Parse plain text (from pdftotext) into structured law data.
+ *
+ * ACCURACY WARNING: PDF text extraction is not as accurate as parsing
+ * digital (HTML/API) sources. The text may contain spacing artifacts,
+ * encoding issues, or structural ambiguity from the PDF layout engine.
+ * For the authoritative text, refer to the official PDF at
+ * diputados.gob.mx/LeyesBiblio/pdf/{CODE}.pdf
+ */
+export function parseMexicanText(text: string, law: LawIndexEntry): ParsedLaw {
+  if (text.length < 200) {
+    console.log(`    WARNING: ${law.shortName} text too short (${text.length} chars)`);
+    return {
+      id: law.id,
+      type: 'statute',
+      title: law.title,
+      title_en: law.titleEn,
+      short_name: law.shortName,
+      status: law.status,
+      issued_date: law.issuedDate,
+      in_force_date: law.inForceDate,
+      url: law.url,
+      description: law.description ?? law.title,
+      provisions: [],
+      definitions: [],
+    };
+  }
+
+  const { provisions, definitions } = extractArticlesFromText(text);
+  const transitoryProvisions = extractTransitoryFromText(text);
 
   return {
     id: law.id,
