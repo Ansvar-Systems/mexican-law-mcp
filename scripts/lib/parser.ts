@@ -1,24 +1,22 @@
 /**
  * Parser for Mexican federal legislation from diputados.gob.mx
  *
- * Parses plain text (extracted from PDF via pdftotext) into structured
- * provision data. Mexican legislation follows civil law tradition with
- * "Artículo X" numbering. Laws are organized as:
+ * Parses plain text (extracted from DOC via antiword, or PDF via pdftotext)
+ * into structured provision data. Mexican legislation follows civil law
+ * tradition with "Artículo X" numbering. Laws are organized as:
  *
  *   TÍTULO (Title) > CAPÍTULO (Chapter) > SECCIÓN (Section) > Artículo N
  *
- * Text patterns from PDF extraction:
+ * Text patterns:
  *   - Articles:   "Artículo N.-" or "Artículo N." at line start
  *   - Chapters:   "CAPÍTULO I" or "Capítulo I"
  *   - Titles:     "TÍTULO PRIMERO" or "Título Primero"
  *   - Transitory: "TRANSITORIOS" or "ARTÍCULOS TRANSITORIOS"
  *   - Fractions:  I., II., III., etc. (Roman numeral sub-provisions)
  *
- * ACCURACY WARNING: Text extracted from PDF is not as accurate as digital
- * (HTML/API) sources. PDF is a presentation format — text extraction may
- * introduce spacing errors, encoding artifacts, or structural ambiguity.
- * For authoritative text, always refer to the official PDF at
- * diputados.gob.mx/LeyesBiblio/pdf/{CODE}.pdf
+ * DOC extraction (via antiword) produces cleaner text than PDF — no page
+ * headers, footers, or page numbers. Reform annotations are present in
+ * both formats as they are part of the source document.
  */
 
 export interface LawIndexEntry {
@@ -32,6 +30,7 @@ export interface LawIndexEntry {
   inForceDate: string;
   url: string;
   pdfUrl?: string;
+  docUrl?: string;
   description?: string;
 }
 
@@ -326,6 +325,86 @@ export function parseMexicanHtml(html: string, law: LawIndexEntry): ParsedLaw {
  * on a new line (sometimes with leading whitespace from layout preservation).
  * We split on article boundaries and collect text between them.
  */
+/**
+ * Clean raw pdftotext output by removing recurring page artifacts.
+ *
+ * diputados.gob.mx PDFs have a consistent layout:
+ *   - Header: law title (all caps) repeated on every page
+ *   - Sub-header: "CÁMARA DE DIPUTADOS DEL H. CONGRESO DE LA UNIÓN"
+ *   - Sub-header: "Secretaría General" / "Secretaría de Servicios Parlamentarios"
+ *   - Footer: "Última Reforma DOF dd-mm-yyyy"
+ *   - Page numbers: "N de M" centered at bottom
+ *   - Reform annotations: "Párrafo reformado DOF ..." / "Artículo adicionado DOF ..."
+ *
+ * These are editorial/layout elements, not part of the law text.
+ */
+function cleanPdfText(text: string): string {
+  const lines = text.split('\n');
+  const cleaned: string[] = [];
+
+  for (const line of lines) {
+    const trimmed = line.trim();
+
+    // Skip empty lines (will be normalized later)
+    if (trimmed.length === 0) {
+      cleaned.push('');
+      continue;
+    }
+
+    // Skip page headers: "CÁMARA DE DIPUTADOS DEL H. CONGRESO DE LA UNIÓN"
+    if (/^CÁMARA DE DIPUTADOS/i.test(trimmed)) continue;
+
+    // Skip sub-headers
+    if (/^Secretar[ií]a\s+(General|de\s+Servicios\s+Parlamentarios)/i.test(trimmed)) continue;
+
+    // Skip "Última Reforma DOF" lines
+    if (/^Última\s+Reforma\s+DOF/i.test(trimmed)) continue;
+
+    // Skip page numbers: "N de M" (where N and M are numbers, line is just this)
+    if (/^\d{1,4}\s+de\s+\d{1,4}$/.test(trimmed)) continue;
+
+    // Skip reform annotation lines (editorial notes, not law text)
+    // "Párrafo reformado DOF 10-06-2011", "Artículo adicionado DOF ...", etc.
+    if (/^(?:Párrafo|Art[ií]culo|Fracción|Inciso|Numeral|Apartado|Base|Secci[oó]n)\s+(?:reformad|adicionad|derogad|abrogad|publicad)/i.test(trimmed)) continue;
+    // Also match "Denominación del Capítulo reformada DOF ..."
+    if (/^Denominaci[oó]n\s+(?:del|de\s+la|de\s+los)?\s*(?:Cap[ií]tulo|T[ií]tulo|Secci[oó]n)\s+(?:reformad|adicionad)/i.test(trimmed)) continue;
+    // "Fe de erratas DOF ..."  / "Nota de vigencia: ..."
+    if (/^(?:Fe\s+de\s+erratas|Nota\s+de\s+vigencia)\b/i.test(trimmed)) continue;
+    // "(Reformado|Adicionado|Derogado), DOF ..." at line start
+    if (/^\((?:Reformad|Adicionad|Derogad|Abrogad)/i.test(trimmed)) continue;
+
+    // Skip repeated law title headers (all-caps law name repeated on every page)
+    // These are typically > 30 chars, ALL CAPS, and repeat the law title
+    // We detect them by checking if a line is ALL CAPS and appears many times
+    // (handled more efficiently below)
+
+    cleaned.push(line);
+  }
+
+  let result = cleaned.join('\n');
+
+  // Remove repeated all-caps law title lines that appear on every page
+  // Find the most common all-caps line (>20 chars) and remove all occurrences
+  const capsLineCount: Record<string, number> = {};
+  for (const line of cleaned) {
+    const t = line.trim();
+    if (t.length > 20 && t === t.toUpperCase() && /^[A-ZÁÉÍÓÚÑÜ\s,.\-()]+$/.test(t)) {
+      capsLineCount[t] = (capsLineCount[t] || 0) + 1;
+    }
+  }
+  for (const [capsLine, count] of Object.entries(capsLineCount)) {
+    if (count >= 5) {
+      // This line appears on many pages — it's a header, remove it
+      result = result.split('\n').filter(l => l.trim() !== capsLine).join('\n');
+    }
+  }
+
+  // Collapse excessive blank lines
+  result = result.replace(/\n{4,}/g, '\n\n\n');
+
+  return result;
+}
+
 function extractArticlesFromText(text: string): { provisions: ParsedProvision[]; definitions: ParsedDefinition[] } {
   const provisions: ParsedProvision[] = [];
   const definitions: ParsedDefinition[] = [];
@@ -515,8 +594,11 @@ export function parseMexicanText(text: string, law: LawIndexEntry): ParsedLaw {
     };
   }
 
-  const { provisions, definitions } = extractArticlesFromText(text);
-  const transitoryProvisions = extractTransitoryFromText(text);
+  // Clean PDF artifacts (headers, footers, page numbers, reform annotations)
+  const cleanedText = cleanPdfText(text);
+
+  const { provisions, definitions } = extractArticlesFromText(cleanedText);
+  const transitoryProvisions = extractTransitoryFromText(cleanedText);
 
   return {
     id: law.id,

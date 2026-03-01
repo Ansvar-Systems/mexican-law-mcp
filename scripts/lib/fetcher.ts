@@ -6,12 +6,14 @@
  *   https://www.diputados.gob.mx/LeyesBiblio/
  *
  * Laws are available as:
- *   - PDF:  /LeyesBiblio/pdf/{CODE}.pdf (consolidated law text — primary source)
+ *   - DOC:  /LeyesBiblio/doc/{CODE}.doc (Word binary format — preferred source)
+ *   - PDF:  /LeyesBiblio/pdf/{CODE}.pdf (consolidated law text — fallback)
  *   - HTML: /LeyesBiblio/ref/{code}.htm (reform history index, NOT law text)
  *
  * IMPORTANT: The ref/*.htm pages contain reform/amendment history, not the actual
- * consolidated law text. The PDF files are the authoritative source for current
- * law text. Text is extracted from PDFs using pdftotext (poppler-utils).
+ * consolidated law text. DOC files are preferred over PDF because they produce
+ * cleaner text without page headers, footers, and page numbers. Text is extracted
+ * from DOC files using antiword. PDF fallback uses pdftotext (poppler-utils).
  *
  * Key considerations:
  *   - 300ms minimum delay between requests (respectful to government servers)
@@ -19,8 +21,7 @@
  *   - User-Agent header identifying the MCP
  *   - Retry on 429/5xx with exponential backoff
  *   - No auth needed (public government data)
- *   - Connection timeout of 30s (PDFs can be large, site can be slow)
- *   - PDF extraction may introduce OCR-like artifacts (spacing, encoding)
+ *   - Connection timeout of 30s (files can be large, site can be slow)
  */
 
 const USER_AGENT = 'Mexican-Law-MCP/1.0 (https://github.com/Ansvar-Systems/mexican-law-mcp; hello@ansvar.ai)';
@@ -175,67 +176,43 @@ export async function fetchLawHtml(code: string): Promise<FetchResult> {
 }
 
 /**
- * Known PDF filename overrides where the filename doesn't match
- * the simple uppercase convention. diputados.gob.mx uses mixed case
- * for some PDF filenames (e.g., "CCom.pdf" instead of "CCOM.pdf").
+ * Download a law file (.doc or .pdf) from diputados.gob.mx.
+ *
+ * Tries DOC format first (cleaner text extraction), then falls back to PDF.
+ * The code parameter should match the exact code from the index page
+ * (case-sensitive, e.g., "LAmp", "CPEUM", "LFPDPPP").
+ *
+ * Returns the raw file bytes as a Buffer and the format used.
  */
-const PDF_CODE_OVERRIDES: Record<string, string> = {
-  ccom: 'CCom',
-  cnpp: 'CNPP',
-};
+export async function fetchLawFile(code: string, docUrl?: string, pdfUrl?: string): Promise<{ status: number; buffer: Buffer; url: string; format: 'doc' | 'pdf' }> {
+  // Build candidate URLs: DOC first, then PDF
+  const candidates: Array<{ url: string; format: 'doc' | 'pdf' }> = [];
 
-/**
- * Download the PDF of a Mexican federal law.
- *
- * The PDF at /LeyesBiblio/pdf/{CODE}.pdf contains the consolidated (current)
- * law text. This is the primary source — the ref/*.htm pages only contain
- * reform history.
- *
- * Tries multiple URL patterns because diputados.gob.mx uses inconsistent
- * filename casing (some PDFs use UPPERCASE, others use MixedCase).
- *
- * Returns the raw PDF bytes as a Buffer.
- */
-export async function fetchLawPdf(code: string, pdfUrl?: string): Promise<{ status: number; buffer: Buffer; url: string }> {
-  // Build candidate URLs to try
-  const candidateUrls: string[] = [];
+  // DOC URLs
+  if (docUrl) {
+    candidates.push({ url: docUrl, format: 'doc' });
+  }
+  candidates.push({ url: `https://www.diputados.gob.mx/LeyesBiblio/doc/${code}.doc`, format: 'doc' });
 
-  // If census provides a direct PDF URL, try it first
+  // PDF fallback
   if (pdfUrl) {
-    candidateUrls.push(pdfUrl);
+    candidates.push({ url: pdfUrl, format: 'pdf' });
   }
-
-  // Build fallback candidate codes
-  const candidates: string[] = [];
-  if (PDF_CODE_OVERRIDES[code]) {
-    candidates.push(PDF_CODE_OVERRIDES[code]);
-  }
-  candidates.push(code.toUpperCase()); // CCOM
-  // Title case: capitalize first letter of each word-like segment
-  const titleCase = code.replace(/(?:^|_)(\w)/g, (_, c) => c.toUpperCase());
-  if (!candidates.includes(titleCase)) candidates.push(titleCase);
-  if (!candidates.includes(code)) candidates.push(code); // lowercase
-
-  for (const c of candidates) {
-    const url = `https://www.diputados.gob.mx/LeyesBiblio/pdf/${c}.pdf`;
-    if (!candidateUrls.includes(url)) candidateUrls.push(url);
-  }
+  candidates.push({ url: `https://www.diputados.gob.mx/LeyesBiblio/pdf/${code}.pdf`, format: 'pdf' });
 
   await rateLimit();
 
   try {
-    // Try each candidate URL
-    for (const url of candidateUrls) {
-
+    for (const candidate of candidates) {
       for (let attempt = 0; attempt <= 2; attempt++) {
         try {
           const controller = new AbortController();
           const timeout = setTimeout(() => controller.abort(), CONNECT_TIMEOUT_MS);
 
-          const response = await fetch(url, {
+          const response = await fetch(candidate.url, {
             headers: {
               'User-Agent': USER_AGENT,
-              'Accept': 'application/pdf, */*',
+              'Accept': '*/*',
             },
             redirect: 'follow',
             signal: controller.signal,
@@ -251,57 +228,80 @@ export async function fetchLawPdf(code: string, pdfUrl?: string): Promise<{ stat
             }
           }
 
-          // If 404, try next candidate code
-          if (response.status === 404) break;
+          if (response.status === 404) break; // try next candidate
 
           if (response.status !== 200) {
-            return { status: response.status, buffer: Buffer.alloc(0), url };
+            return { status: response.status, buffer: Buffer.alloc(0), url: candidate.url, format: candidate.format };
           }
 
           const arrayBuffer = await response.arrayBuffer();
-          return { status: response.status, buffer: Buffer.from(arrayBuffer), url };
+          return { status: response.status, buffer: Buffer.from(arrayBuffer), url: candidate.url, format: candidate.format };
         } catch (error) {
           if (error instanceof Error && error.name === 'AbortError') {
             if (attempt < 2) continue;
-            break; // try next candidate
+            break;
           }
           throw error;
         }
       }
     }
 
-    // All candidates failed
-    return { status: 404, buffer: Buffer.alloc(0), url: candidateUrls[0] };
+    return { status: 404, buffer: Buffer.alloc(0), url: candidates[0].url, format: 'doc' };
   } finally {
     releaseSlot();
   }
 }
 
 /**
+ * Legacy wrapper — downloads PDF only. Used by older code paths.
+ */
+export async function fetchLawPdf(code: string, pdfUrl?: string): Promise<{ status: number; buffer: Buffer; url: string }> {
+  const result = await fetchLawFile(code, undefined, pdfUrl);
+  return { status: result.status, buffer: result.buffer, url: result.url };
+}
+
+/**
+ * Convert a DOC file to plain text using antiword.
+ *
+ * antiword extracts text from Microsoft Word binary (.doc) files.
+ * The -m UTF-8.txt flag produces UTF-8 output. This gives cleaner text
+ * than PDF extraction — no page headers, footers, or page numbers.
+ *
+ * Reform annotations (e.g., "Párrafo reformado DOF 10-06-2011") are
+ * present in the source document itself and will appear in the output.
+ */
+export async function docToText(docBuffer: Buffer, docPath: string): Promise<string> {
+  const { execSync } = await import('child_process');
+  const fs = await import('fs');
+
+  fs.writeFileSync(docPath, docBuffer);
+
+  try {
+    const text = execSync(`antiword -m UTF-8.txt "${docPath}"`, {
+      maxBuffer: 50 * 1024 * 1024,
+      timeout: 60_000,
+    }).toString('utf-8');
+
+    return text;
+  } catch (error) {
+    const msg = error instanceof Error ? error.message : String(error);
+    throw new Error(`antiword failed for ${docPath}: ${msg}`);
+  }
+}
+
+/**
  * Convert a PDF buffer to plain text using pdftotext (poppler-utils).
- *
- * ACCURACY WARNING: PDF text extraction is not perfectly accurate.
- * PDF is a presentation format, not a semantic format. Common issues:
- *   - Column layouts may merge or interleave text
- *   - Headers/footers may appear mid-text
- *   - Special characters (accents, ñ) may be lost or garbled
- *   - Hyphenated line breaks may not rejoin correctly
- *   - Table content may lose structure
- *
- * For the authoritative text, always refer to the official PDF at
- * diputados.gob.mx/LeyesBiblio/pdf/{CODE}.pdf
+ * Fallback when DOC format is unavailable.
  */
 export async function pdfToText(pdfBuffer: Buffer, pdfPath: string): Promise<string> {
   const { execSync } = await import('child_process');
   const fs = await import('fs');
 
-  // Write PDF to temp file
   fs.writeFileSync(pdfPath, pdfBuffer);
 
   try {
-    // pdftotext with -layout preserves spatial layout (better for article structure)
     const text = execSync(`pdftotext -layout -enc UTF-8 "${pdfPath}" -`, {
-      maxBuffer: 50 * 1024 * 1024, // 50MB
+      maxBuffer: 50 * 1024 * 1024,
       timeout: 60_000,
     }).toString('utf-8');
 

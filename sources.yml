@@ -8,8 +8,8 @@ sources:
     authority: "Camara de Diputados del H. Congreso de la Union, Mexico"
     official_portal: "https://www.diputados.gob.mx/LeyesBiblio/index.htm"
     canonical_identifier: "N/A (Mexican legislation identified by law title, DOF publication date, and reform date; no standardized URI scheme)"
-    retrieval_method: "PDF_EXTRACT"
-    api_documentation: "N/A (no public API; legislation available as PDF at /LeyesBiblio/pdf/{CODE}.pdf)"
+    retrieval_method: "DOC_EXTRACT"
+    api_documentation: "N/A (no public API; legislation available as DOC at /LeyesBiblio/doc/{CODE}.doc and PDF at /LeyesBiblio/pdf/{CODE}.pdf)"
     update_frequency: "on_change"
     last_ingested: "2026-03-01"
     license_or_terms:
@@ -17,7 +17,7 @@ sources:
       url: "https://www.diputados.gob.mx"
       summary: "Mexican federal legislation is public domain as government publication; the Camara de Diputados maintains the official compilation of all federal laws with consolidated reform texts"
     coverage:
-      scope: "All federal laws of Mexico including LFPDPPP (Ley Federal de Proteccion de Datos Personales en Posesion de los Particulares 2010), Ley General de Proteccion de Datos Personales en Posesion de Sujetos Obligados 2017, Ley Fintech (Ley para Regular las Instituciones de Tecnologia Financiera 2018), Codigo Penal Federal (cybercrime provisions), Ley General de Sociedades Mercantiles, Codigo de Comercio, Ley Federal de Proteccion al Consumidor"
+      scope: "All 317 federal laws of Mexico as published on diputados.gob.mx including Constitution (CPEUM), 9 federal codes, 201 federal laws, 56 general laws, 22 organic laws, 7 national laws. Covers LFPDPPP (data protection 2010), LGPDPPSO (public sector data protection 2017), Ley Fintech (2018), Codigo Penal Federal, all financial regulation, energy, telecommunications, and more. 45,179 provisions, 2,128 definitions."
       limitations: "State legislation not included; subsidiary regulations (reglamentos) may lag behind primary law reforms; historical versions of laws prior to consolidation may be incomplete; DOF (Diario Oficial) publication dates are authoritative but not always linked"
     languages:
       - "es"
