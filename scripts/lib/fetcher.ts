@@ -5,15 +5,8 @@
  * maintains the official compilation of all federal legislation at:
  *   https://www.diputados.gob.mx/LeyesBiblio/
  *
- * Laws are available as:
- *   - DOC:  /LeyesBiblio/doc/{CODE}.doc (Word binary format — preferred source)
- *   - PDF:  /LeyesBiblio/pdf/{CODE}.pdf (consolidated law text — fallback)
- *   - HTML: /LeyesBiblio/ref/{code}.htm (reform history index, NOT law text)
- *
- * IMPORTANT: The ref/*.htm pages contain reform/amendment history, not the actual
- * consolidated law text. DOC files are preferred over PDF because they produce
- * cleaner text without page headers, footers, and page numbers. Text is extracted
- * from DOC files using antiword. PDF fallback uses pdftotext (poppler-utils).
+ * Laws are available as DOC files at /LeyesBiblio/doc/{CODE}.doc
+ * (Word binary format). Text is extracted using antiword.
  *
  * Key considerations:
  *   - 300ms minimum delay between requests (respectful to government servers)
@@ -155,7 +148,7 @@ export async function fetchWithRateLimit(url: string, maxRetries = 3): Promise<F
 /**
  * Fetch the HTML reference page for a specific Mexican federal law.
  * NOTE: ref/*.htm pages contain reform history, NOT the consolidated law text.
- * Use fetchLawPdf() for the actual law content.
+ * Use fetchLawFile() for the actual law content (DOC format).
  */
 export async function fetchLawHtml(code: string): Promise<FetchResult> {
   const refUrl = `https://www.diputados.gob.mx/LeyesBiblio/ref/${code}.htm`;
@@ -176,96 +169,71 @@ export async function fetchLawHtml(code: string): Promise<FetchResult> {
 }
 
 /**
- * Download a law file (.doc or .pdf) from diputados.gob.mx.
+ * Download a law DOC file from diputados.gob.mx.
  *
- * Tries DOC format first (cleaner text extraction), then falls back to PDF.
+ * Downloads the DOC file at /LeyesBiblio/doc/{CODE}.doc.
  * The code parameter should match the exact code from the index page
  * (case-sensitive, e.g., "LAmp", "CPEUM", "LFPDPPP").
  *
- * Returns the raw file bytes as a Buffer and the format used.
+ * Returns the raw file bytes as a Buffer.
  */
-export async function fetchLawFile(code: string, docUrl?: string, pdfUrl?: string): Promise<{ status: number; buffer: Buffer; url: string; format: 'doc' | 'pdf' }> {
-  // Build candidate URLs: DOC first, then PDF
-  const candidates: Array<{ url: string; format: 'doc' | 'pdf' }> = [];
-
-  // DOC URLs
-  if (docUrl) {
-    candidates.push({ url: docUrl, format: 'doc' });
-  }
-  candidates.push({ url: `https://www.diputados.gob.mx/LeyesBiblio/doc/${code}.doc`, format: 'doc' });
-
-  // PDF fallback
-  if (pdfUrl) {
-    candidates.push({ url: pdfUrl, format: 'pdf' });
-  }
-  candidates.push({ url: `https://www.diputados.gob.mx/LeyesBiblio/pdf/${code}.pdf`, format: 'pdf' });
+export async function fetchLawFile(code: string, docUrl?: string): Promise<{ status: number; buffer: Buffer; url: string }> {
+  const url = docUrl ?? `https://www.diputados.gob.mx/LeyesBiblio/doc/${code}.doc`;
 
   await rateLimit();
 
   try {
-    for (const candidate of candidates) {
-      for (let attempt = 0; attempt <= 2; attempt++) {
-        try {
-          const controller = new AbortController();
-          const timeout = setTimeout(() => controller.abort(), CONNECT_TIMEOUT_MS);
+    for (let attempt = 0; attempt <= 2; attempt++) {
+      try {
+        const controller = new AbortController();
+        const timeout = setTimeout(() => controller.abort(), CONNECT_TIMEOUT_MS);
 
-          const response = await fetch(candidate.url, {
-            headers: {
-              'User-Agent': USER_AGENT,
-              'Accept': '*/*',
-            },
-            redirect: 'follow',
-            signal: controller.signal,
-          });
+        const response = await fetch(url, {
+          headers: {
+            'User-Agent': USER_AGENT,
+            'Accept': '*/*',
+          },
+          redirect: 'follow',
+          signal: controller.signal,
+        });
 
-          clearTimeout(timeout);
+        clearTimeout(timeout);
 
-          if (response.status === 429 || response.status >= 500) {
-            if (attempt < 2) {
-              const backoff = Math.pow(2, attempt + 1) * 1000;
-              await new Promise(resolve => setTimeout(resolve, backoff));
-              continue;
-            }
+        if (response.status === 429 || response.status >= 500) {
+          if (attempt < 2) {
+            const backoff = Math.pow(2, attempt + 1) * 1000;
+            await new Promise(resolve => setTimeout(resolve, backoff));
+            continue;
           }
-
-          if (response.status === 404) break; // try next candidate
-
-          if (response.status !== 200) {
-            return { status: response.status, buffer: Buffer.alloc(0), url: candidate.url, format: candidate.format };
-          }
-
-          const arrayBuffer = await response.arrayBuffer();
-          return { status: response.status, buffer: Buffer.from(arrayBuffer), url: candidate.url, format: candidate.format };
-        } catch (error) {
-          if (error instanceof Error && error.name === 'AbortError') {
-            if (attempt < 2) continue;
-            break;
-          }
-          throw error;
         }
+
+        if (response.status !== 200) {
+          return { status: response.status, buffer: Buffer.alloc(0), url };
+        }
+
+        const arrayBuffer = await response.arrayBuffer();
+        return { status: response.status, buffer: Buffer.from(arrayBuffer), url };
+      } catch (error) {
+        if (error instanceof Error && error.name === 'AbortError') {
+          if (attempt < 2) continue;
+          return { status: 0, buffer: Buffer.alloc(0), url };
+        }
+        throw error;
       }
     }
 
-    return { status: 404, buffer: Buffer.alloc(0), url: candidates[0].url, format: 'doc' };
+    return { status: 0, buffer: Buffer.alloc(0), url };
   } finally {
     releaseSlot();
   }
 }
 
 /**
- * Legacy wrapper — downloads PDF only. Used by older code paths.
- */
-export async function fetchLawPdf(code: string, pdfUrl?: string): Promise<{ status: number; buffer: Buffer; url: string }> {
-  const result = await fetchLawFile(code, undefined, pdfUrl);
-  return { status: result.status, buffer: result.buffer, url: result.url };
-}
-
-/**
  * Convert a DOC file to plain text using antiword.
  *
  * antiword extracts text from Microsoft Word binary (.doc) files.
- * The -m UTF-8.txt flag produces UTF-8 output. This gives cleaner text
- * than PDF extraction — no page headers, footers, or page numbers.
+ * The -m UTF-8.txt flag produces UTF-8 output with clean text —
+ * no page headers, footers, or page numbers.
  *
  * Reform annotations (e.g., "Párrafo reformado DOF 10-06-2011") are
  * present in the source document itself and will appear in the output.
@@ -286,28 +254,5 @@ export async function docToText(docBuffer: Buffer, docPath: string): Promise<str
   } catch (error) {
     const msg = error instanceof Error ? error.message : String(error);
     throw new Error(`antiword failed for ${docPath}: ${msg}`);
-  }
-}
-
-/**
- * Convert a PDF buffer to plain text using pdftotext (poppler-utils).
- * Fallback when DOC format is unavailable.
- */
-export async function pdfToText(pdfBuffer: Buffer, pdfPath: string): Promise<string> {
-  const { execSync } = await import('child_process');
-  const fs = await import('fs');
-
-  fs.writeFileSync(pdfPath, pdfBuffer);
-
-  try {
-    const text = execSync(`pdftotext -layout -enc UTF-8 "${pdfPath}" -`, {
-      maxBuffer: 50 * 1024 * 1024,
-      timeout: 60_000,
-    }).toString('utf-8');
-
-    return text;
-  } catch (error) {
-    const msg = error instanceof Error ? error.message : String(error);
-    throw new Error(`pdftotext failed for ${pdfPath}: ${msg}`);
   }
 }

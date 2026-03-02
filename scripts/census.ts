@@ -46,7 +46,7 @@ interface CensusLaw {
   shortName: string;
   category: 'constitucion' | 'codigo' | 'ley_federal' | 'ley_general' | 'ley_nacional' | 'ley_organica' | 'ley_reglamentaria' | 'estatuto' | 'otro';
   url: string;
-  pdfUrl: string;
+  docUrl?: string;
   classification: 'ingestable' | 'inaccessible' | 'metadata_only';
 }
 
@@ -80,11 +80,11 @@ interface CensusOutput {
  *
  * Each entry uses the code as it appears in the official URL:
  *   HTML: https://www.diputados.gob.mx/LeyesBiblio/ref/{code}.htm
- *   PDF:  https://www.diputados.gob.mx/LeyesBiblio/pdf/{CODE}.pdf
+ *   DOC:  https://www.diputados.gob.mx/LeyesBiblio/doc/{CODE}.doc
  *
  * Updated: 2026-02-26
  */
-const KNOWN_LAWS: Omit<CensusLaw, 'url' | 'pdfUrl' | 'classification'>[] = [
+const KNOWN_LAWS: Omit<CensusLaw, 'url' | 'docUrl' | 'classification'>[] = [
   // ═══════════════════════════════════════════════════════
   // CONSTITUCIÓN
   // ═══════════════════════════════════════════════════════
@@ -303,11 +303,11 @@ const KNOWN_LAWS: Omit<CensusLaw, 'url' | 'pdfUrl' | 'classification'>[] = [
   { id: 'lra', code: 'lra', title: 'Ley de la Renta', titleEn: 'Rental Law', shortName: 'Ley de la Renta', category: 'ley_federal' },
 ];
 
-function buildCensusLaw(entry: Omit<CensusLaw, 'url' | 'pdfUrl' | 'classification'>): CensusLaw {
+function buildCensusLaw(entry: Omit<CensusLaw, 'url' | 'docUrl' | 'classification'>): CensusLaw {
   return {
     ...entry,
     url: `https://www.diputados.gob.mx/LeyesBiblio/ref/${entry.code}.htm`,
-    pdfUrl: `https://www.diputados.gob.mx/LeyesBiblio/pdf/${entry.code.toUpperCase()}.pdf`,
+    docUrl: `https://www.diputados.gob.mx/LeyesBiblio/doc/${entry.code}.doc`,
     classification: 'ingestable',
   };
 }
@@ -332,8 +332,8 @@ async function scrapeLiveIndex(): Promise<CensusLaw[]> {
         continue;
       }
 
-      // Parse law links: /LeyesBiblio/ref/{code}.htm or /LeyesBiblio/pdf/{CODE}.pdf
-      const linkRe = /href="(?:\/LeyesBiblio\/)?(?:ref|pdf)\/([a-zA-Z0-9_]+)\.(?:htm|pdf)"/gi;
+      // Parse law links: /LeyesBiblio/ref/{code}.htm or /LeyesBiblio/doc/{CODE}.doc
+      const linkRe = /href="(?:\/LeyesBiblio\/)?(?:ref|doc)\/([a-zA-Z0-9_]+)\.(?:htm|doc)"/gi;
       const codes = new Set<string>();
       let match: RegExpExecArray | null;
 
@@ -357,7 +357,7 @@ async function scrapeLiveIndex(): Promise<CensusLaw[]> {
             shortName: code.toUpperCase(),
             category: 'ley_federal',
             url: `https://www.diputados.gob.mx/LeyesBiblio/ref/${code}.htm`,
-            pdfUrl: `https://www.diputados.gob.mx/LeyesBiblio/pdf/${code.toUpperCase()}.pdf`,
+            docUrl: `https://www.diputados.gob.mx/LeyesBiblio/doc/${code}.doc`,
             classification: 'ingestable',
           });
         }

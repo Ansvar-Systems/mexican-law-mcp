@@ -1,8 +1,8 @@
 /**
  * Parser for Mexican federal legislation from diputados.gob.mx
  *
- * Parses plain text (extracted from DOC via antiword, or PDF via pdftotext)
- * into structured provision data. Mexican legislation follows civil law
+ * Parses plain text (extracted from DOC via antiword) into structured
+ * provision data. Mexican legislation follows civil law
  * tradition with "Artículo X" numbering. Laws are organized as:
  *
  *   TÍTULO (Title) > CAPÍTULO (Chapter) > SECCIÓN (Section) > Artículo N
@@ -14,9 +14,9 @@
  *   - Transitory: "TRANSITORIOS" or "ARTÍCULOS TRANSITORIOS"
  *   - Fractions:  I., II., III., etc. (Roman numeral sub-provisions)
  *
- * DOC extraction (via antiword) produces cleaner text than PDF — no page
- * headers, footers, or page numbers. Reform annotations are present in
- * both formats as they are part of the source document.
+ * DOC extraction (via antiword) produces clean text — no page headers,
+ * footers, or page numbers. Reform annotations are present in the source
+ * document and will appear in the extracted text.
  */
 
 export interface LawIndexEntry {
@@ -29,7 +29,6 @@ export interface LawIndexEntry {
   issuedDate: string;
   inForceDate: string;
   url: string;
-  pdfUrl?: string;
   docUrl?: string;
   description?: string;
 }
@@ -319,16 +318,9 @@ export function parseMexicanHtml(html: string, law: LawIndexEntry): ParsedLaw {
 }
 
 /**
- * Extract articles from plain text (pdftotext output).
+ * Clean extracted text by removing recurring layout artifacts.
  *
- * PDF text has each article starting with "Artículo N.-" or "Artículo N."
- * on a new line (sometimes with leading whitespace from layout preservation).
- * We split on article boundaries and collect text between them.
- */
-/**
- * Clean raw pdftotext output by removing recurring page artifacts.
- *
- * diputados.gob.mx PDFs have a consistent layout:
+ * diputados.gob.mx DOC files may contain:
  *   - Header: law title (all caps) repeated on every page
  *   - Sub-header: "CÁMARA DE DIPUTADOS DEL H. CONGRESO DE LA UNIÓN"
  *   - Sub-header: "Secretaría General" / "Secretaría de Servicios Parlamentarios"
@@ -338,7 +330,7 @@ export function parseMexicanHtml(html: string, law: LawIndexEntry): ParsedLaw {
  *
  * These are editorial/layout elements, not part of the law text.
  */
-function cleanPdfText(text: string): string {
+function cleanExtractedText(text: string): string {
   const lines = text.split('\n');
   const cleaned: string[] = [];
 
@@ -469,7 +461,7 @@ function extractArticlesFromText(text: string): { provisions: ParsedProvision[];
     // Collect lines for this article
     let text = lines.slice(block.startLine, endLine).join('\n').trim();
 
-    // Clean up pdftotext layout artifacts (excessive whitespace)
+    // Clean up layout artifacts (excessive whitespace)
     text = text
       .replace(/\n\s*\n\s*\n/g, '\n\n') // collapse triple+ newlines
       .replace(/[ \t]{3,}/g, '  ')        // collapse excessive horizontal space
@@ -567,13 +559,10 @@ function extractTransitoryFromText(text: string): ParsedProvision[] {
 }
 
 /**
- * Parse plain text (from pdftotext) into structured law data.
+ * Parse plain text (from antiword DOC extraction) into structured law data.
  *
- * ACCURACY WARNING: PDF text extraction is not as accurate as parsing
- * digital (HTML/API) sources. The text may contain spacing artifacts,
- * encoding issues, or structural ambiguity from the PDF layout engine.
- * For the authoritative text, refer to the official PDF at
- * diputados.gob.mx/LeyesBiblio/pdf/{CODE}.pdf
+ * For the authoritative text, refer to the official source at
+ * diputados.gob.mx/LeyesBiblio/doc/{CODE}.doc
  */
 export function parseMexicanText(text: string, law: LawIndexEntry): ParsedLaw {
   if (text.length < 200) {
@@ -594,8 +583,8 @@ export function parseMexicanText(text: string, law: LawIndexEntry): ParsedLaw {
     };
   }
 
-  // Clean PDF artifacts (headers, footers, page numbers, reform annotations)
-  const cleanedText = cleanPdfText(text);
+  // Clean layout artifacts (headers, footers, page numbers, reform annotations)
+  const cleanedText = cleanExtractedText(text);
 
   const { provisions, definitions } = extractArticlesFromText(cleanedText);
   const transitoryProvisions = extractTransitoryFromText(cleanedText);
@@ -622,7 +611,7 @@ export function parseMexicanText(text: string, law: LawIndexEntry): ParsedLaw {
  * consumer protection, and telecommunications.
  *
  * URL pattern: https://www.diputados.gob.mx/LeyesBiblio/ref/{code}.htm
- * PDF pattern: https://www.diputados.gob.mx/LeyesBiblio/pdf/{CODE}.pdf
+ * DOC pattern: https://www.diputados.gob.mx/LeyesBiblio/doc/{CODE}.doc
  */
 export const KEY_MEXICAN_ACTS: LawIndexEntry[] = [
   {
