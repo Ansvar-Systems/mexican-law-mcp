@@ -1,5 +1,5 @@
 /**
- * Response metadata utilities for Australian Law MCP.
+ * Response metadata utilities for Mexican Law MCP.
  */
 
 import type Database from '@ansvar/mcp-sqlite';
@@ -30,12 +30,10 @@ export function generateResponseMetadata(
   }
 
   return {
-    data_source: 'Federal Register of Legislation (legislation.gov.au) — Australian Government, Office of Parliamentary Counsel',
-    jurisdiction: 'AU',
+    data_source: 'Diario Oficial de la Federación (diputados.gob.mx) — Mexican Chamber of Deputies',
+    jurisdiction: 'MX',
     disclaimer:
-      'This data is sourced from the Federal Register of Legislation under CC BY 4.0 licence. ' +
-      'The authoritative versions are maintained by the Australian Government. ' +
-      'Always verify with the official Federal Register of Legislation portal (legislation.gov.au).',
+      'This data is sourced from the Mexican Chamber of Deputies legislation portal. The authoritative versions are maintained by the Mexican federal government. Always verify with the official portal (diputados.gob.mx).',
     freshness,
   };
 }
