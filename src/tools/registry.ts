@@ -17,14 +17,8 @@ import { validateCitationTool, type ValidateCitationInput } from './validate-cit
 import { buildLegalStance, type BuildLegalStanceInput } from './build-legal-stance.js';
 import { formatCitationTool, type FormatCitationInput } from './format-citation.js';
 import { checkCurrency, type CheckCurrencyInput } from './check-currency.js';
-import { getEUBasis, type GetEUBasisInput } from './get-eu-basis.js';
-import { getMexicanImplementations, type GetMexicanImplementationsInput } from './get-mexican-implementations.js';
-import { searchEUImplementations, type SearchEUImplementationsInput } from './search-eu-implementations.js';
-import { getProvisionEUBasis, type GetProvisionEUBasisInput } from './get-provision-eu-basis.js';
-import { validateEUCompliance, type ValidateEUComplianceInput } from './validate-eu-compliance.js';
 import { listSources } from './list-sources.js';
 import { getAbout, type AboutContext } from './about.js';
-import { detectCapabilities, upgradeMessage } from '../capabilities.js';
 export type { AboutContext } from './about.js';
 
 const ABOUT_TOOL: Tool = {
@@ -39,7 +33,7 @@ const LIST_SOURCES_TOOL: Tool = {
   name: 'list_sources',
   description:
     'Returns detailed provenance metadata for all data sources used by this server, ' +
-    'including the Federal Register of Legislation (Mexican Government, Office of Parliamentary Counsel). ' +
+    'including the Cámara de Diputados official legislation portal (diputados.gob.mx/LeyesBiblio). ' +
     'Use this to understand what data is available, its authority, coverage scope, and known limitations. ' +
     'Also returns dataset statistics (document counts, provision counts) and database build timestamp. ' +
     'Call this FIRST when you need to understand what Mexican legal data this server covers.',
@@ -53,7 +47,7 @@ export const TOOLS: Tool[] = [
       'Search Mexican statutes and regulations by keyword using full-text search (FTS5 with BM25 ranking). ' +
       'Returns matching provisions with document context, snippets with >>> <<< markers around matched terms, and relevance scores. ' +
       'Supports FTS5 syntax: quoted phrases ("exact match"), boolean operators (AND, OR, NOT), and prefix wildcards (term*). ' +
-      'Results are in English. Default limit is 10 results. For broad topics, increase the limit. ' +
+      'Results are in Spanish. Default limit is 10 results. For broad topics, increase the limit. ' +
       'Do NOT use this for retrieving a known provision — use get_provision instead.',
     inputSchema: {
       type: 'object',
@@ -61,8 +55,8 @@ export const TOOLS: Tool[] = [
         query: {
           type: 'string',
           description:
-            'Search query in English. Supports FTS5 syntax: ' +
-            '"personal information" for exact phrase, privacy* for prefix.',
+            'Search query (Spanish recommended). Supports FTS5 syntax: ' +
+            '"datos personales" for exact phrase, protección* for prefix.',
         },
         document_id: {
           type: 'string',
@@ -85,11 +79,11 @@ export const TOOLS: Tool[] = [
   {
     name: 'get_provision',
     description:
-      'Retrieve the full text of a specific provision (section) from an Mexican statute. ' +
-      'Specify a document_id (Act title, abbreviation, or internal ID) and optionally a section or provision_ref. ' +
+      'Retrieve the full text of a specific provision (article) from a Mexican statute. ' +
+      'Specify a document_id (law title, abbreviation, or internal ID) and optionally a section or provision_ref. ' +
       'Omit section/provision_ref to get ALL provisions in the statute (use sparingly — can be large). ' +
       'Returns provision text, chapter, section number, and metadata. ' +
-      'Supports Act title references (e.g., "Privacy Act 1988"), abbreviations, and full titles. ' +
+      'Supports law title references (e.g., "LFPDPPP"), abbreviations, and full titles. ' +
       'Use this when you know WHICH provision you want. For discovery, use search_legislation instead.',
     inputSchema: {
       type: 'object',
@@ -97,16 +91,16 @@ export const TOOLS: Tool[] = [
         document_id: {
           type: 'string',
           description:
-            'Statute identifier: Act title (e.g., "Privacy Act 1988"), abbreviation, ' +
-            'or internal document ID (e.g., "privacy-act-1988").',
+            'Statute identifier: law abbreviation (e.g., "LFPDPPP"), short name, ' +
+            'or internal document ID (e.g., "lfpdppp").',
         },
         section: {
           type: 'string',
-          description: 'Section number (e.g., "13", "8"). Omit to get all provisions.',
+          description: 'Article number (e.g., "1", "16"). Omit to get all provisions.',
         },
         provision_ref: {
           type: 'string',
-          description: 'Direct provision reference (e.g., "s13"). Alternative to section parameter.',
+          description: 'Direct provision reference (e.g., "art1"). Alternative to section parameter.',
         },
       },
       required: ['document_id'],
@@ -115,16 +109,16 @@ export const TOOLS: Tool[] = [
   {
     name: 'validate_citation',
     description:
-      'Validate an Mexican legal citation against the database — zero-hallucination check. ' +
+      'Validate a Mexican legal citation against the database — zero-hallucination check. ' +
       'Parses the citation, checks that the document and provision exist, and returns warnings about status ' +
       '(repealed, amended). Use this to verify any citation BEFORE including it in a legal analysis. ' +
-      'Supports formats: "Section 13 Privacy Act 1988", "Privacy Act 1988 s 13", "s 13".',
+      'Supports formats: "Artículo 1 LFPDPPP", "LFPDPPP art 1", "art 1".',
     inputSchema: {
       type: 'object',
       properties: {
         citation: {
           type: 'string',
-          description: 'Citation string to validate. Examples: "Section 13 Privacy Act 1988", "Privacy Act 1988 s 13".',
+          description: 'Citation string to validate. Examples: "Artículo 1 LFPDPPP", "CPEUM art 16".',
         },
       },
       required: ['citation'],
@@ -142,7 +136,7 @@ export const TOOLS: Tool[] = [
       properties: {
         query: {
           type: 'string',
-          description: 'Legal question or topic to research (e.g., "personal information", "critical infrastructure").',
+          description: 'Legal question or topic to research (e.g., "datos personales", "delitos informáticos").',
         },
         document_id: {
           type: 'string',
@@ -160,9 +154,9 @@ export const TOOLS: Tool[] = [
   {
     name: 'format_citation',
     description:
-      'Format an Mexican legal citation per standard conventions. ' +
-      'Three formats: "full" (formal, e.g., "Section 13, Privacy Act 1988"), ' +
-      '"short" (abbreviated, e.g., "Privacy Act 1988 s 13"), "pinpoint" (section reference only, e.g., "s 13").',
+      'Format a Mexican legal citation per standard conventions. ' +
+      'Three formats: "full" (formal, e.g., "Artículo 1, LFPDPPP, DOF 05-07-2010"), ' +
+      '"short" (abbreviated, e.g., "LFPDPPP art 1"), "pinpoint" (article reference only, e.g., "art 1").',
     inputSchema: {
       type: 'object',
       properties: {
@@ -180,7 +174,7 @@ export const TOOLS: Tool[] = [
   {
     name: 'check_currency',
     description:
-      'Check whether an Mexican statute or provision is currently in force, amended, repealed, or not yet in force. ' +
+      'Check whether a Mexican statute or provision is currently in force, amended, repealed, or not yet in force. ' +
       'Returns the document status, issued date, in-force date, and warnings. ' +
       'Essential before citing any provision — always verify currency.',
     inputSchema: {
@@ -188,111 +182,12 @@ export const TOOLS: Tool[] = [
       properties: {
         document_id: {
           type: 'string',
-          description: 'Statute identifier (Act title, abbreviation, or ID).',
+          description: 'Statute identifier (law abbreviation, title, or ID).',
         },
         provision_ref: {
           type: 'string',
-          description: 'Optional: provision reference to check a specific section.',
+          description: 'Optional: provision reference to check a specific article.',
         },
-      },
-      required: ['document_id'],
-    },
-  },
-  {
-    name: 'get_eu_basis',
-    description:
-      'Get the EU legal basis that an Mexican statute references or aligns with. ' +
-      'Mexico is not an EU member but Mexican laws may reference EU directives/regulations ' +
-      '(e.g., Privacy Act references GDPR concepts, SOCI Act aligns with NIS2 patterns). ' +
-      'Returns EU document identifiers, reference types, and alignment status.',
-    inputSchema: {
-      type: 'object',
-      properties: {
-        document_id: { type: 'string', description: 'Mexican statute identifier.' },
-        include_articles: {
-          type: 'boolean',
-          description: 'Include specific EU article references (default: false).',
-          default: false,
-        },
-      },
-      required: ['document_id'],
-    },
-  },
-  {
-    name: 'get_mexican_implementations',
-    description:
-      'Find all Mexican statutes that reference or align with a specific EU directive or regulation. ' +
-      'Given an EU document ID (e.g., "regulation:2016/679" for GDPR), returns matching Mexican statutes. ' +
-      'Note: Mexico does not transpose EU law but may reference or align with EU frameworks voluntarily.',
-    inputSchema: {
-      type: 'object',
-      properties: {
-        eu_document_id: {
-          type: 'string',
-          description: 'EU document ID (e.g., "regulation:2016/679" for GDPR, "directive:2022/2555" for NIS2).',
-        },
-        primary_only: {
-          type: 'boolean',
-          description: 'Return only primary referencing statutes (default: false).',
-          default: false,
-        },
-        in_force_only: {
-          type: 'boolean',
-          description: 'Return only currently in-force statutes (default: false).',
-          default: false,
-        },
-      },
-      required: ['eu_document_id'],
-    },
-  },
-  {
-    name: 'search_eu_implementations',
-    description:
-      'Search for EU directives and regulations that are referenced by Mexican legislation. ' +
-      'Search by keyword, type (directive/regulation), or year range.',
-    inputSchema: {
-      type: 'object',
-      properties: {
-        query: { type: 'string', description: 'Keyword search across EU document titles.' },
-        type: { type: 'string', enum: ['directive', 'regulation'], description: 'Filter by EU document type.' },
-        year_from: { type: 'number', description: 'Filter by year (from).' },
-        year_to: { type: 'number', description: 'Filter by year (to).' },
-        has_mexican_implementation: {
-          type: 'boolean',
-          description: 'If true, only return EU documents referenced by Mexican legislation.',
-        },
-        limit: { type: 'number', description: 'Max results (default: 20, max: 100).', default: 20 },
-      },
-    },
-  },
-  {
-    name: 'get_provision_eu_basis',
-    description:
-      'Get the EU legal basis for a SPECIFIC provision within an Mexican statute. ' +
-      'More granular than get_eu_basis (which operates at the statute level). ' +
-      'Use this for pinpoint EU alignment checks at the provision level.',
-    inputSchema: {
-      type: 'object',
-      properties: {
-        document_id: { type: 'string', description: 'Mexican statute identifier.' },
-        provision_ref: { type: 'string', description: 'Provision reference (e.g., "s13" or "13").' },
-      },
-      required: ['document_id', 'provision_ref'],
-    },
-  },
-  {
-    name: 'validate_eu_compliance',
-    description:
-      'Check EU alignment status for an Mexican statute or provision. ' +
-      'Detects references to EU directives, alignment status, and cross-references. ' +
-      'Returns compliance status (compliant, partial, unclear, not_applicable) with warnings. ' +
-      'Note: Mexico is not bound by EU law; this checks voluntary alignment and cross-references.',
-    inputSchema: {
-      type: 'object',
-      properties: {
-        document_id: { type: 'string', description: 'Mexican statute identifier.' },
-        provision_ref: { type: 'string', description: 'Optional: check for a specific provision.' },
-        eu_document_id: { type: 'string', description: 'Optional: check against a specific EU document.' },
       },
       required: ['document_id'],
     },
@@ -356,21 +251,6 @@ export function registerTools(
           break;
         case 'check_currency':
           result = await checkCurrency(db, args as unknown as CheckCurrencyInput);
-          break;
-        case 'get_eu_basis':
-          result = await getEUBasis(db, args as unknown as GetEUBasisInput);
-          break;
-        case 'get_mexican_implementations':
-          result = await getMexicanImplementations(db, args as unknown as GetMexicanImplementationsInput);
-          break;
-        case 'search_eu_implementations':
-          result = await searchEUImplementations(db, args as unknown as SearchEUImplementationsInput);
-          break;
-        case 'get_provision_eu_basis':
-          result = await getProvisionEUBasis(db, args as unknown as GetProvisionEUBasisInput);
-          break;
-        case 'validate_eu_compliance':
-          result = await validateEUCompliance(db, args as unknown as ValidateEUComplianceInput);
           break;
         case 'list_sources':
           result = await listSources(db);

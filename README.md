@@ -9,9 +9,9 @@
 [![CI](https://github.com/Ansvar-Systems/mexican-law-mcp/actions/workflows/ci.yml/badge.svg)](https://github.com/Ansvar-Systems/mexican-law-mcp/actions/workflows/ci.yml)
 [![Daily Data Check](https://github.com/Ansvar-Systems/mexican-law-mcp/actions/workflows/check-updates.yml/badge.svg)](https://github.com/Ansvar-Systems/mexican-law-mcp/actions/workflows/check-updates.yml)
 [![Database](https://img.shields.io/badge/database-pre--built-green)](#whats-included)
-[![Provisions](https://img.shields.io/badge/provisions-583-blue)](#whats-included)
+[![Provisions](https://img.shields.io/badge/provisions-45%2C179-blue)](#whats-included)
 
-Query **185 Mexican federal statutes** -- from the Constitucion and LFPDPPP to the Ley Fintech, Codigo Penal Federal, and more -- directly from Claude, Cursor, or any MCP-compatible client.
+Query **317 Mexican federal statutes** -- from the Constitucion and LFPDPPP to the Ley Fintech, Codigo Penal Federal, and more -- directly from Claude, Cursor, or any MCP-compatible client.
 
 If you're building legal tech, compliance tools, or doing Mexican legal research, this is your verified reference database.
 
@@ -131,15 +131,15 @@ Once connected, just ask naturally:
 |----------|-------|---------|
 | **Constitution** | 1 | Constitucion Politica de los Estados Unidos Mexicanos |
 | **Federal Codes** | 9 | Civil, Commercial, Criminal, Tax, Procedure, Military Justice |
-| **Federal Laws** | 116 | Data protection, fintech, telecom, labor, competition, etc. |
-| **General Laws** | 43 | Health, education, environment, transparency, anti-corruption |
-| **Organic Laws** | 9 | Judiciary, Congress, Public Administration, Attorney General |
-| **Regulatory Laws** | 6 | Agrarian, mining, nuclear energy, professional practice |
-| **Other** | 1 | Statutes |
-| **Total Statutes** | 185 | Comprehensive Mexican federal legislation |
-| **Provisions** | 583 | Full-text searchable with FTS5 (unicode61 for Spanish) |
-| **Definitions** | 56 | Legal term definitions extracted from statutes |
-| **Database Size** | ~0.7 MB | Optimized SQLite, portable |
+| **Federal Laws** | 201 | Data protection, fintech, telecom, labor, competition, etc. |
+| **General Laws** | 56 | Health, education, environment, transparency, anti-corruption |
+| **Organic Laws** | 22 | Judiciary, Congress, Public Administration, Attorney General |
+| **National Laws** | 7 | Criminal procedure, detention, juvenile justice |
+| **Other** | 21 | Regulatory laws, statutes |
+| **Total Statutes** | 317 | All Mexican federal legislation from diputados.gob.mx |
+| **Provisions** | 45,179 | Full-text searchable with FTS5 (unicode61 for Spanish) |
+| **Definitions** | 2,128 | Legal term definitions extracted from statutes |
+| **Database Size** | ~69 MB | SQLite with FTS5 indexes |
 
 **Verified data only** -- every citation is validated against official sources (diputados.gob.mx). Zero LLM-generated content.
 
@@ -185,14 +185,14 @@ Once connected, just ask naturally:
 
 | Tool | Description |
 |------|-------------|
-| `search_legislation` | FTS5 search on 583 provisions with BM25 ranking |
+| `search_legislation` | FTS5 search across 45,179 provisions with BM25 ranking |
 | `get_provision` | Retrieve specific provision by law + article number |
-| `list_laws` | List all 185 statutes with metadata |
-| `get_preparatory_works` | Get linked reform history for a statute |
 | `validate_citation` | Validate citation against database (zero-hallucination check) |
 | `build_legal_stance` | Aggregate citations from multiple statutes |
 | `format_citation` | Format citations per Mexican conventions (DOF reference) |
 | `check_currency` | Check if statute is in force, amended, or repealed |
+| `list_sources` | Data provenance metadata (source authority, coverage, freshness) |
+| `about` | Server metadata, dataset statistics, and provenance |
 
 ---
 
@@ -273,7 +273,7 @@ npm run census                             # Enumerate all federal laws
 npm run ingest                             # Full corpus ingestion from census
 npm run ingest -- --resume                 # Resume interrupted ingestion
 npm run ingest -- --limit 5                # Test with 5 laws
-npm run ingest -- --skip-fetch             # Reuse cached HTML
+npm run ingest -- --skip-fetch             # Reuse cached text
 npm run build:db                           # Rebuild SQLite database
 npm run check-updates                      # Check for amendments
 ```
@@ -281,9 +281,9 @@ npm run check-updates                      # Check for amendments
 ### Census-First Workflow
 
 ```
-census.ts -> data/census.json (185 laws)
+census.ts -> data/census.json (317 laws)
     |
-ingest.ts -> data/seed/*.json (per-law provision JSON)
+ingest.ts -> data/seed/*.json (per-law provision JSON via DOC extraction)
     |
 build-db.ts -> data/database.db (SQLite + FTS5)
 ```
@@ -291,7 +291,7 @@ build-db.ts -> data/database.db (SQLite + FTS5)
 ### Performance
 
 - **Search Speed:** <100ms for most FTS5 queries
-- **Database Size:** ~0.7 MB (efficient, portable)
+- **Database Size:** ~69 MB (SQLite with FTS5 indexes)
 - **FTS5 Tokenizer:** unicode61 (optimized for Spanish accented text)
 
 ---
@@ -319,7 +319,6 @@ This server is part of **Ansvar's Compliance Suite** -- MCP servers that work to
 Contributions welcome! See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
 Priority areas:
-- Full corpus re-ingestion when diputados.gob.mx is accessible
 - State-level legislation coverage
 - Reglamentos (federal regulations) ingestion
 - Jurisprudencia (judicial precedent) integration
@@ -329,10 +328,10 @@ Priority areas:
 
 ## Roadmap
 
-- [x] **Census-first architecture** -- 185 federal laws enumerated
-- [x] **Core law ingestion** -- LFPDPPP, Ley Fintech, Codigo Penal, and 7 more fully parsed
+- [x] **Census-first architecture** -- 317 federal laws enumerated from live index
+- [x] **Full corpus ingestion** -- all 317 laws, 45,179 provisions via DOC extraction
 - [x] **FTS5 with unicode61** -- Optimized for Spanish text search
-- [ ] Full corpus re-ingestion (pending diputados.gob.mx availability)
+- [x] **DOC-based extraction** -- antiword produces clean text without page artifacts
 - [ ] Reglamentos coverage (80+ federal regulations)
 - [ ] State-level legislation
 - [ ] Jurisprudencia (SCJN case law)
@@ -350,7 +349,7 @@ If you use this MCP server in academic research:
   title = {Mexican Law MCP Server: Federal Legislation Research Tool},
   year = {2026},
   url = {https://github.com/Ansvar-Systems/mexican-law-mcp},
-  note = {185 Mexican federal statutes with Spanish full-text search}
+  note = {317 Mexican federal statutes with Spanish full-text search}
 }
 ```
 

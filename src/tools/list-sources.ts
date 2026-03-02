@@ -49,11 +49,11 @@ export async function listSources(
           url: 'https://www.diputados.gob.mx/LeyesBiblio/index.htm',
           license: 'Government Public Data (public domain)',
           coverage:
-            'Mexican federal legislation: Constitution, federal codes, ' +
-            'federal laws, general laws, organic laws, regulatory laws. ' +
+            'All 317 Mexican federal laws: Constitution, 9 federal codes, ' +
+            '201 federal laws, 56 general laws, 22 organic laws, 7 national laws. ' +
             'Covers data protection (LFPDPPP, LGPDPPSO), fintech, cybercrime, ' +
             'commercial law, consumer protection, telecommunications. ' +
-            'Text extracted from official PDF — may contain extraction artifacts.',
+            'Text extracted from official DOC files using antiword.',
           languages: ['es'],
         },
       ],

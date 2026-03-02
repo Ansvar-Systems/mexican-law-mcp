@@ -2,7 +2,7 @@
   "$schema": "./golden-tests.schema.json",
   "version": "1.0",
   "mcp_name": "Mexican Law MCP",
-  "description": "Golden contract tests for the Mexican Law MCP covering 185 federal laws — Constitution, codes, data protection, fintech, cybercrime, commercial law, consumer protection, and more",
+  "description": "Golden contract tests for the Mexican Law MCP covering 317 federal laws — Constitution, codes, data protection, fintech, cybercrime, commercial law, consumer protection, and more",
   "tests": [
     {
       "id": "mx-001",

@@ -40,8 +40,6 @@ export function getAbout(db: InstanceType<typeof Database>, context: AboutContex
       documents: safeCount(db, 'SELECT COUNT(*) as count FROM legal_documents'),
       provisions: safeCount(db, 'SELECT COUNT(*) as count FROM legal_provisions'),
       definitions: safeCount(db, 'SELECT COUNT(*) as count FROM definitions'),
-      eu_documents: safeCount(db, 'SELECT COUNT(*) as count FROM eu_documents'),
-      eu_references: safeCount(db, 'SELECT COUNT(*) as count FROM eu_references'),
     },
     data_source: {
       name: 'Cámara de Diputados — Leyes Federales Vigentes',
@@ -50,8 +48,8 @@ export function getAbout(db: InstanceType<typeof Database>, context: AboutContex
       license: 'Government Public Data (public domain)',
       jurisdiction: 'MX',
       languages: ['es'],
-      extraction_method: meta.extraction_method ?? 'pdf-pdftotext',
-      accuracy_notice: 'Text extracted from official PDF files using pdftotext. PDF is a presentation format — extraction may introduce spacing errors or structural ambiguity. For authoritative text, refer to the official PDF at diputados.gob.mx/LeyesBiblio/pdf/{CODE}.pdf',
+      extraction_method: meta.extraction_method ?? 'doc-antiword',
+      accuracy_notice: 'Text extracted from official DOC files using antiword. DOC extraction produces clean text without page headers/footers. For authoritative text, refer to the official source at diputados.gob.mx/LeyesBiblio/doc/{CODE}.doc',
     },
   };
 }

@@ -50,22 +50,6 @@ interface DefinitionSeed {
   source_provision?: string;
 }
 
-type EUDocumentType = 'directive' | 'regulation';
-type EUCommunity = 'EU' | 'EC' | 'EEC' | 'Euratom';
-type EUReferenceType = 'implements' | 'references';
-
-interface ExtractedEUReference {
-  type: EUDocumentType;
-  community: EUCommunity;
-  year: number;
-  number: number;
-  euDocumentId: string;
-  euArticle: string | null;
-  fullCitation: string;
-  referenceContext: string;
-  referenceType: EUReferenceType;
-}
-
 // Database schema
 const SCHEMA = `
 -- Legal documents (statutes)
@@ -175,55 +159,6 @@ CREATE TRIGGER definitions_au AFTER UPDATE ON definitions BEGIN
   VALUES (new.id, new.term, new.definition);
 END;
 
--- EU Documents (directives and regulations)
-CREATE TABLE eu_documents (
-  id TEXT PRIMARY KEY,
-  type TEXT NOT NULL CHECK (type IN ('directive', 'regulation')),
-  year INTEGER NOT NULL CHECK (year >= 1957 AND year <= 2100),
-  number INTEGER NOT NULL CHECK (number > 0),
-  community TEXT CHECK (community IN ('EU', 'EC', 'EEC', 'Euratom')),
-  celex_number TEXT,
-  title TEXT,
-  title_en TEXT,
-  short_name TEXT,
-  adoption_date TEXT,
-  entry_into_force_date TEXT,
-  in_force BOOLEAN DEFAULT 1,
-  amended_by TEXT,
-  repeals TEXT,
-  url_eur_lex TEXT,
-  description TEXT,
-  last_updated TEXT DEFAULT CURRENT_TIMESTAMP
-);
-
-CREATE INDEX idx_eu_documents_type_year ON eu_documents(type, year DESC);
-
--- EU References (links national provisions to EU documents)
-CREATE TABLE eu_references (
-  id INTEGER PRIMARY KEY AUTOINCREMENT,
-  source_type TEXT NOT NULL CHECK (source_type IN ('provision', 'document', 'case_law')),
-  source_id TEXT NOT NULL,
-  document_id TEXT NOT NULL REFERENCES legal_documents(id),
-  provision_id INTEGER REFERENCES legal_provisions(id),
-  eu_document_id TEXT NOT NULL REFERENCES eu_documents(id),
-  eu_article TEXT,
-  reference_type TEXT NOT NULL CHECK (reference_type IN (
-    'implements', 'supplements', 'applies', 'references', 'complies_with',
-    'derogates_from', 'amended_by', 'repealed_by', 'cites_article'
-  )),
-  reference_context TEXT,
-  full_citation TEXT,
-  is_primary_implementation BOOLEAN DEFAULT 0,
-  implementation_status TEXT CHECK (implementation_status IN ('complete', 'partial', 'pending', 'unknown')),
-  created_at TEXT DEFAULT CURRENT_TIMESTAMP,
-  last_verified TEXT,
-  UNIQUE(source_id, eu_document_id, eu_article)
-);
-
-CREATE INDEX idx_eu_references_document ON eu_references(document_id, eu_document_id);
-CREATE INDEX idx_eu_references_eu_document ON eu_references(eu_document_id, document_id);
-CREATE INDEX idx_eu_references_provision ON eu_references(provision_id, eu_document_id);
-
 -- Build metadata
 CREATE TABLE db_metadata (
   key TEXT PRIMARY KEY,
@@ -245,60 +180,6 @@ function dedupeProvisions(provisions: ProvisionSeed[]): ProvisionSeed[] {
     }
   }
   return Array.from(byRef.values());
-}
-
-function extractEuReferences(text: string): ExtractedEUReference[] {
-  if (!text || text.trim().length === 0) return [];
-
-  const refs: ExtractedEUReference[] = [];
-  const seen = new Set<string>();
-
-  const patterns: RegExp[] = [
-    /\b(Regulation|Directive)\s*\((EU|EC|EEC|Euratom)\)\s*(?:No\.?\s*)?(\d{2,4})\/(\d{1,4})\b/gi,
-    /\b(Regulation|Directive)\s*(?:No\.?\s*)?(\d{2,4})\/(\d{1,4})\/(EU|EC|EEC|Euratom)\b/gi,
-    /\b(Regulation|Directive)\s*(?:No\.?\s*)?(\d{2,4})\/(\d{1,4})\b/gi,
-  ];
-
-  for (const pattern of patterns) {
-    let match: RegExpExecArray | null;
-    while ((match = pattern.exec(text)) !== null) {
-      const type = match[1].toLowerCase() as EUDocumentType;
-      let rawYear: string, rawNumber: string, communityRaw: string | undefined;
-
-      if (pattern === patterns[0]) {
-        communityRaw = match[2]; rawYear = match[3]; rawNumber = match[4];
-      } else if (pattern === patterns[1]) {
-        rawYear = match[2]; rawNumber = match[3]; communityRaw = match[4];
-      } else {
-        rawYear = match[2]; rawNumber = match[3]; communityRaw = undefined;
-      }
-
-      const parsedYear = Number.parseInt(rawYear, 10);
-      const year = rawYear.length === 2 ? (parsedYear >= 50 ? 1900 + parsedYear : 2000 + parsedYear) : parsedYear;
-      const number = Number.parseInt(rawNumber, 10);
-      if (year <= 0 || Number.isNaN(number) || number <= 0) continue;
-
-      const community = (communityRaw?.toUpperCase() ?? 'EU') as EUCommunity;
-      const euDocumentId = `${type}:${year}/${number}`;
-
-      const start = Math.max(0, match.index - 120);
-      const end = Math.min(text.length, match.index + match[0].length + 120);
-      const referenceContext = text.slice(start, end).replace(/\s+/g, ' ').trim();
-      const euArticle = referenceContext.match(/\bArticle\s+(\d+[A-Za-z]?(?:\(\d+\))?)/i)?.[1] ?? null;
-      const referenceType: EUReferenceType = /\b(implement|align|transpos|equivalent)\b/i.test(referenceContext) ? 'implements' : 'references';
-
-      const dedupeKey = `${euDocumentId}:${euArticle ?? ''}`;
-      if (seen.has(dedupeKey)) continue;
-      seen.add(dedupeKey);
-
-      refs.push({
-        type, community, year, number, euDocumentId, euArticle,
-        fullCitation: match[0], referenceContext, referenceType,
-      });
-    }
-  }
-
-  return refs;
 }
 
 function buildDatabase(): void {
@@ -335,19 +216,6 @@ function buildDatabase(): void {
     VALUES (?, ?, ?, ?, ?)
   `);
 
-  const insertEuDocument = db.prepare(`
-    INSERT OR IGNORE INTO eu_documents (id, type, year, number, community, title, short_name, url_eur_lex, description)
-    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
-  `);
-
-  const insertEuReference = db.prepare(`
-    INSERT INTO eu_references
-      (source_type, source_id, document_id, provision_id, eu_document_id, eu_article,
-       reference_type, reference_context, full_citation, is_primary_implementation,
-       implementation_status, last_verified)
-    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-  `);
-
   if (!fs.existsSync(SEED_DIR)) {
     console.log(`No seed directory at ${SEED_DIR} — creating empty database.`);
     db.close();
@@ -366,9 +234,6 @@ function buildDatabase(): void {
   let totalDocs = 0;
   let totalProvisions = 0;
   let totalDefs = 0;
-  let totalEuDocuments = 0;
-  let totalEuReferences = 0;
-  const primaryImplementationByDocument = new Set<string>();
 
   const loadAll = db.transaction(() => {
     for (const file of seedFiles) {
@@ -388,46 +253,12 @@ function buildDatabase(): void {
         const deduped = dedupeProvisions(seed.provisions);
 
         for (const prov of deduped) {
-          const insertResult = insertProvision.run(
+          insertProvision.run(
             seed.id, prov.provision_ref, prov.chapter ?? null,
             prov.section, prov.title ?? null, prov.content,
             prov.metadata ? JSON.stringify(prov.metadata) : null,
           );
           totalProvisions++;
-
-          const provisionId = Number(insertResult.lastInsertRowid);
-          const extractedRefs = extractEuReferences(prov.content);
-          if (extractedRefs.length > 0) {
-            const sourceId = `${seed.id}:${prov.provision_ref}`;
-            const lastVerified = new Date().toISOString();
-
-            for (const ref of extractedRefs) {
-              const eurLexType = ref.type === 'regulation' ? 'reg' : 'dir';
-              const eurLexUrl = `https://eur-lex.europa.eu/eli/${eurLexType}/${ref.year}/${ref.number}/oj`;
-              const shortName = `${ref.type === 'regulation' ? 'Regulation' : 'Directive'} ${ref.year}/${ref.number}`;
-
-              const euInsert = insertEuDocument.run(
-                ref.euDocumentId, ref.type, ref.year, ref.number, ref.community,
-                shortName, shortName, eurLexUrl, 'Auto-extracted from Mexican statute text',
-              );
-              if (euInsert.changes > 0) totalEuDocuments++;
-
-              const primaryKey = `${seed.id}:${ref.euDocumentId}`;
-              const isPrimary = ref.referenceType === 'implements' && !primaryImplementationByDocument.has(primaryKey) ? 1 : 0;
-              if (isPrimary === 1) primaryImplementationByDocument.add(primaryKey);
-
-              try {
-                const refInsert = insertEuReference.run(
-                  'provision', sourceId, seed.id, provisionId, ref.euDocumentId, ref.euArticle,
-                  ref.referenceType, ref.referenceContext, ref.fullCitation, isPrimary,
-                  isPrimary === 1 ? 'complete' : 'unknown', lastVerified,
-                );
-                if (refInsert.changes > 0) totalEuReferences++;
-              } catch {
-                // Ignore duplicate references
-              }
-            }
-          }
         }
       }
 
@@ -452,8 +283,8 @@ function buildDatabase(): void {
     insertMeta.run('jurisdiction', 'MX');
     insertMeta.run('source', 'official-source');
     insertMeta.run('licence', 'See sources.yml');
-    insertMeta.run('extraction_method', 'pdf-pdftotext');
-    insertMeta.run('accuracy_notice', 'Text extracted from PDF using pdftotext. PDF is a presentation format, not a semantic format — extraction may introduce spacing errors, encoding artifacts, or structural ambiguity. For authoritative text, refer to the official PDF at diputados.gob.mx/LeyesBiblio/pdf/{CODE}.pdf');
+    insertMeta.run('extraction_method', 'doc-antiword');
+    insertMeta.run('accuracy_notice', 'Text extracted from DOC files using antiword. DOC extraction produces clean text without page headers/footers. For authoritative text, refer to the official source at diputados.gob.mx/LeyesBiblio/doc/{CODE}.doc');
   });
   writeMeta();
 
@@ -466,8 +297,7 @@ function buildDatabase(): void {
 
   const size = fs.statSync(DB_PATH).size;
   console.log(
-    `\nBuild complete: ${totalDocs} documents, ${totalProvisions} provisions, ` +
-    `${totalDefs} definitions, ${totalEuDocuments} EU documents, ${totalEuReferences} EU references`
+    `\nBuild complete: ${totalDocs} documents, ${totalProvisions} provisions, ${totalDefs} definitions`
   );
   console.log(`Output: ${DB_PATH} (${(size / 1024 / 1024).toFixed(1)} MB)`);
 }
