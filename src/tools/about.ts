@@ -3,8 +3,6 @@
  */
 
 import type Database from '@ansvar/mcp-sqlite';
-import { detectCapabilities, readDbMetadata } from '../capabilities.js';
-import { SERVER_NAME, SERVER_VERSION, REPOSITORY_URL } from '../constants.js';
 
 export interface AboutContext {
   version: string;
@@ -22,34 +20,42 @@ function safeCount(db: InstanceType<typeof Database>, sql: string): number {
 }
 
 export function getAbout(db: InstanceType<typeof Database>, context: AboutContext) {
-  const caps = detectCapabilities(db);
-  const meta = readDbMetadata(db);
+
+  const euRefs = safeCount(db, 'SELECT COUNT(*) as count FROM eu_references');
+
+  const stats: Record<string, number> = {
+    documents: safeCount(db, 'SELECT COUNT(*) as count FROM legal_documents'),
+    provisions: safeCount(db, 'SELECT COUNT(*) as count FROM legal_provisions'),
+    definitions: safeCount(db, 'SELECT COUNT(*) as count FROM definitions'),
+  };
+
+  if (euRefs > 0) {
+    stats.eu_documents = safeCount(db, 'SELECT COUNT(*) as count FROM eu_documents');
+    stats.eu_references = euRefs;
+  }
 
   return {
-    server: SERVER_NAME,
+    name: 'Mexican Law MCP',
     version: context.version,
-    repository: REPOSITORY_URL,
-    database: {
-      fingerprint: context.fingerprint,
-      built_at: context.dbBuilt,
-      tier: meta.tier,
-      schema_version: meta.schema_version,
-      capabilities: [...caps],
+    jurisdiction: 'MX',
+    description: 'Mexican Law MCP — legislation via Model Context Protocol',
+    stats,
+    data_sources: [
+      {
+        name: 'Leyes Federales de Mexico',
+        url: 'https://diputados.gob.mx/LeyesBiblio/',
+        authority: 'Camara de Diputados',
+      },
+    ],
+    freshness: {
+      database_built: context.dbBuilt,
     },
-    statistics: {
-      documents: safeCount(db, 'SELECT COUNT(*) as count FROM legal_documents'),
-      provisions: safeCount(db, 'SELECT COUNT(*) as count FROM legal_provisions'),
-      definitions: safeCount(db, 'SELECT COUNT(*) as count FROM definitions'),
-    },
-    data_source: {
-      name: 'Cámara de Diputados — Leyes Federales Vigentes',
-      authority: 'Cámara de Diputados del H. Congreso de la Unión, Mexico',
-      url: 'https://www.diputados.gob.mx/LeyesBiblio/index.htm',
-      license: 'Government Public Data (public domain)',
-      jurisdiction: 'MX',
-      languages: ['es'],
-      extraction_method: meta.extraction_method ?? 'doc-antiword',
-      accuracy_notice: 'Text extracted from official DOC files using antiword. DOC extraction produces clean text without page headers/footers. For authoritative text, refer to the official source at diputados.gob.mx/LeyesBiblio/doc/{CODE}.doc',
+    disclaimer:
+      'This is a research tool, not legal advice. Verify critical citations against official sources.',
+    network: {
+      name: 'Ansvar MCP Network',
+      open_law: 'https://ansvar.eu/open-law',
+      directory: 'https://ansvar.ai/mcp',
     },
   };
 }
